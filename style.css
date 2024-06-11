@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -16,10 +20,35 @@ html {
     border: 2px solid black;
 }
 
+.separator {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+    line-height: 200%;
+    font-size: 2rem;
+}
+
 .board {
     border: 2px solid black;
     grid-column: 1 / -1;
     grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 50%;
+    grid-auto-rows: 50%;
+    overflow: auto;
+}
+
+.headerTab {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.card {
+    border: 1px solid black;
+
 }
 
 
