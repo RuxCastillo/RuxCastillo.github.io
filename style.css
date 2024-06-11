@@ -36,7 +36,7 @@ html {
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10% 50%;
+    grid-template-rows: 7% 50%;
     grid-auto-rows: 50%;
     overflow: auto;
 }
@@ -46,7 +46,64 @@ html {
     grid-column: 1 / -1;
 }
 
+/* aqui va lo de las tarjetas */
+
 .card {
+    border: 1px solid black;
+}
+
+.tarjeta {
+    border: 1px solid black;
+    height: 95%;
+    width: 70%;
+    margin: 2.5% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8% 47% 37% 8%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.tarjeta h2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    border: 1px solid black;
+}
+
+.tarjeta img {
+    border: 1px solid black;
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 90%;
+}
+
+.tarjeta p {
+    border: 1px solid black;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    width: 90%;
+    height: 90%;
+    font-size: 1.6rem;
+}
+
+.tarjeta button {
+    width: 90%;
+    height: 100%;
+}
+
+.tarjeta > button {
+    border: 1px solid black;
+
+}
+ 
+.tarjeta:last-child {
     border: 1px solid black;
 
 }
@@ -74,7 +131,7 @@ html {
 }
 
 #perfil-picture {
-    width: 70%;
+    width: 80%;
     height: 90%;
     border-radius: 50%;
 }
@@ -82,13 +139,17 @@ html {
 #info{
     width: 100%;
     height: 100%;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-align: center;    
 }
 /* usar calc para modificar el font-size
  */
-#info * {
-    margin: 3px auto;
+#info .div-icons, #info h1 {
+    margin: 20px auto;
+}
+
+#info h2 {
+    margin-top: auto;
 }
 
 #icon {
