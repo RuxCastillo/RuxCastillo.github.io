@@ -1,19 +1,19 @@
 [
     {
-        "type": "certifications",
+        "type": "studie",
         "id": "0",
-        "title": "tTitulo que se vea bien aunque el titulo sea bien largo porque los...itulo",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aquEl nombre del maestro del curso y alomejor las tecnologias que se manejani van mas palabras clave botonCodigo"
+        "title": "UVEG",
+        "img": "https://github.com/RuxCastillo/Img-host/blob/main/universidad-virtual-del-estado-de-guanajuato.jpg?raw=true",
+        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/CampusV.png?raw=true",
+        "palabrasClave": "Universidad Virtual del Estado de Guanajuato. Engineering student in software development"
     },
     {
         "type": "certifications",
         "id": "1",
-        "title": "titulo1",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
+        "title": "The Complete 2024 Web Development Bootcamp",
+        "img": "https://github.com/RuxCastillo/Img-host/blob/main/Cert%20undemy1.jpg?raw=true",
+        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/udemy_logo_icon_249323.png?raw=true",
+        "palabrasClave": "Dr. Angela Yu. HTML, CSS, Flexbox, Grid, Js, DOM, jQuery, Node.js, Express, EJS, Git, APIs, PostgreSQL and React"
     },
     {
         "type": "certifications",
