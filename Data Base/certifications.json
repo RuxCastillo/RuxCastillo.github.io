@@ -2,15 +2,15 @@
     {
         "type": "certifications",
         "id": "0",
-        "title": "titulo",
+        "title": "tTitulo que se vea bien aunque el titulo sea bien largo porque los...itulo",
         "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
         "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
+        "palabrasClave": "aquEl nombre del maestro del curso y alomejor las tecnologias que se manejani van mas palabras clave botonCodigo"
     },
     {
         "type": "certifications",
         "id": "1",
-        "title": "titulo",
+        "title": "titulo1",
         "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
         "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
         "palabrasClave": "aqui van mas palabras clave botonCodigo"
@@ -18,7 +18,7 @@
     {
         "type": "certifications",
         "id": "2",
-        "title": "titulo",
+        "title": "titulo2",
         "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
         "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
         "palabrasClave": "aqui van mas palabras clave botonCodigo"
