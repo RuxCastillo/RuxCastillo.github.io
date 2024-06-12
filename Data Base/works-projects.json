@@ -4,7 +4,7 @@
         "id": "0",
         "title": "titulo",
         "img": "imagen",
-        "palabras-clave": "Aqui van palabras clave del proyecto",
+        "palabrasclave": "Aqui van palabras clave del proyecto",
         "codeButton": "botonCodigo",
         "verMas": "verMas" 
     },
@@ -13,7 +13,7 @@
         "id": "1",
         "title": "titulo1",
         "img": "imagen",
-        "palabras-clave": "Aqui van palabras clave del proyecto1",
+        "palabrasclave": "Aqui van palabras clave del proyecto1",
         "codeButton": "botonCodigo1",
         "verMas": "verMas1" 
     },
@@ -22,7 +22,7 @@
         "id": "2",
         "title": "titulo2",
         "img": "imagen2",
-        "palabras-clave": "Aqui van palabras clave del proyecto2",
+        "palabrasclave": "Aqui van palabras clave del proyecto2",
         "codeButton": "botonCodigo2",
         "verMas": "verMas" 
     },
@@ -31,7 +31,7 @@
         "id": "3",
         "title": "titulo3",
         "img": "imagen3",
-        "palabras-clave": "Aqui van palabras clave del proyecto3",
+        "palabrasclave": "Aqui van palabras clave del proyecto3",
         "codeButton": "botonCodigo3",
         "verMas": "verMas3" 
     },
@@ -40,7 +40,7 @@
         "id": "4",
         "title": "titulo4",
         "img": "imagen4",
-        "palabras-clave": "Aqui van palabras clave del proyecto4",
+        "palabrasclave": "Aqui van palabras clave del proyecto4",
         "codeButton": "botonCodigo4",
         "verMas": "verMas4" 
     },
@@ -49,7 +49,7 @@
         "id": "5",
         "title": "titulo5",
         "img": "imagen5",
-        "palabras-clave": "Aqui van palabras clave del proyecto5",
+        "palabrasclave": "Aqui van palabras clave del proyecto5",
         "codeButton": "botonCodigo5",
         "verMas": "verMas5" 
     },
@@ -58,7 +58,7 @@
         "id": "6",
         "title": "titulo6",
         "img": "imagen6",
-        "palabras-clave": "Aqui van palabras clave del proyecto6",
+        "palabrasclave": "Aqui van palabras clave del proyecto6",
         "codeButton": "botonCodigo6",
         "verMas": "verMas6" 
     }
