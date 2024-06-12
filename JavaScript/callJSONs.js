@@ -9,6 +9,7 @@ let jsonDataWork = {};
 let jsonDataCertifications = {};
 let jsonDataPractice = {};
 
+
 fetch(jsonFilePathWork)
     .then(response => {
         if (!response.ok) {
@@ -23,6 +24,8 @@ fetch(jsonFilePathWork)
     .catch(error => {
         console.error("Work: Hubo un problema con la operación de fetch:", error)
     });
+
+
 
 fetch(jsonFilePathCertifications)
     .then(response => {
@@ -39,6 +42,8 @@ fetch(jsonFilePathCertifications)
         console.error("Certs: Hubo un problema con la operación de fetch:", error)
     });
 
+
+    
 fetch(jsonFilePathPractice)
     .then(response => {
         if (!response.ok) {
