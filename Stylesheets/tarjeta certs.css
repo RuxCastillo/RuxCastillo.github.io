@@ -5,8 +5,8 @@
     max-width: 90%;
     max-height: 95%;
     display: grid; 
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 10% 65% 20%;    
+    grid-template-columns: 3.5fr 6.5fr;
+    grid-template-rows: 1fr 6.5fr 2fr;
     justify-content: center;
     justify-items: center;
     align-items: center;
