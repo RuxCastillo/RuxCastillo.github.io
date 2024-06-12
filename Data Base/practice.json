@@ -2,7 +2,7 @@
     {
         "type": "practice",
         "id": "0",
-        "title": "titulo",
+        "title": "practice1",
         "img": "imagen",
         "palabras-clave": "Aqui van palabras clave del proyecto",
         "codeButton": "botonCodigo",
@@ -11,7 +11,7 @@
     {
         "type": "practice",
         "id": "1",
-        "title": "titulo1",
+        "title": "practice2",
         "img": "imagen",
         "palabras-clave": "Aqui van palabras clave del proyecto1",
         "codeButton": "botonCodigo1",
@@ -20,7 +20,7 @@
     {
         "type": "practice",
         "id": "2",
-        "title": "titulo2",
+        "title": "practice3",
         "img": "imagen2",
         "palabras-clave": "Aqui van palabras clave del proyecto2",
         "codeButton": "botonCodigo2",
@@ -29,7 +29,7 @@
     {
         "type": "practice",
         "id": "3",
-        "title": "titulo3",
+        "title": "practice4",
         "img": "imagen3",
         "palabras-clave": "Aqui van palabras clave del proyecto3",
         "codeButton": "botonCodigo3",
@@ -38,7 +38,7 @@
     {
         "type": "practice",
         "id": "4",
-        "title": "titulo4",
+        "title": "practice5",
         "img": "imagen4",
         "palabras-clave": "Aqui van palabras clave del proyecto4",
         "codeButton": "botonCodigo4",
@@ -47,7 +47,7 @@
     {
         "type": "practice",
         "id": "5",
-        "title": "titulo5",
+        "title": "practice6",
         "img": "imagen5",
         "palabras-clave": "Aqui van palabras clave del proyecto5",
         "codeButton": "botonCodigo5",
@@ -56,7 +56,7 @@
     {
         "type": "practice",
         "id": "6",
-        "title": "titulo6",
+        "title": "practice7",
         "img": "imagen6",
         "palabras-clave": "Aqui van palabras clave del proyecto6",
         "codeButton": "botonCodigo6",
