@@ -28,6 +28,7 @@
     max-width: 380px;
     max-height: 230px;
     margin: 0 auto;
+    object-fit: contain;
 }
 
 .certp {
