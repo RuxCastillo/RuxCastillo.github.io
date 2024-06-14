@@ -27,6 +27,7 @@
     max-height: 230px;
     margin: 0 auto;
     object-fit: fill; 
+    border-radius: 15px;
 }
 
 .certp {
