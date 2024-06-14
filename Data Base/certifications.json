@@ -4,55 +4,22 @@
         "id": "0",
         "title": "UVEG",
         "img": "https://github.com/RuxCastillo/Img-host/blob/main/universidad-virtual-del-estado-de-guanajuato.jpg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/CampusV.png?raw=true",
         "palabrasClave": "Universidad Virtual del Estado de Guanajuato. Engineering student in software development"
     },
     {
         "type": "certifications",
         "id": "1",
         "title": "The Complete 2024 Web Development Bootcamp",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/Cert%20undemy1.jpg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/udemy_logo_icon_249323.png?raw=true",
+        "img": "https://github.com/RuxCastillo/Img-host/blob/main/udemy%201.png?raw=true",
+        "link": "https://www.udemy.com/certificate/UC-316f00d4-2d2f-419d-b893-3312791d1d84/",
         "palabrasClave": "Dr. Angela Yu. HTML, CSS, Flexbox, Grid, Js, DOM, jQuery, Node.js, Express, EJS, Git, APIs, PostgreSQL and React"
     },
     {
         "type": "certifications",
         "id": "2",
-        "title": "titulo2",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
-    },
-    {
-        "type": "certifications",
-        "id": "3",
-        "title": "titulo",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
-    },
-    {
-        "type": "certifications",
-        "id": "4",
-        "title": "titulo",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
-    },
-    {
-        "type": "certifications",
-        "id": "5",
-        "title": "titulo",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
-    },
-    {
-        "type": "certifications",
-        "id": "6",
-        "title": "titulo",
-        "img": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "icon": "https://github.com/RuxCastillo/Img-host/blob/main/prueba.jpeg?raw=true",
-        "palabrasClave": "aqui van mas palabras clave botonCodigo"
+        "title": "Responsive Web Design",
+        "img": "https://github.com/RuxCastillo/Img-host/blob/main/freeCodeCamp.png?raw=true",
+        "link": "https://www.freecodecamp.org/certification/fcc47e5c3f0-ece2-494b-9246-61e3f25e0129/responsive-web-design",
+        "palabrasClave": "HTML, CSS, Flexbox, Grid, CSS animations, Typography and Accessibility "
     }
 ]
