@@ -23,7 +23,6 @@
 
 .tarjeta img {
     border: 1px solid black;
-    width: 80%;
     height: 40%;
     margin: 0 auto;
     grid-column: 1 / 3;

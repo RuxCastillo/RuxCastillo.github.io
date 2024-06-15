@@ -56,8 +56,8 @@ function generarCerts(arr) {
         let addHTML = (
             `<div class="card">
                 <div class="certs">
-                    <h2 class="certh2">${arr[i].title}</h2>
                     <img class="certimg1" src="${arr[i].img}"/>
+                    <h2 class="certh2">${arr[i].title}</h2>
                     <p class="certp">${arr[i].palabrasClave}</p>
                 </div>
             </div>`
