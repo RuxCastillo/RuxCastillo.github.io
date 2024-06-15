@@ -9,7 +9,8 @@ language.addEventListener("click", cambioLanguage);
 function cambioTheme() {
     console.log("le diste click a cambio theme")
     theme.setAttribute("src", "./Img/icons/sun.png")
-    body.style.backgroundImage = "url(../Img/black.png"
+    body.style.backgroundImage = "url(../Img/darktheme.jpg"
+    body.style.color = "white"
     console.log(fondo)
 }
 
