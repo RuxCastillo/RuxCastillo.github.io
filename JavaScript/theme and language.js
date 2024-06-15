@@ -2,6 +2,7 @@ const theme = document.querySelector("#moon");
 const language = document.querySelector("#language");
 const body = document.querySelector("#body");
 const imgProfile = document.querySelector("#profile img")
+const oldReddit = document.querySelector("#reddit")
 let colorActual = "white";
 
 
@@ -18,6 +19,7 @@ function cambioTheme() {
         theme.setAttribute("src", "./Img/icons/sun.png")
         language.setAttribute("src", "./Img/icons/enwhite.png")
         imgProfile.setAttribute("src", "./Img/Perfilbackgroundtransparent2.png")
+        oldReddit.setAttribute("src", "./Img/icons/gridwhite.png")
         body.style.backgroundImage = "url(../Img/darktheme.jpg"
 
         body.style.color = "white"
@@ -28,6 +30,7 @@ function cambioTheme() {
         language.setAttribute("src", "./Img/icons/idioma.png")
         imgProfile.setAttribute("src", "./Img/Perfilbackgroundtransparent3.png")
         body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg"
+        oldReddit.setAttribute("src", "./Img/icons/gridblack.png")
         body.style.color = "black"
     }
 }

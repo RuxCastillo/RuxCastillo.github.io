@@ -53,3 +53,12 @@
     border: 1px solid black;
 
 }
+
+div, h1, h2 {
+    font-family: Helvetica, sans-serif;
+}
+
+h3, p {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
