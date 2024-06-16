@@ -28,15 +28,17 @@ function generarPractice(arr) {
 
     const totalTarjetas = arr.length
 
-    for (let i = 0; i < totalTarjetas; i++) {
+    for (let i = totalTarjetas -1; i >= 0; i--) {
         let addHTML = (
             `<div class="card">
                 <div class="tarjeta">
+                    <a href="${arr[i].pagina}" target="_blank">
+                        <img src="${arr[i].img}" />
+                    </a>
                     <h2>${arr[i].title}</h2>
-                    <img />
-                    <p>${arr[i].palabrasclave}</p>
-                    <button>Ver Codigo</button>
-                    <button>Ver mas...</button>
+                    <p>${arr[i].palabras}</p>
+                    <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
+                    <button class="ver-mas"><a href="${arr[i].verMas}" target="_blank">Ver mas</a></button>
                 </div>
             </div>`
         )
