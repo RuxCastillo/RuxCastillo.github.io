@@ -61,7 +61,7 @@
 /* usar calc para modificar el font-size
  */
 
-#icon {
+.icon {
     max-width: 15%;
     margin: 10px 5px;
 }
