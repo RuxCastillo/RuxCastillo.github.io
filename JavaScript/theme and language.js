@@ -24,7 +24,6 @@ function cambioTheme() {
         for (let j = 0; j < allIcons.length; j++) {
         elcambio = allIcons[j].getAttribute("src").slice(0, -4)
         elcambio += "white.png"
-        console.log(elcambio)
         allIcons[j].setAttribute("src", elcambio)
         }
 
@@ -36,7 +35,6 @@ function cambioTheme() {
         for (let j = 0; j < allIcons.length; j++) {
         elcambio = allIcons[j].getAttribute("src").slice(0, -9)
         elcambio += ".png"
-        console.log(elcambio)
         allIcons[j].setAttribute("src", elcambio)
         }
         body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg"
@@ -49,16 +47,29 @@ function cambioLanguage() {
     let arreglandoColor = colorActual;
 
     let str = (arreglandoColor === "white")?  ".png" : "white.png"
-    console.log(arreglandoColor)
 
     if (idiomaActual === "en") {
         idiomaActual = "es"
         language.setAttribute("src", `./Img/icons/es${str}`)
-    } else {
+    } else if (idiomaActual === "es") {
         idiomaActual = "en"
         language.setAttribute("src", `./Img/icons/en${str}`)
     }
+    
+    let queLang = (idiomaActual === "en")? jsonDataLanguage[0] : jsonDataLanguage[1];
 
+    let queLangArray = Object.keys(queLang)
+    let arrayValue = Object.values(queLang)
+
+    console.log(arrayValue)
+
+    for (let h = 0; h < queLangArray.length; h++) {
+
+        let variable3 = document.querySelector("." + queLangArray[h])
+        variable3.innerText= arrayValue[h]
+
+
+    }
 }
 
 function temaActual() {

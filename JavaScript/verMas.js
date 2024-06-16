@@ -1,5 +1,5 @@
 const pagina = document.querySelector("#body");
-const vermas = document.querySelector("")
+
 let = cualBase
 let = loQueHabiaBoard
 
