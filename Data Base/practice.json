@@ -1,7 +1,7 @@
 [
     {
         "type": "practice",
-        "id": "1",
+        "id": "0",
         "title": "La bandera de Laos",
         "img": "./Img/cards/1practice.png",
         "palabras": "Mi primer mini practica de CSS",
@@ -12,7 +12,7 @@
     },
     {
         "type": "practice",
-        "id": "2",
+        "id": "1",
         "title": "Practicando float en CSS",
         "img": "./Img/cards/2practice.png",
         "palabras": "Practicando usando float y clear de CSS",
@@ -23,7 +23,7 @@
     },
     {
         "type": "practice",
-        "id": "1",
+        "id": "2",
         "title": "Grid y @media",
         "img": "./Img/cards/3practice.png",
         "palabras": "Aqui practique grid y @media en un diseño sencillo.",

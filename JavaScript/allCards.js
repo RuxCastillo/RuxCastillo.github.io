@@ -38,13 +38,12 @@ function generarPractice(arr) {
                     <h2>${arr[i].title}</h2>
                     <p>${arr[i].palabras}</p>
                     <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
-                    <button class="ver-mas"><a href="${arr[i].verMas}" target="_blank">Ver mas</a></button>
+                    <button onClick="abreMas('practica', ${arr[i].id})" class="ver-mas">Ver mas</button>
                 </div>
             </div>`
         )
         resultado += addHTML
     }
-    console.log(resultado);
     board.innerHTML = resultado;
 }
 
@@ -54,10 +53,10 @@ function generarCerts(arr) {
 
     const totalTarjetas = arr.length
 
-    for (let i = 0; i < totalTarjetas; i++) {
+    for (let i = totalTarjetas -1; i >= 0; i--) {
         let addHTML = (
             `<div class="card">
-                <div class="certs">
+                <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
                     <img class="certimg1" src="${arr[i].img}"/>
                     <h2 class="certh2">${arr[i].title}</h2>
                     <p class="certp">${arr[i].palabrasClave}</p>
@@ -66,7 +65,6 @@ function generarCerts(arr) {
         )
     resultado += addHTML;
     }
-    console.log(resultado);
     board.innerHTML = resultado;
 }
 
@@ -93,6 +91,5 @@ function generarTarjetas(arr) {
         resultado += addHTML;
     }
 
-    console.log(resultado)
     board.innerHTML = resultado;
 };
