@@ -1,4 +1,4 @@
-VIM
+#VIM
 # Swap
 [._]*.s[a-v][a-z]
 !*.svg  # comment out if you don't need vector files
@@ -19,7 +19,7 @@ tags
 # Persistent undo
 [._]*.un~
 
-VSCODE
+#VSCODE
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -33,7 +33,7 @@ VSCODE
 # Built Visual Studio Code Extensions
 *.vsix
 
-WEBMETHODS
+#WEBMETHODS
 **/IntegrationServer/datastore/
 **/IntegrationServer/db/
 **/IntegrationServer/DocumentStore/
@@ -49,7 +49,7 @@ WEBMETHODS
 **/IntegrationServer/XAStore/
 **/IntegrationServer/packages/Wm*/
 
-WINDOWS
+#WINDOWS
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -75,7 +75,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-GITHUBPAGES
+#GITHUBPAGES
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
 # a Gemfile as specified at https://github.com/github/pages-gem#conventional
 
@@ -96,7 +96,7 @@ _site/
 Gemfile.lock
 
 
-WORDPRESS
+#WORDPRESS
 # Wordpress - ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
@@ -146,7 +146,7 @@ wp-config.php
 # uncomment the next line
 #/wp-content/themes
 
-NODE
+#NODE
 # Logs
 logs
 *.log
@@ -278,7 +278,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-JAVASCRIPT
+#JAVASCRIPT
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -370,4 +370,31 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
