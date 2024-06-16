@@ -39,7 +39,7 @@ function cambiandoElBoard(placeholder) {
 
     `)
     
-    dj
+    
 }
 
 
