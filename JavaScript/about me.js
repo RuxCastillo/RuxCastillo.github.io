@@ -7,13 +7,27 @@ aboutMe.addEventListener("click", vuelta);
 
 function vuelta() {
 
-    profileCard.innerHTML = `<button class="regresar">Regresar</button>`
+    profileCard.innerHTML = (
+        `<p class="aboutMeText">${(idiomaActual === "en")? jsonDataLanguage[0].aboutMeText : jsonDataLanguage[1].aboutMeText}</p>
+        <button class="regresar">Regresar</button>`
+    )
+
     let regresar = document.querySelector(".regresar");
     regresar.addEventListener("click", goBack)
 
 }
 
 function goBack() {
-    profileCard.innerHTML = (
-                    `${originalPerfil}`)
+    if ( colorActual === "white") {
+    profileCard.innerHTML = (`${originalPerfil}`)
+    } else {
+    profileCard.innerHTML = (`${originalPerfil}`)
+    cambioThemeABlanco()
+
+    }
+}
+
+function aboutMeLang() {
+    
+    
 }

@@ -15,8 +15,15 @@ language.addEventListener("click", cambioLanguage);
 
 function cambioTheme() {
     console.log(colorActual)
-
     if ( colorActual === "white") {
+    cambioThemeABlanco("cambio")
+    }else {
+    cambioThemeANegro("cambio")
+    }
+}
+
+function cambioThemeABlanco(placeholder) {
+        const allIcons = document.getElementsByClassName(placeholder)
         colorActual = "black"    
         console.log("le diste click a cambio theme")
         body.style.backgroundImage = "url(../Img/darktheme.jpg)"
@@ -25,11 +32,12 @@ function cambioTheme() {
         elcambio = allIcons[j].getAttribute("src").slice(0, -4)
         elcambio += "white.png"
         allIcons[j].setAttribute("src", elcambio)
-        }
 
         body.style.color = "white"
-       
-    } else {
+    }
+}
+
+function cambioThemeANegro() {
         colorActual = "white"
 
         for (let j = 0; j < allIcons.length; j++) {
@@ -40,7 +48,7 @@ function cambioTheme() {
         body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg"
         body.style.color = "black"
     }
-}
+
 
 function cambioLanguage() {
     console.log("le diste click a cambio language")
@@ -61,12 +69,18 @@ function cambioLanguage() {
     let queLangArray = Object.keys(queLang)
     let arrayValue = Object.values(queLang)
 
-    console.log(arrayValue)
-
     for (let h = 0; h < queLangArray.length; h++) {
 
+        if ( document.querySelector("." + queLangArray[h]) !== null) {
+
         let variable3 = document.querySelector("." + queLangArray[h])
-        variable3.innerText= arrayValue[h]
+
+        console.log(arrayValue[h])
+
+        variable3.innerText = arrayValue[h]
+        console.log(variable3)
+
+        }
 
 
     }

@@ -1,18 +1,20 @@
 [
     {
-    "works-projects": "Projects.",
     "certifications": "Achivements.",
     "practice": "Practice.",
     "aboutMe": "About Me.",
     "ingenieria": "Engineering Student in Software Development.",
-    "abajoIngenieria": "Full-Stack developer with focus in Front-End"
+    "abajoIngenieria": "Full-Stack developer with focus in Front-End",
+    "aboutMeText": "HTML, CSS, Flexbox and Grid, JavaScript, React, SQL, PostgreSQL, Git, GitHub, DSA (data structure and algorithms) are my work tools for web development, I love how everything is so exact when it comes to we write code. Studying and learning new things is something that I really like now (it wasn't always like this) and I spend a lot of time studying on my own and developing myself in this field to be constantly improving every day. \n \n In addition, he likes to collaborate with other people and considers that learning from others is one of the best ways in which one can retain information and learn useful things on a daily basis that are not mentioned in books. A work team can always go further. than a single person working on their own, my goal now is to work on large projects that result from problems that generate an impact on people's well-being.",
+    "works-projects": "Projects."
     },
     {
-    "works-projects": "Projectos.",
     "certifications": "Logros.",
-    "practice": "Practica",
+    "practice": "Practica.",
     "aboutMe": "Acerca de mí.",
     "ingenieria": "Estudiante de Ingenieria en Desarrollo de Software.",
-    "abajoIngenieria": "Desarrollador Full-Stack enfocado en Front-End"
+    "abajoIngenieria": "Desarrollador Full-Stack enfocado en Front-End",
+    "aboutMeText": "HTML, CSS, Flexbox y Grid, JavaScript, React, SQL, PostgreSQL, Git, GitHub, DSA (estructura de datos y algoritmos) son mis herramientas de trabajo para el desarrollo web, me encanta el cómo todo es tan exacto a la hora que escribimos código. Estudiar y aprender nuevas cosas es algo que me gusta mucho ahora (no siempre fue así) y me la paso mucho tiempo estudiando por mi cuenta y desarrollarme en este campo para estar en constante mejora todos los días.\n \n Además, gusta colaborar con otras personas y considera que aprender de otros es de las mejores formas en que uno puede retener información y aprender cosas útiles en el día a día que no se mencionan en los libros, un equipo de trabajo siempre podrá llegar más lejos que una sola persona trabajando por su cuenta, mi objetivo ahora es trabajar en proyectos grandes que resultan de problemas que generan impacto en el bienestar de las personas.",
+    "works-projects": "Projectos."
     }
 ]
