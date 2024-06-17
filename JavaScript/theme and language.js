@@ -4,18 +4,13 @@ const body = document.querySelector("#body");
 const imgProfile = document.querySelector("#profile img")
 const oldReddit = document.querySelector("#reddit")
 const allIcons = document.getElementsByClassName("cambio")
-let colorActual = "white";
-let idiomaActual = "en";
-
-
 
 theme.addEventListener("click", cambioTheme);
 language.addEventListener("click", cambioLanguage);
 
-
 function cambioTheme() {
-    console.log(colorActual)
-    if ( colorActual === "white") {
+    console.log(esBlanco)
+    if (esBlanco) {
     cambioThemeABlanco("cambio")
     }else {
     cambioThemeANegro("cambio")
@@ -24,7 +19,7 @@ function cambioTheme() {
 
 function cambioThemeABlanco(placeholder) {
         const allIcons = document.getElementsByClassName(placeholder)
-        colorActual = "black"    
+        esBlanco = false
         console.log("le diste click a cambio theme")
         body.style.backgroundImage = "url(../Img/darktheme.jpg)"
 
@@ -39,7 +34,7 @@ function cambioThemeABlanco(placeholder) {
 
 function cambioThemeANegro(placeholder) {
         const allIcons = document.getElementsByClassName(placeholder)
-        colorActual = "white"
+        esBlanco = true
 
         for (let j = 0; j < allIcons.length; j++) {
         elcambio = allIcons[j].getAttribute("src").slice(0, -9)
@@ -50,22 +45,20 @@ function cambioThemeANegro(placeholder) {
         body.style.color = "black"
     }
 
-
 function cambioLanguage() {
     console.log("le diste click a cambio language")
-    let arreglandoColor = colorActual;
 
-    let str = (arreglandoColor === "white")?  ".png" : "white.png"
+    let str = (esBlanco)?  ".png" : "white.png"
 
-    if (idiomaActual === "en") {
-        idiomaActual = "es"
+    if (english) {
+        english = false
         language.setAttribute("src", `./Img/icons/es${str}`)
-    } else if (idiomaActual === "es") {
-        idiomaActual = "en"
+    } else if (!english) {
+        english = true
         language.setAttribute("src", `./Img/icons/en${str}`)
     }
     
-    let queLang = (idiomaActual === "en")? jsonDataLanguage[0] : jsonDataLanguage[1];
+    let queLang = (english)? jsonDataLanguage[0] : jsonDataLanguage[1];
 
     let queLangArray = Object.keys(queLang)
     let arrayValue = Object.values(queLang)
@@ -80,10 +73,7 @@ function cambioLanguage() {
 
         variable3.innerText = arrayValue[h]
         console.log(variable3)
-
         }
-
-
     }
 }
 

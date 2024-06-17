@@ -1,28 +1,14 @@
-const profileCard = document.querySelector("#profile");
-const originalPerfil = profileCard.innerHTML;
-const aboutMe = document.querySelector(".aboutMe");
+let profileCard = document.querySelector("#profile");
+let originalPerfil = profileCard.innerHTML;
+let aboutMe = document.querySelector(".aboutMe");
 
-queHaceAboutMe(seVeFoto)
-
-function queHaceAboutMe(ph) {
-    console.log("queHaceAboutMe", ph, aboutMe)
-    if (ph) {
-        console.log(aboutMe)
-        aboutMe.addEventListener("click", vuelta);
-    }else {
-        aboutMe.addEventListener("click", goBack)
-    }
-}
-
-function vuelta() {
-    seVeFoto = false 
-
-    let regresar = document.querySelector(".regresar");
-    regresar.addEventListener("click", goBack)
-    queHaceAboutMe(seVeFoto)
+if(aboutMe) {
+aboutMe.addEventListener("click", adentroVuelta);
 }
 
 function adentroVuelta() {
+    seVeFoto = false
+    console.log("adentroVuelta")
 
     profileCard.innerHTML = (
         `<div id="cambioProfile">
@@ -30,16 +16,22 @@ function adentroVuelta() {
             <button class="regresar">Regresar</button>
         </div>`
     )
+    let regresar = document.querySelector(".regresar")
+    regresar.addEventListener("click", goBack)
 
+    aboutMe = document.querySelector(".aboutMe")
+    aboutMe.addEventListener("click", goBack)
 }
 
 function goBack() {
-    aboutMe.addEventListener("click", vuelta);
-    if ( colorActual === "white") {
+    console.log("goBack")
+    seVeFoto = true
+    if (esBlanco) {
     profileCard.innerHTML = (`${originalPerfil}`)
+    aboutMe.removeEventListener("click", goBack)
     } else {
     profileCard.innerHTML = (`${originalPerfil}`)
     cambioThemeABlanco("icon")
-
+    aboutMe.removeEventListener("click", goBack)
     }
 }
