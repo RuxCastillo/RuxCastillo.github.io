@@ -6,11 +6,11 @@ const jsonFilePathCertifications = "./Data Base/certifications.json";
 const jsonFilePathPractice = "./Data Base/practice.json";
 const jsonFileLanguage = "./Data Base/en-es.json";
 
-let jsonDataWork = {};
-let jsonDataCertifications = {};
-let jsonDataPractice = {};
-let jsonDataLanguage = {};
 
+let jsonDataWork = {}
+let jsonDataCertifications = {}
+let jsonDataPractice = {}
+let jsonDataLanguage = {}
 
 fetch(jsonFilePathWork)
     .then(response => {
@@ -76,14 +76,6 @@ fetch(jsonFileLanguage)
     .catch(error => {
         console.error("Language: Hubo un problema con la operación de fetch:", error)
     });
-
-
-
-
-
-
-
-
 
 
 // Aqui se acaba el traer las tarjetas.

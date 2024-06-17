@@ -3,33 +3,58 @@ const works = document.querySelector(".works-projects");
 const certs = document.querySelector(".certifications");
 const practice = document.querySelector(".practice");
 
+
 practice.addEventListener(
     "click",
     function () {
-        generarPractice(jsonDataPractice)
+        generarTarjeta(jsonDataPractice)
     });
 
 
 works.addEventListener(
     "click", 
     function () {
-        generarTarjetas(jsonDataWork)
+        generarTarjeta(jsonDataWork)
     });
 
 certs.addEventListener(
     "click",
     function () {
-        generarCerts(jsonDataCertifications)
+        generarTarjeta(jsonDataCertifications)
     });
 
-function generarPractice(arr) {
+
+
+function generarTarjeta(arr) {
+    console.log(arr)
     board.innerHTML = "";
+    board.innerHTML = pushTarjeta(arr);
+}
+
+function pushTarjeta(arr) {
     let resultado = "";
+    let tarjetasWorkPractice = "";
 
-    const totalTarjetas = arr.length
+    if (arr === jsonDataCertifications) {
 
-    for (let i = totalTarjetas -1; i >= 0; i--) {
-        let addHTML = (
+    for (let i = arr.length -1; i >= 0; i--) {
+        tarjetasWorkPractice = (
+            `<div class="card">
+                <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
+                    <img class="certimg1" src="${arr[i].img}"/>
+                    <h2 class="certh2">${arr[i].title}</h2>
+                    <p class="certp">${arr[i].palabrasClave}</p>
+                </div>
+            </div>`
+        )
+    resultado += tarjetasWorkPractice;
+    }
+
+    }else {
+
+    for (let i = arr.length -1; i >= 0; i--) {
+
+        tarjetasWorkPractice = (
             `<div class="card">
                 <div class="tarjeta">
                     <a href="${arr[i].pagina}" target="_blank">
@@ -40,56 +65,10 @@ function generarPractice(arr) {
                     <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
                     <button onClick="abreMas('practica', ${arr[i].id})" class="ver-mas">Ver mas</button>
                 </div>
-            </div>`
-        )
-        resultado += addHTML
+            </div>`)
+        resultado += tarjetasWorkPractice
     }
-    board.innerHTML = resultado;
+    }
+
+    return resultado
 }
-
-function generarCerts(arr) {
-    board.innerHTML = "";
-    let resultado = "";
-
-    const totalTarjetas = arr.length
-
-    for (let i = totalTarjetas -1; i >= 0; i--) {
-        let addHTML = (
-            `<div class="card">
-                <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
-                    <img class="certimg1" src="${arr[i].img}"/>
-                    <h2 class="certh2">${arr[i].title}</h2>
-                    <p class="certp">${arr[i].palabrasClave}</p>
-                </div>
-            </div>`
-        )
-    resultado += addHTML;
-    }
-    board.innerHTML = resultado;
-}
-
-function generarTarjetas(arr) {
-    board.innerHTML = "";
-    let resultado = "";
-
-    const totalTarjetas = arr.length;
-
-    for (let i = 0; i < totalTarjetas; i++) {
-        let addHTML = (
-            `<div class="card ${i}">
-                <div class="tarjeta ${i}">
-                    <h2>${arr[i].title}</h2>
-                    <img />
-                    <p>${arr[i].palabrasclave}</p>
-                    <button>Ver Codigo</button>
-                    <button>Ver mas...</button>
-                </div>
-            </div>`
-
-        )
-
-        resultado += addHTML;
-    }
-
-    board.innerHTML = resultado;
-};
