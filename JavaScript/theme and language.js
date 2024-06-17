@@ -37,7 +37,8 @@ function cambioThemeABlanco(placeholder) {
     }
 }
 
-function cambioThemeANegro() {
+function cambioThemeANegro(placeholder) {
+        const allIcons = document.getElementsByClassName(placeholder)
         colorActual = "white"
 
         for (let j = 0; j < allIcons.length; j++) {

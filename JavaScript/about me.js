@@ -22,7 +22,7 @@ function goBack() {
     profileCard.innerHTML = (`${originalPerfil}`)
     } else {
     profileCard.innerHTML = (`${originalPerfil}`)
-    cambioThemeABlanco()
+    cambioThemeABlanco("icon")
 
     }
 }
