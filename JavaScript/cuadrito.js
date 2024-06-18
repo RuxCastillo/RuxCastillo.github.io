@@ -9,7 +9,6 @@ function numeroRandom() {
     let numRandom = Math.floor(Math.random() * nume) + 1;
 
     while(noRepeat === numRandom) {
-        console.log("fue repetido", numRandom, noRepeat)
         numRandom = Math.floor(Math.random() * nume) + 1
     }
 
@@ -23,7 +22,6 @@ function queColor(colorActual) {
 
 function elegirCarpeta() {
     path =  `./Img/esquina/${lenguajeActual(english)}/${queColor(esBlanco)}/${numeroRandom()}.png`
-    console.log(path)
     return path 
 }
 

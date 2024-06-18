@@ -34,53 +34,50 @@ function pushTarjeta(arr) {
     let tarjetasWorkPractice = "";
 
     if (arr === jsonDataCertifications) {
-
-    for (let i = arr.length -1; i >= 0; i--) {
-        tarjetasWorkPractice = (
-            `<div class="card">
-                <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
-                    <img class="certimg1" src="${arr[i].img}"/>
-                    <h2 class="certh2">${arr[i].title}</h2>
-                    <p class="certp">${arr[i].palabrasClave}</p>
-                </div>
-            </div>`
-        )
-    resultado += tarjetasWorkPractice;
-    }
-
-    }else if (arr === jsonDataWork) {
-
-    for (let i = arr.length -1; i >= 0; i--) {
-
-        tarjetasWorkPractice = (
-            `<div class="card">
-                <div class="tarjeta">
-                    <a href="${arr[i].pagina}" target="_blank">
-                        <img src="${arr[i].img}" />
-                    </a>
-                    <h2>${arr[i].title}</h2>
-                    <p>${arr[i].palabras}</p>
-                    <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
-                    <button onClick="abreMas('practica', ${arr[i].id})" class="ver-mas">Ver mas</button>
-                </div>
-            </div>`)
-        resultado += tarjetasWorkPractice
-    }
-    } else {
-
-        for (let i = arr.length - 1; i >= 0; i--) {
-
+        for (let i = arr.length -1; i >= 0; i--) {
             tarjetasWorkPractice = (
                 `<div class="card">
-                    <div class="tarjetaPractice">
-                        <img id="PracticeImg" src="${arr[i].img}" />
-                        <h2 class="h2Practice">${arr[i].title}</h2>
-                        <p class="pPractice">${arr[i].palabras}</p>
-                        <button class="code-buttonPractice"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
+                    <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
+                        <img class="certimg1" src="${arr[i].img}"/>
+                        <h2 class="certh2">${arr[i].title}</h2>
+                        <p class="certp">${arr[i].palabrasClave}</p>
                     </div>
-                </div>`)
-        resultado += tarjetasWorkPractice
+                </div>`
+                )
+            resultado += tarjetasWorkPractice;
         }
+
+        }else if (arr === jsonDataWork) {
+            for (let i = arr.length -1; i >= 0; i--) {
+                tarjetasWorkPractice = (
+                    `<div class="card">
+                        <div class="tarjeta">
+                            <a href="${arr[i].pagina}" target="_blank">
+                                <img src="${arr[i].img}" />
+                            </a>
+                            <h2>${arr[i].title}</h2>
+                            <p>${arr[i].palabras}</p>
+                            <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
+                            <button onClick="abreMas('practica', ${arr[i].id})" class="ver-mas">Ver mas</button>
+                        </div>
+                    </div>`)
+                    resultado += tarjetasWorkPractice
+            }
+        } else {
+
+            for (let i = arr.length - 1; i >= 0; i--) {
+
+                tarjetasWorkPractice = (
+                    `<div class="card">
+                        <div class="tarjetaPractice">
+                            <img id="PracticeImg" src="${arr[i].img}" />
+                            <h2 class="h2Practice">${arr[i].title}</h2>
+                            <p class="pPractice">${arr[i].palabras}</p>
+                            <button class="code-buttonPractice"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
+                        </div>
+                    </div>`)
+                resultado += tarjetasWorkPractice
+            }
     }
 
     return resultado

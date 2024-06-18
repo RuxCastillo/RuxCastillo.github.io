@@ -1,12 +1,10 @@
-let originalPerfil = "";
-
+let profileCard = document.querySelector("#profile");
+originalPerfil = profileCard.innerHTML;
+let aboutMe = document.querySelector(".aboutMe");
 aboutMe.addEventListener("click", adentroVuelta);
 
 function adentroVuelta() {
-    let profileCard = document.querySelector("#profile");
-    originalPerfil = profileCard.innerHTML;
     seVeFoto = false
-    console.log("adentroVuelta")
 
     profileCard.innerHTML = (
         `<div id="cambioProfile">
@@ -22,8 +20,6 @@ function adentroVuelta() {
 }
 
 function goBack() {
-    let aboutMe = document.querySelector(".aboutMe");
-    console.log("goBack")
     seVeFoto = true
     if (esBlanco) {
     profileCard.innerHTML = (`${originalPerfil}`)
