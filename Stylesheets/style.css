@@ -137,6 +137,19 @@ h3, p {
     height: 100vh;
 }
 
+@media (max-width: 1550px) {
+    div, h1, h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.7rem;
+    }
+
+    h3, p {
+        font-family: Georgia, serif;
+        font-weight: normal;
+        font-size: 1.7rem;
+    }
+}
+
 @media (max-width: 1300px) {
     #board {
         grid-template-columns: 1fr 1fr;
@@ -144,19 +157,40 @@ h3, p {
     #main {
         grid-template-columns: 2fr 1fr;
     }
+    div, h1, h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.7rem;
+    }
+
+    h3, p {
+        font-family: Georgia, serif;
+        font-weight: normal;
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 1000px) {
     #board {
         grid-template-columns: 1fr;
+        font-size: 1.7rem;
     }
     #main {
         grid-template-columns: 1fr 1fr;
+        font-size: 1.7rem;
     }
 }
 
 @media (max-width: 781px) {
+    div, h1, h2 {
+        font-family: Helvetica, sans-serif;
+        font-size: 1.7rem;
+    }
 
+    h3, p {
+        font-family: Georgia, serif;
+        font-weight: normal;
+        font-size: 1.7rem;
+    }
 
     #reddit, #moon, #language {
         width: 100%;

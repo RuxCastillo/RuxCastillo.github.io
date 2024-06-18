@@ -1,41 +1,40 @@
-let profileCard = document.querySelector("#profile");
-let originalPerfil = profileCard.innerHTML;
-let aboutMe = document.querySelector(".aboutMe");
+let originalPerfil = "";
 
-if(aboutMe) {
 aboutMe.addEventListener("click", adentroVuelta);
-}
 
 function adentroVuelta() {
+    let profileCard = document.querySelector("#profile");
+    originalPerfil = profileCard.innerHTML;
     seVeFoto = false
     console.log("adentroVuelta")
 
     profileCard.innerHTML = (
         `<div id="cambioProfile">
-            <p class="aboutMeText">${(english)? jsonDataLanguage[0].aboutMeText : jsonDataLanguage[1].aboutMeText}</p>
-            <button class="regresar">Regresar</button>
+            <div id="losP">
+                <p class="aboutMeText1">${(english)? jsonDataLanguage[0].aboutMeText1 : jsonDataLanguage[1].aboutMeText1}</p>
+                <p class="aboutMeText2">${(english)? jsonDataLanguage[0].aboutMeText2 : jsonDataLanguage[1].aboutMeText2}</p>
+            </div>
+            <button class="regresarBoton">Regresar</button>
         </div>`
     )
-    let regresar = document.querySelector(".regresar")
+    let regresar = document.querySelector(".regresarBoton")
     regresar.addEventListener("click", goBack)
-
-    aboutMe = document.querySelector(".aboutMe")
-    aboutMe.addEventListener("click", goBack)
 }
 
 function goBack() {
+    let aboutMe = document.querySelector(".aboutMe");
     console.log("goBack")
     seVeFoto = true
     if (esBlanco) {
     profileCard.innerHTML = (`${originalPerfil}`)
-    aboutMe.removeEventListener("click", goBack)
     } else {
     profileCard.innerHTML = (`${originalPerfil}`)
     cambioThemeABlanco("icon")
-    aboutMe.removeEventListener("click", goBack)
     }
     let h31 = profileCard.querySelector(".ingenieria")
     let h32 = profileCard.querySelector(".abajoIngenieria")
     h31.innerText = ((english)? jsonDataLanguage[0].ingenieria : jsonDataLanguage[1].ingenieria)
     h32.innerText = ((english)? jsonDataLanguage[0].abajoIngenieria : jsonDataLanguage[1].abajoIngenieria)
+    aboutMe = document.querySelector(".aboutMe");
+    aboutMe.addEventListener("click", adentroVuelta)
 }

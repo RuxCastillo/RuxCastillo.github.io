@@ -26,8 +26,6 @@ certs.addEventListener(
 
 
 function generarTarjeta(arr) {
-    console.log(arr)
-    board.innerHTML = "";
     board.innerHTML = pushTarjeta(arr);
 }
 
