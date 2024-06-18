@@ -1,8 +1,16 @@
+.card {
+    width: 100%;
+    height: 100%;
+}
 
+div, h1, h2 {
+    font-family: Helvetica, sans-serif;
+}
 
-
-
-
+h3, p {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
 
 #reddit, #moon, #language {
     width: 100%;
@@ -45,7 +53,7 @@
     width: 100%;
 }
 
-#perfil-picture {
+#perfileImg {
     width: 80%;
     min-width: 80%;
     height: 80%;
@@ -71,8 +79,8 @@
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 55%;
-    grid-auto-rows: 55%;
+    grid-template-rows: 52%;
+    grid-auto-rows: 52%;
     overflow: auto;
 }
 

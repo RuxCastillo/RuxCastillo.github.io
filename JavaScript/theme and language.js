@@ -1,7 +1,7 @@
 const theme = document.querySelector("#moon");
 const language = document.querySelector("#language");
 const body = document.querySelector("#body");
-const imgProfile = document.querySelector("#profile img")
+const imgProfile = document.querySelector("#profile > img")
 const oldReddit = document.querySelector("#reddit")
 const allIcons = document.getElementsByClassName("cambio")
 
@@ -22,6 +22,7 @@ function cambioThemeABlanco(placeholder) {
         esBlanco = false
         console.log("le diste click a cambio theme")
         body.style.backgroundImage = "url(../Img/darktheme.jpg)"
+        imgProfile.setAttribute("src", "./Img/Perfilbackgroundtransparent2.png")
 
         for (let j = 0; j < allIcons.length; j++) {
         elcambio = allIcons[j].getAttribute("src").slice(0, -4)
@@ -35,13 +36,14 @@ function cambioThemeABlanco(placeholder) {
 function cambioThemeANegro(placeholder) {
         const allIcons = document.getElementsByClassName(placeholder)
         esBlanco = true
+        imgProfile.setAttribute("src", "./Img/Perfilbackgroundtransparent2white.png")
 
         for (let j = 0; j < allIcons.length; j++) {
         elcambio = allIcons[j].getAttribute("src").slice(0, -9)
         elcambio += ".png"
         allIcons[j].setAttribute("src", elcambio)
         }
-        body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg"
+        body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg)"
         body.style.color = "black"
     }
 

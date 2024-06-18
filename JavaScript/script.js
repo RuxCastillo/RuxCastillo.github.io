@@ -1,13 +1,4 @@
-const foto = document.querySelector("#perfil-picture");
 
-foto.addEventListener("click", alertFun);
-
-function alertFun() {
-    console.log("le diste click en la foto");
-    enDondeEstamos = "inicio"
-    console.log(enDondeEstamos)
-    board.innerHTML = "";
-}
 
 //true es white
 let esBlanco = true
