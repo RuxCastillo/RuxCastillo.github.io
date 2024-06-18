@@ -1,5 +1,4 @@
 
-
 //true es white
 let esBlanco = true
 //seVeFoto es true cuando se ve la foto

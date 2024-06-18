@@ -25,12 +25,12 @@ function cambioThemeABlanco(placeholder) {
         imgProfile.setAttribute("src", "./Img/Perfilbackgroundtransparent2.png")
 
         for (let j = 0; j < allIcons.length; j++) {
-        elcambio = allIcons[j].getAttribute("src").slice(0, -4)
-        elcambio += "white.png"
-        allIcons[j].setAttribute("src", elcambio)
-
+            elcambio = allIcons[j].getAttribute("src").slice(0, -4)
+            elcambio += "white.png"
+            allIcons[j].setAttribute("src", elcambio)
+        }
         body.style.color = "white"
-    }
+        elCuadrito()
 }
 
 function cambioThemeANegro(placeholder) {
@@ -45,6 +45,7 @@ function cambioThemeANegro(placeholder) {
         }
         body.style.backgroundImage = "url(./Img/mamol%20fondo.jpg)"
         body.style.color = "black"
+        elCuadrito()
     }
 
 function cambioLanguage() {
@@ -61,7 +62,6 @@ function cambioLanguage() {
     }
     
     let queLang = (english)? jsonDataLanguage[0] : jsonDataLanguage[1];
-
     let queLangArray = Object.keys(queLang)
     let arrayValue = Object.values(queLang)
 
@@ -71,12 +71,12 @@ function cambioLanguage() {
 
         let variable3 = document.querySelector("." + queLangArray[h])
 
-        console.log(arrayValue[h])
-
         variable3.innerText = arrayValue[h]
         console.log(variable3)
         }
     }
+    
+    elCuadrito()
 }
 
 function temaActual() {
