@@ -29,8 +29,8 @@ function goBack() {
     }
     let h31 = profileCard.querySelector(".ingenieria")
     let h32 = profileCard.querySelector(".abajoIngenieria")
-    h31.innerText = ((english)? jsonDataLanguage[0].ingenieria : jsonDataLanguage[1].ingenieria)
-    h32.innerText = ((english)? jsonDataLanguage[0].abajoIngenieria : jsonDataLanguage[1].abajoIngenieria)
+    h31.innerText = (english? jsonDataLanguage[0].ingenieria : jsonDataLanguage[1].ingenieria)
+    h32.innerText = (english? jsonDataLanguage[0].abajoIngenieria : jsonDataLanguage[1].abajoIngenieria)
     aboutMe = document.querySelector(".aboutMe");
     aboutMe.addEventListener("click", adentroVuelta)
 }

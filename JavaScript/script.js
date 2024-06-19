@@ -10,3 +10,5 @@ let english = true
 //acabaAbrirPagina solo esta true al inicio cuando se abre la pagina
 let acabaAbrirPagina = true
 let seAbrioMasInformación = false
+
+let panelConfiguracion = false

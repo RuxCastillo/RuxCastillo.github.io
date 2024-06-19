@@ -6,3 +6,31 @@
     height: 9%;
     color: none;
 }
+
+.configuration {
+    height: 60px;
+    width: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+#configuracion {
+    width: 50px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+#panelAbierto {
+    height: 180px;
+    width: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    position: relative; 
+    padding-top: 10px;
+    align-items: center;
+    display: none; 
+}

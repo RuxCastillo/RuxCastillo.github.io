@@ -16,8 +16,8 @@ function abreMas(lugar, elId) {
 
 function cambiandoElBoard(placeholder) {
     loQueHabiaBoard = board.innerHTML
-    board.innerHTML = (`
-        <div id="newBoard">
+    board.innerHTML = (
+        `<div id="newBoard">
             <div onClick="board.innerHTML = loQueHabiaBoard"></div>
             <div></div>
             <div></div>
