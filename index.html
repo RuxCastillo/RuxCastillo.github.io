@@ -20,11 +20,11 @@
                     <div class="certifications separator" onclick="generarTarjeta(jsonDataCertifications)">Achivements.</div>
                     <div class="practice separator" onclick="generarTarjeta(jsonDataPractice)">Practice.</div>
                     <div class="vacio separator"></div>
-                    <div class="configuration"><img id="configuracion" class="cambio" name="configuracion"/>
+                    <div class="configuration" onclick="abrePanel()"><img id="configuracion" class="cambio" name="configuracion"/>
                         <div id="panelAbierto">
                             <div class="oldReddit"><div class="divdiv"><img id="reddit" class="cambio" name="grid"/></div></div>
-                            <div class="white-black" onclick="cambioTheme()"><div class="divdiv"><img id="moon" name="luna" class="cambio" /></div></div>
-                            <div class="ing-esp" onclick="cambioLanguage()"><div class="divdiv"><img id="language" name="en" class="cambio" /></div></div>
+                            <div class="white-black" onclick="solicitudCambioTheme()"><div class="divdiv"><img id="moon" name="luna" class="cambio" /></div></div>
+                            <div class="ing-esp" onclick="solicitudCambioLenguaje()"><div class="divdiv"><img id="language" name="en" class="cambio" /></div></div>
                         </div>
                     </div>
                     <div id="board"></div>
