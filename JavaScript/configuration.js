@@ -1,7 +1,4 @@
 
-//<div class="oldReddit"><div class="divdiv"><img id="reddit" class="cambio" src="./Img/icons/grid.png" /></div></div>
-//<div class="white-black"><div class="divdiv"><img id="moon" class="cambio" src="./Img/icons/luna.png" /></div></div>
-//<div class="ing-esp"><div class="divdiv"><img id="language" class="cambio" src="./Img/icons/en.png" /></div></div>
 
 let configuracionImg = document.querySelector("#configuracion");
 let configuracionDiv = document.querySelector(".configuration");
