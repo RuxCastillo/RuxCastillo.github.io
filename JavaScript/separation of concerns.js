@@ -1,33 +1,26 @@
-const board = document.querySelector("#board");
-const works = document.querySelector(".works-projects");
-const certs = document.querySelector(".certifications");
-const practice = document.querySelector(".practice");
-
-
-practice.addEventListener(
-    "click",
-    function () {
-        generarTarjeta(jsonDataPractice)
-    });
-
-
-works.addEventListener(
-    "click", 
-    function () {
-        generarTarjeta(jsonDataWork)
-    });
-
-certs.addEventListener(
-    "click",
-    function () {
-        generarTarjeta(jsonDataCertifications)
-    });
-
-
-
-function generarTarjeta(arr) {
-    board.innerHTML = pushTarjeta(arr);
+function htmlDeBienvenida() {
+    return (
+        `<div class="bienvenida">
+            <h2>${english? jsonDataLanguage[0].todaviaNoHagoEsto : jsonDataLanguage[1].todaviaNoHagoEsto }></h2>
+            <p>${queJsonUsarParaLenguaje().todaviaNoHagoEsto}</p>
+            //aqui arriba va mensaje de que la pagina esta hecha a mano como static para poder aprender lo mas que pueda, asi como que le hice muchos detalles para aprender y la hice con mucho cariño.
+        </div>`
+    )
 }
+
+function htmlAboutMe() {
+    return (
+        `<div id="cambioProfile">
+            <div id="losP">
+                <p class="aboutMeText1">${(english)? jsonDataLanguage[0].aboutMeText1 : jsonDataLanguage[1].aboutMeText1}</p>
+                <p class="aboutMeText2">${(english)? jsonDataLanguage[0].aboutMeText2 : jsonDataLanguage[1].aboutMeText2}</p>
+            </div>
+            <button class="regresarBoton">Regresar</button>
+        </div>`
+    )
+}
+
+const originalHTMLProfileCard = document.querySelector("#profile").innerHTML
 
 function pushTarjeta(arr) {
     let resultado = "";

@@ -1,11 +1,6 @@
-const theme = document.querySelector("#moon");
-const language = document.querySelector("#language");
 const body = document.querySelector("#body");
 const oldReddit = document.querySelector("#reddit")
 const allIcons = document.getElementsByClassName("cambio")
-
-theme.addEventListener("click", cambioTheme);
-language.addEventListener("click", cambioLanguage);
 
 function cambioTheme() {
     if (esBlanco) {
@@ -59,7 +54,7 @@ function cambioLanguage() {
         language.setAttribute("src", `./Img/icons/en${str}`)
     }
     
-    let queLang = (english)? jsonDataLanguage[0] : jsonDataLanguage[1];
+    let queLang = queJsonUsarParaLenguaje()
     let queLangArray = Object.keys(queLang)
     let arrayValue = Object.values(queLang)
 
@@ -70,4 +65,12 @@ function cambioLanguage() {
         }
     }
     elCuadrito()
+}
+
+function queJsonUsarParaLenguaje() {
+    return (english? jsonDataLanguage[0] : jsonDataLanguage[1])
+}
+
+function cambiandoBackground() {
+    esBlanco? 
 }

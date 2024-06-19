@@ -13,51 +13,50 @@
             <script src="./JavaScript/callJSONs.js"></script>
             <title>Portafolio</title>
         </head>
-        <body id="body">
+        <body id="body" onload="actualizarTodo()">
             <main id="main">
                 <div id="projects">
-                    <div class="works-projects separator">Projects.</div>
-                    <div class="certifications separator">Achivements.</div>
-                    <div class="practice separator">Practice.</div>
+                    <div class="works-projects separator" onclick="generarTarjeta(jsonDataWork)">Projects.</div>
+                    <div class="certifications separator" onclick="generarTarjeta(jsonDataCertifications)">Achivements.</div>
+                    <div class="practice separator" onclick="generarTarjeta(jsonDataPractice)">Practice.</div>
                     <div class="vacio separator"></div>
-                    <div class="configuration"><img id="configuracion" class="cambio" src="./Img/icons/configuracion.png" />
+                    <div class="configuration"><img id="configuracion" class="cambio" name="configuracion"/>
                         <div id="panelAbierto">
-                            <div class="oldReddit"><div class="divdiv"><img id="reddit" class="cambio" src="./Img/icons/grid.png" /></div></div>
-                            <div class="white-black"><div class="divdiv"><img id="moon" class="cambio" src="./Img/icons/luna.png" /></div></div>
-                            <div class="ing-esp"><div class="divdiv"><img id="language" class="cambio" src="./Img/icons/en.png" /></div></div>
+                            <div class="oldReddit"><div class="divdiv"><img id="reddit" class="cambio" name="grid"/></div></div>
+                            <div class="white-black" onclick="cambioTheme()"><div class="divdiv"><img id="moon" name="luna" class="cambio" /></div></div>
+                            <div class="ing-esp" onclick="cambioLanguage()"><div class="divdiv"><img id="language" name="en" class="cambio" /></div></div>
                         </div>
                     </div>
                     <div id="board"></div>
                 </div>
                 <div id="profile">
-                    <img src="./Img/Perfilbackgroundtransparent2.png" alt="perfil picture" id="perfileImg" />
+                    <img alt="perfil picture" id="perfileImg" name="Perfil" onclick="mostrarElMensajeDeBienvenidaDeNuevo()"/>
                     <div id="info">
                         <h1>Rubén López C.</h1>
                         <h3 class="ingenieria">Engineering Student in Software Development.</h3>
                         <h3 class="abajoIngenieria">Full-Stack developer with focus in Front-End</h3>
                         <div class="div-icons">
-                            <img class="icon cambio" src="./Img/icons/javascript.png" />
-                            <img class="icon cambio" src="./Img/icons/node.png" />
-                            <img class="icon cambio" src="./Img/icons/react.png" />
-                            <img class="icon cambio" src="./Img/icons/postgresql.png" />
-                            <img class="icon cambio" src="./Img/icons/typescript.png" />
+                            <img class="icon cambio" name="javascript" />
+                            <img class="icon cambio" name="node" />
+                            <img class="icon cambio" name="react" />
+                            <img class="icon cambio" name="postgresql" />
+                            <img class="icon cambio" name="typescript" />
                         </div>
                         <div class="div-icons">
-                            <a href="https://www.linkedin.com/in/ruben-l-1811402a4/" target="_blank"><img class="icon cambio" src="./Img/icons/linked.png" /></a>
-                            <a href="https://github.com/RuxCastillo" target="_blank"><img class="icon cambio" src="./Img/icons/github.png" /></a>
-                            <a href="mailto:rubenldc1412@gmail.com?Subject=Estaba%20mirando%20tu%20perfil%20y%20queria%20contactarte." target="_blank"><img class="icon cambio" src="./Img/icons/gmail.png" /></a>
-                            <div class="aboutMe separator">About Me.</div>
+                            <a href="https://www.linkedin.com/in/ruben-l-1811402a4/" target="_blank"><img class="icon cambio" name="linked" /></a>
+                            <a href="https://github.com/RuxCastillo" target="_blank"><img class="icon cambio" name="github" /></a>
+                            <a href="mailto:rubenldc1412@gmail.com?Subject=Estaba%20mirando%20tu%20perfil%20y%20queria%20contactarte." target="_blank"><img class="icon cambio" name="gmail" /></a>
+                            <div class="aboutMe separator" onclick="verAboutMe()">About Me.</div>
                         </div>
                     </div>
                 </div>
-                <img id="phrase" class="phrase" />
+                <img id="phrase" class="phrase cambio" name="cuadrito" />
             </main>
-            <script src="./JavaScript/script.js"></script>
             <script src="./JavaScript/verMas.js"></script>
             <script src="./JavaScript/theme and language.js"></script>
-            <script src="./JavaScript/about me.js"></script>
-            <script src="./JavaScript/allCards.js"></script>
             <script src="./JavaScript/cuadrito.js"></script>
             <script src="./JavaScript/configuration.js"></script>
+            <script src="./JavaScript/separation of concerns.js"></script>
+            <script src="./JavaScript/script.js"></script>
         </body>
     </html>
