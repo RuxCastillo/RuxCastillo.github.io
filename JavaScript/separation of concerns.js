@@ -74,4 +74,20 @@ function pushTarjeta(arr) {
     }
 
     return resultado
+} 
+
+function verMasHTML() {
+        return (
+            `<div id="newBoard">
+                <div onClick="board.innerHTML = loQueHabiaBoard"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>`
+        )
 }

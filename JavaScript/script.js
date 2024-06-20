@@ -190,21 +190,40 @@ function actualizarTodo() {
 
 
 function temaDependeDeHora(hour) {
-    if (hour < 9 && hour > 20) {
-        return
-    }   
+    if (hour < 9 || hour > 20) {
         solicitudCambioTheme()
+    }   
+        return
 
 }
 
 function consiguiendoLaHoraActual() {
     let date = new Date()
     let hours = date.getHours()
+    console.log(hours)
     temaDependeDeHora(hours)
 }
 
 consiguiendoLaHoraActual()
 
+function abreMas(lugar, elId) {
+    let cualBase
+    if (lugar === 'practica') {
+        cualBase = jsonDataPractice[elId]
+    }else if (lugar === 'certificados') {
+        cualBase = jsonDataCertifications[elId]
+    } else {
+        cualBase = jsonDataWork[elId]
+    }
+    cambiandoElBoard(cualBase)
+}
 
+let board = document.querySelector("#board")
+let loQueHabiaBoard
+function cambiandoElBoard(placeholder) {
+    loQueHabiaBoard = board.innerHTML
+
+    board.innerHTML = verMasHTML()
+}
 
 
