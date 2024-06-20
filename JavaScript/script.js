@@ -8,6 +8,14 @@ let acabaAbrirPagina = true
 let seAbrioMasInformación = false
 let panelConfiguracion = false
 
+let date = new Date()
+let hours = date.getHours()
+
+(hours > 20)? esBlanco = false : esBlanco = true
+
+console.log(hours)
+
+
 function mensajeBienvenida(bool) {
     bool? encenderMensajedeBienvenida() : null
     acabaAbrirPagina = false
