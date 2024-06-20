@@ -8,16 +8,10 @@ let acabaAbrirPagina = true
 let seAbrioMasInformación = false
 let panelConfiguracion = false
 
-let date = new Date()
-let hours = date.getHours()
-
-(hours > 20)? esBlanco = false : esBlanco = true
-
-console.log(hours)
 
 
-function mensajeBienvenida(bool) {
-    bool? encenderMensajedeBienvenida() : null
+function mensajeBienvenida() {
+    encenderMensajedeBienvenida()
     acabaAbrirPagina = false
 }
 
@@ -99,11 +93,11 @@ function solicitudCambioTheme() {
 function solicitudCambioLenguaje() {
     if(english) {
         english = false
-        cambioDeLenguaje()
     }else {
         english = true
-        cambioDeLenguaje()
     }
+    cambioDeLenguaje()
+    elCuadrito()
 }
 
 function queJsonUsarParaLenguaje() {
@@ -164,12 +158,24 @@ function abrePanel() {
 
 }
 
+let noRepeat = 0;
+function numeroRandomParaCuadrito() {
+    nume = english? 12 : 8;
+    let numRandom = Math.floor(Math.random() * nume) + 1;
+    while(noRepeat === numRandom) {
+        numRandom = Math.floor(Math.random() * nume) + 1
+    }
+    noRepeat = numRandom
+    return numRandom
+}
 
+function saberElPathDeCuadrito() {
+    return  `./Img/${regresaStringDependiendoTheme()}/${(english)? "ingles" : "español"}/${numeroRandomParaCuadrito()}.png`
+}
 
-
-
-
-
+function elCuadrito() {
+    document.querySelector("#phrase").setAttribute("src", saberElPathDeCuadrito())
+}
 
 
 
@@ -179,15 +185,25 @@ function actualizarTodo() {
     seVeFoto? ponerFotoPerfil() : null
     actualizandoElBackground()
     actualizandoTexto()
+    elCuadrito()
 }
 
 
+function temaDependeDeHora(hour) {
+    if (hour < 9 && hour > 20) {
+        return
+    }   
+        solicitudCambioTheme()
 
+}
 
+function consiguiendoLaHoraActual() {
+    let date = new Date()
+    let hours = date.getHours()
+    temaDependeDeHora(hours)
+}
 
-
-
-
+consiguiendoLaHoraActual()
 
 
 
