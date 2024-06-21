@@ -5,9 +5,7 @@
         "title": "La bandera de Laos",
         "img": "./Img/cards/Practice/1practice.png",
         "palabras": "Mi primer mini practica de CSS",
-        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/1%20Basic%20Proyect%20CSS/index.html",
-        "pagina": "https://ruxcastillo.github.io/Practice-Courses/1%20Frontend/1%20Basic%20Proyect%20CSS/index.html",
-        "verMas": "https://search.brave.com/search?q=google&source=desktop"
+        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/1%20Basic%20Proyect%20CSS/index.html"
 
     },
     {
@@ -16,9 +14,7 @@
         "title": "Practicando float en CSS",
         "img": "./Img/cards/Practice/2practice.png",
         "palabras": "Practicando usando float y clear de CSS",
-        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/2%20Practice%20Float%20CSS/index.html",
-        "pagina": "https://ruxcastillo.github.io/Practice-Courses/1%20Frontend/2%20Practice%20Float%20CSS/",
-        "verMas": "https://search.brave.com/search?q=google&source=desktop"
+        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/2%20Practice%20Float%20CSS/index.html"
 
     },
     {
@@ -27,9 +23,7 @@
         "title": "Grid y @media",
         "img": "./Img/cards/Practice/3practice.png",
         "palabras": "Aqui practique grid y @media en un diseño sencillo.",
-        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/3%20Pratice%20Grid%20and%20Media/index.html",
-        "pagina": "https://ruxcastillo.github.io/Practice-Courses/1%20Frontend/3%20Pratice%20Grid%20and%20Media/index.html",
-        "verMas": "https://search.brave.com/search?q=google&source=desktop"
+        "codeButton": "https://github.com/RuxCastillo/Practice-Courses/blob/main/1%20Frontend/3%20Pratice%20Grid%20and%20Media/index.html"
 
     }
 ]

@@ -63,10 +63,11 @@ function pushTarjeta(arr) {
                 tarjetasWorkPractice = (
                     `<div class="card">
                         <div class="tarjetaPractice">
-                            <img id="PracticeImg" src="${arr[i].img}" />
+                            <a href="${arr[i].codeButton}" target="_blank">
+                                <img id="PracticeImg" src="${arr[i].img}" />
+                            </a>
                             <h2 class="h2Practice">${arr[i].title}</h2>
                             <p class="pPractice">${arr[i].palabras}</p>
-                            <button class="code-buttonPractice"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
                         </div>
                     </div>`)
                 resultado += tarjetasWorkPractice

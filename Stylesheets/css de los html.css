@@ -120,7 +120,7 @@
     margin: 2.5% auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr .8fr 2fr .8fr;
+    grid-template-rows: 5fr 1.5fr 1.5fr;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -137,9 +137,21 @@
     border-radius: 15px;
 }
 
+.tarjetaPractice a {
+    width: 90%;
+    min-height: 95%;
+    max-height: 95%;
+    margin: 0 auto;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tarjetaPractice h2 {
     grid-row: 2 / 3;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 p.pPractice {
@@ -147,16 +159,9 @@ p.pPractice {
     width: 90%;
     height: 90%;
     font-size: 1.6rem;
+    text-align: center;
 }
 
-.tarjetaPractice .code-button {
-    grid-row: 4 / 5;
-}
-
-.tarjetaPractice button {
-    width: 70%;
-    height: 100%;
-}
 
 /* aqui va el css de la tarjetas verMas */
 

@@ -190,7 +190,7 @@ function actualizarTodo() {
 
 
 function temaDependeDeHora(hour) {
-    if (hour < 9 || hour > 20) {
+    if (hour < 9 || hour >= 20) {
         solicitudCambioTheme()
     }   
         return
