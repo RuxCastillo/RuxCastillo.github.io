@@ -7,8 +7,9 @@ let english = true
 let acabaAbrirPagina = true
 let seAbrioMasInformación = false
 let panelConfiguracion = false
+let modoCel = false
 
-
+console.log(window.innerHeight)
 
 function mensajeBienvenida() {
     encenderMensajedeBienvenida()
@@ -51,15 +52,28 @@ function ponerFotoPerfil() {
 }
 
 function verAboutMe() {
-    seVeFoto = false
-    document.querySelector("#profile").innerHTML = htmlAboutMe()
-    document.querySelector(".regresarBoton").addEventListener("click", goBack)
+    if(modoCel) {
+        seVeFoto = false
+        document.querySelector("#board").innerHTML = htmlAboutMe()
+        document.querySelector(".regresarBoton").addEventListener("click", goBack)
+        
+    } else {
+        seVeFoto = false
+        document.querySelector("#profile").innerHTML = htmlAboutMe()
+        document.querySelector(".regresarBoton").addEventListener("click", goBack)
+    }
 }
 
 function goBack() {
-    seVeFoto = true
-    document.querySelector("#profile").innerHTML = originalHTMLProfileCard
-    actualizarTodo()
+    if(modoCel) {
+        seVeFoto = true
+        document.querySelector("#board").innerHTML = originalHTMLProfileCard
+        actualizarTodo()
+    } else {
+        seVeFoto = true
+        document.querySelector("#profile").innerHTML = originalHTMLProfileCard
+        actualizarTodo()
+    }
 }
 
 function generarTarjeta(arr) {
@@ -182,10 +196,37 @@ function elCuadrito() {
 function actualizarTodo() {
     cambioDeLenguaje()
     agarrandoTodosIconos()
-    seVeFoto? ponerFotoPerfil() : null
     actualizandoElBackground()
+    seVeFoto? ponerFotoPerfil() : null
+    seVeFoto? elCuadrito() : null
     actualizandoTexto()
-    elCuadrito()
+    if(window.innerWidth < 781) {
+        modoCel = true
+        console.log("hola")
+        esconderPerfil()
+    } 
+}
+
+let guardadoPerfil = document.querySelector("#profile").innerHTML
+function esconderPerfil() {
+    seVeFoto = false
+    document.querySelector("#profile").style.display = "none"
+    document.querySelector("#main").innerHTML += (
+        `<div id="abrirPerfil" onclick="seeProfile()">
+            <div><img src="../Img/flecha.png" /></div>
+            <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
+            <div><img src="./Img/flecha.png" /></div>
+        </div>`
+    )
+}
+
+function seeProfile() {
+    seVeFoto = true
+    modoCel = true
+    console.log("abrir perfil")
+    document.querySelector("#board").innerHTML = ""
+    document.querySelector("#board").innerHTML = guardadoPerfil
+    actualizarTodo()
 }
 
 
