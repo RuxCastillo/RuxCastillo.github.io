@@ -11,8 +11,6 @@ let modoCel
 let barraLateral = false
 let perfilAbiertoModoCel = false
 
-console.log(window.innerHeight)
-
 
 function mensajeBienvenida() {
     encenderMensajedeBienvenida()
@@ -81,6 +79,8 @@ function goBack() {
 
 function generarTarjeta(arr) {
     document.querySelector("#board").innerHTML = pushTarjeta(arr);
+    barraLateral = false
+    actualizarTodo()
 }
 //actualizando el background
 function actualizandoElBackground() {
@@ -204,14 +204,18 @@ function actualizarTodo() {
     seVeFoto? ponerFotoPerfil() : null
     seVeFoto? elCuadrito() : null
     loRelacionadoConCel()
+    console.log(barraLateral, modoCel, perfilAbiertoModoCel)
+    console.log("actualizartodo")
 }
 
 function estamosenModoCel() {
     if(window.innerWidth < 781) {
         modoCel = true
+        
     } else {
         modoCel = false
     }
+    console.log("estamosModoCel")
 }
 
 function loRelacionadoConCel() {
@@ -222,19 +226,21 @@ function loRelacionadoConCel() {
     }else {
         quitarLoDeLaDerecha();
     }
-
+    console.log("lorelacionadoconcel")
 }
 
 function ponerLoDeLaDerecha() {
         if(!barraLateral) {
             esconderPerfil()
         }
+        console.log("ponerlodeladerecha")
 }
 
 function quitarLoDeLaDerecha() {
     console.log("quitarlodeladerecha")
     document.querySelector("#profile").style.display = "grid"
     if(barraLateral) {
+        barraLateral = false
         document.querySelector("#main").innerHTMl -= (
             `<div id="abrirPerfil" onclick="seeProfile()">
                 <div><img src="../Img/flecha.png" /></div>
@@ -243,8 +249,6 @@ function quitarLoDeLaDerecha() {
             </div>`
         )
     }
-
-
 }
 
 let guardadoPerfil = document.querySelector("#profile").innerHTML
@@ -260,8 +264,9 @@ function esconderPerfil() {
                 <div><img src="./Img/flecha.png" /></div>
             </div>`
     )
-} else {
 }
+
+console.log("esconderperfil")
 
 }
 
@@ -281,6 +286,7 @@ function seeProfile() {
         barraLateral = false
         perfilAbiertoModoCel = false
         esconderPerfil()
+        console.log("esconderperfil")
     }
 }
 
@@ -322,4 +328,18 @@ function cambiandoElBoard(placeholder) {
     board.innerHTML = verMasHTML()
 }
 
+let elwidthactual = window.innerWidth
+setInterval(mifuncion, 1000)
+function mifuncion() {
+    if(window.innerWidth === elwidthactual) {
 
+    }else {
+        window.addEventListener("resize", actualizarTodo())
+        elwidthactual = window.innerWidth
+        if(elwidthactual > 782) {
+        document.querySelector("#board").innerHTML = ""
+        }else {
+            seeProfile()
+        }
+}
+}

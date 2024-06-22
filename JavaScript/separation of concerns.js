@@ -25,6 +25,7 @@ const originalHTMLProfileCard = document.querySelector("#profile").innerHTML
 function pushTarjeta(arr) {
     let resultado = "";
     let tarjetasWorkPractice = "";
+    perfilAbiertoModoCel = false
 
     if (arr === jsonDataCertifications) {
         for (let i = arr.length -1; i >= 0; i--) {
@@ -72,10 +73,9 @@ function pushTarjeta(arr) {
                     </div>`)
                 resultado += tarjetasWorkPractice
             }
-    }
-
-    return resultado
 } 
+    return resultado
+}
 
 function verMasHTML() {
         return (
