@@ -212,7 +212,6 @@ function seeProfile() {
     if(!estadoPagina.perfilAbiertoModoCel) {
         estadoPagina.perfilAbiertoModoCel = true 
         estadoPagina.modoCel = true
-        console.log("abrir perfil")
         document.querySelector("#board").innerHTML = ""
         document.querySelector("#board").innerHTML = guardadoPerfil
         estadoPagina.barraLateral = false
@@ -235,7 +234,6 @@ function consiguiendoLaHoraActual() {
 }
 function temaDependeDeHora(hour) {
     estadoPagina.esBlanco = true
-    console.log(estadoPagina.esBlanco)
     if (hour < 9 || hour >= 20) {
         solicitudCambioTheme()
     }   
