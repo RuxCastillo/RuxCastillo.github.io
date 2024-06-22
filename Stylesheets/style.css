@@ -157,13 +157,13 @@ h3, p {
         height: 7vh;
     }
     .configuration {
-        max-width: 35px;
-        max-height: 35px;
+        max-width: 50px;
+        max-height: 50px;
     }
     #configuracion {
         max-width: 50px;
         max-height: 50px;
-    }
+    
     #html {
         margin: auto;
     }
@@ -200,12 +200,35 @@ h3, p {
         height: 7vh;
     }
     .configuration {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
     }
     #configuracion {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
+    }
+    #panelAbierto {
+        max-width: 35px;
+        padding: 0px;
+        height: 80px;
+        top: 60px
+    }
+     #moon {
+        padding-top: 5px;
+    }
+    #language {
+        padding-bottom: 0px;
+    }
+    #moon, #language {
+        max-width: 29px;
+        max-height: 29px;
+    }   
+    .divdiv {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30px;
     }
 }
 
@@ -232,24 +255,62 @@ h3, p {
         height: 8vh;
     }
     .configuration {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
     }
     #configuracion {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
+    }
+    #panelAbierto {
+        max-width: 35px;
+        padding: 0px;
+        height: 80px;
+        top: 60px
+    }
+     #moon {
+        padding-top: 5px;
+    }
+    #language {
+        padding-bottom: 0px;
+    }
+    #moon, #language {
+        max-width: 29px;
+        max-height: 29px;
+    }   
+    .divdiv {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30px;
     }
 }
 
 @media (max-width: 781px) {
     .configuration {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
     }
     #configuracion {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 35px;
+        max-height: 35px;
     }
+    #panelAbierto {
+        padding: 0px;
+        height: 80px;
+        top: 60px
+    }
+     #moon {
+        padding-top: 5px;
+    }
+    #language {
+        padding-bottom: 0px;
+    }
+    #moon, #language {
+        max-width: 30px;
+        max-height: 30px;
+    }   
     #projects {
         grid-template-columns: 1fr 1fr 1fr .5fr;
         grid-template-rows: 1fr .1fr;
@@ -257,16 +318,7 @@ h3, p {
     .vacio {
        display: none
     }
-    #moon {
-        padding-top: 5px;
-    }
-    #language {
-        padding-bottom: 0px;
-    }
-    #moon, #language {
-        max-width: 38px;
-        max-height: 38px;
-    }
+
     
     #phrase {
     position: fixed;
@@ -283,8 +335,8 @@ h3, p {
 
     .divdiv {
         margin: 0px auto;
-        height: 50px;
-        width: 50px;
+        height: 35px;
+        width: 35px;
     }
 
     /* .oldReddit, .white-black, .ing-esp {
@@ -445,4 +497,4 @@ h3, p {
 
         font-size: 1.7rem;
     }
-}
+}}
