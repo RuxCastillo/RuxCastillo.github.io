@@ -146,10 +146,14 @@ function actualizarTodo() {
      if(estadoPagina.modoCel) {
         estadoPagina.barraLateralExiste = false
         esconderPerfil()
-        
+        document.querySelector("#profile").style.display = "none"
+    } else {
+        obteniendoDatos()
+        document.querySelector("#profile").style.display = "grid"
+    }
+
     } 
  
-}
 
 function estamosenModoCel() {
     if(window.innerWidth < 781) {
@@ -165,7 +169,7 @@ function loRelacionadoConCel() {
     if(estadoPagina.modoCel) {
         ponerLoDeLaDerecha() 
     }else {
-        quitarLoDeLaDerecha();
+        //quitarLoDeLaDerecha();
     }
     console.log("lorelacionadoconcel")
 }
@@ -287,6 +291,7 @@ function iniciarProfile() {
     }
 
 }
+
 
 const Path = {
     deLosIconos: function(nameImage) {

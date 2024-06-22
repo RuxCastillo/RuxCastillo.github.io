@@ -177,7 +177,7 @@ h3, p {
         grid-template-columns: 2fr 1fr;
     }
     #projects {
-        grid-template-columns: 1fr 1fr 1fr .5fr;
+        grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
     }
     .vacio {
        display: none
@@ -242,7 +242,7 @@ h3, p {
         font-size: 1.7rem;
     }
     #projects {
-        grid-template-columns: 1fr 1fr 1fr .5fr;
+        grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
     }
     .vacio {
        display: none
