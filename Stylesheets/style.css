@@ -151,11 +151,22 @@ h3, p {
     }
     #phrase {
         position: fixed;
-        bottom: 20px;
-        left: 20px;
-        width: 8vw;
-        height: 11vh;
-}
+        bottom: 5px;
+        left: 5px;
+        width: 6vw;
+        height: 7vh;
+    }
+    .configuration {
+        max-width: 35px;
+        max-height: 35px;
+    }
+    #configuracion {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    #html {
+        margin: auto;
+    }
 }
 
 @media (max-width: 1300px) {
@@ -183,11 +194,19 @@ h3, p {
     }
     #phrase {
         position: fixed;
-        bottom: 20px;
-        left: 20px;
-        width: 9vw;
-        height: 12vh;
-}
+        bottom: 0px;
+        left: 0px;
+        width: 6vw;
+        height: 7vh;
+    }
+    .configuration {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    #configuracion {
+        max-width: 50px;
+        max-height: 50px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -196,7 +215,7 @@ h3, p {
         font-size: 1.7rem;
     }
     #main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
         font-size: 1.7rem;
     }
     #projects {
@@ -206,18 +225,30 @@ h3, p {
        display: none
     }
     #phrase {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 11vw;
-    height: 15vh;
-}
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 7vw;
+        height: 8vh;
+    }
+    .configuration {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    #configuracion {
+        max-width: 50px;
+        max-height: 50px;
+    }
 }
 
 @media (max-width: 781px) {
+    .configuration {
+        max-width: 50px;
+        max-height: 50px;
+    }
     #configuracion {
-        width: 120%;
-        height: 120%;
+        max-width: 50px;
+        max-height: 50px;
     }
     #projects {
         grid-template-columns: 1fr 1fr 1fr .5fr;
@@ -226,24 +257,23 @@ h3, p {
     .vacio {
        display: none
     }
-
-    div, h1, h2 {
-        font-family: Helvetica, sans-serif;
-        font-size: 1.7rem;
+    #moon {
+        padding-top: 5px;
     }
-
-    h3, p {
-        font-family: Georgia, serif;
-        font-weight: normal;
-        font-size: 1.7rem;
+    #language {
+        padding-bottom: 0px;
+    }
+    #moon, #language {
+        max-width: 38px;
+        max-height: 38px;
     }
     
     #phrase {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    width: 19vw;
-    height: 9vh;
+    width: 12vw;
+    height: 7vh;
 }
 
     #reddit, #moon, #language {
@@ -253,8 +283,8 @@ h3, p {
 
     .divdiv {
         margin: 0px auto;
-        height: 35px;
-        width: 35px;
+        height: 50px;
+        width: 50px;
     }
 
     /* .oldReddit, .white-black, .ing-esp {
@@ -283,6 +313,12 @@ h3, p {
         border-radius: 50%;
     }
 
+    #perfileImg {
+        margin: auto;
+        justify-self: center;
+        align-self: center;
+    }
+
     #info{
         width: 100%;
         height: 100%;
@@ -303,8 +339,7 @@ h3, p {
         grid-template-columns: 1fr;
         grid-template-rows: 55%;
         grid-auto-rows: 55%;
-        overflow: auto;
-        max-width: fit-content;
+        min-height: 90%;
     }
 
     #main {
@@ -313,6 +348,7 @@ h3, p {
         display: flex;
         flex-direction: column;
         margin: 0px;
+        max-width: 500px;
     }
 
     #body {
@@ -342,5 +378,71 @@ h3, p {
         font-size: 62.5%;
         width: 100%;
         height: 100%;
+    }
+    #abrirPerfil {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 25%;
+        right: 0px;
+        width: 30px;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+    }
+    #seeProfile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #miNombre {
+        writing-mode:vertical-rl;
+        color: black;
+        font-weight: bolder;
+        text-orientation: mixed;
+
+    }
+    #cambioProfile {
+        height: 80%;
+        width: 100%;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    
+    .regresarBoton {
+        width: 50%;
+        height: 7%;
+    }
+    
+    #losP {
+        padding: 5px;
+        height: 90%;
+        font-size: 2rem;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .aboutMeText1, .aboutMeText2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-family: Georgia, serif;
+        font-weight: normal;
+    }
+    div, h1, h2 {
+        font-family: Helvetica, sans-serif;
+        font-size: 1.7rem;
+    }
+
+    h3, p {
+
+        font-size: 1.7rem;
     }
 }

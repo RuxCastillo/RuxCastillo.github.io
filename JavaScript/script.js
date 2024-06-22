@@ -7,7 +7,9 @@ let english = true
 let acabaAbrirPagina = true
 let seAbrioMasInformación = false
 let panelConfiguracion = false
-
+let modoCel 
+let barraLateral = false
+let perfilAbiertoModoCel = false
 
 
 function mensajeBienvenida() {
@@ -51,19 +53,34 @@ function ponerFotoPerfil() {
 }
 
 function verAboutMe() {
-    seVeFoto = false
-    document.querySelector("#profile").innerHTML = htmlAboutMe()
-    document.querySelector(".regresarBoton").addEventListener("click", goBack)
+    if(modoCel) {
+        seVeFoto = false
+        document.querySelector("#board").innerHTML = htmlAboutMe()
+        document.querySelector(".regresarBoton").addEventListener("click", goBack)
+        
+    } else {
+        seVeFoto = false
+        document.querySelector("#profile").innerHTML = htmlAboutMe()
+        document.querySelector(".regresarBoton").addEventListener("click", goBack)
+    }
 }
 
 function goBack() {
-    seVeFoto = true
-    document.querySelector("#profile").innerHTML = originalHTMLProfileCard
-    actualizarTodo()
+    if(modoCel) {
+        seVeFoto = true
+        document.querySelector("#board").innerHTML = originalHTMLProfileCard
+        actualizarTodo()
+    } else {
+        seVeFoto = true
+        document.querySelector("#profile").innerHTML = originalHTMLProfileCard
+        actualizarTodo()
+    }
 }
 
 function generarTarjeta(arr) {
     document.querySelector("#board").innerHTML = pushTarjeta(arr);
+    barraLateral = false
+    actualizarTodo()
 }
 //actualizando el background
 function actualizandoElBackground() {
@@ -180,12 +197,97 @@ function elCuadrito() {
 
 
 function actualizarTodo() {
+    actualizandoTexto()
     cambioDeLenguaje()
     agarrandoTodosIconos()
-    seVeFoto? ponerFotoPerfil() : null
     actualizandoElBackground()
-    actualizandoTexto()
-    elCuadrito()
+    seVeFoto? ponerFotoPerfil() : null
+    seVeFoto? elCuadrito() : null
+    loRelacionadoConCel()
+    console.log(barraLateral, modoCel, perfilAbiertoModoCel)
+    console.log("actualizartodo")
+}
+
+function estamosenModoCel() {
+    if(window.innerWidth < 781) {
+        modoCel = true
+        
+    } else {
+        modoCel = false
+    }
+    console.log("estamosModoCel")
+}
+
+function loRelacionadoConCel() {
+    estamosenModoCel()
+
+    if(modoCel) {
+        ponerLoDeLaDerecha() 
+    }else {
+        quitarLoDeLaDerecha();
+    }
+    console.log("lorelacionadoconcel")
+}
+
+function ponerLoDeLaDerecha() {
+        if(!barraLateral) {
+            esconderPerfil()
+        }
+        console.log("ponerlodeladerecha")
+}
+
+function quitarLoDeLaDerecha() {
+    console.log("quitarlodeladerecha")
+    document.querySelector("#profile").style.display = "grid"
+    if(barraLateral) {
+        barraLateral = false
+        document.querySelector("#main").innerHTMl -= (
+            `<div id="abrirPerfil" onclick="seeProfile()">
+                <div><img src="../Img/flecha.png" /></div>
+                <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
+                <div><img src="./Img/flecha.png" /></div>
+            </div>`
+        )
+    }
+}
+
+let guardadoPerfil = document.querySelector("#profile").innerHTML
+function esconderPerfil() {
+    if(!barraLateral) {
+        barraLateral = true
+        seVeFoto = false
+        document.querySelector("#profile").style.display = "none"
+        document.querySelector("#board").innerHTML += (
+            `<div id="abrirPerfil" onclick="seeProfile()">
+                <div><img src="../Img/flecha.png" /></div>
+                <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
+                <div><img src="./Img/flecha.png" /></div>
+            </div>`
+    )
+}
+
+console.log("esconderperfil")
+
+}
+
+function seeProfile() {
+    if(!perfilAbiertoModoCel) {
+        perfilAbiertoModoCel = true
+        seVeFoto = true
+        modoCel = true
+        loDeLaDerecha = true
+        console.log("abrir perfil")
+        document.querySelector("#board").innerHTML = ""
+        document.querySelector("#board").innerHTML = guardadoPerfil
+        barraLateral = false
+        actualizarTodo()
+    }else {
+        document.querySelector("#board").innerHTML = ""
+        barraLateral = false
+        perfilAbiertoModoCel = false
+        esconderPerfil()
+        console.log("esconderperfil")
+    }
 }
 
 
@@ -226,4 +328,18 @@ function cambiandoElBoard(placeholder) {
     board.innerHTML = verMasHTML()
 }
 
+let elwidthactual = window.innerWidth
+setInterval(mifuncion, 1000)
+function mifuncion() {
+    if(window.innerWidth === elwidthactual) {
 
+    }else {
+        window.addEventListener("resize", actualizarTodo())
+        elwidthactual = window.innerWidth
+        if(elwidthactual > 782) {
+        document.querySelector("#board").innerHTML = ""
+        }else {
+            seeProfile()
+        }
+}
+}
