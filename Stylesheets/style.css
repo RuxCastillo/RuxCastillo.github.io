@@ -161,8 +161,8 @@ h3, p {
         max-height: 35px;
     }
     #configuracion {
-        max-width: 35px;
-        max-height: 35px;
+        max-width: 50px;
+        max-height: 50px;
     }
     #html {
         margin: auto;
@@ -200,12 +200,12 @@ h3, p {
         height: 7vh;
     }
     .configuration {
-        max-width: 35px;
-        max-height: 35px;
+        max-width: 50px;
+        max-height: 50px;
     }
     #configuracion {
-        max-width: 35px;
-        max-height: 35px;
+        max-width: 50px;
+        max-height: 50px;
     }
 }
 
@@ -231,12 +231,24 @@ h3, p {
         width: 7vw;
         height: 8vh;
     }
+    .configuration {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    #configuracion {
+        max-width: 50px;
+        max-height: 50px;
+    }
 }
 
 @media (max-width: 781px) {
+    .configuration {
+        max-width: 50px;
+        max-height: 50px;
+    }
     #configuracion {
-        width: 120%;
-        height: 120%;
+        max-width: 50px;
+        max-height: 50px;
     }
     #projects {
         grid-template-columns: 1fr 1fr 1fr .5fr;
@@ -245,7 +257,16 @@ h3, p {
     .vacio {
        display: none
     }
-
+    #moon {
+        padding-top: 5px;
+    }
+    #language {
+        padding-bottom: 0px;
+    }
+    #moon, #language {
+        max-width: 38px;
+        max-height: 38px;
+    }
     
     #phrase {
     position: fixed;
@@ -262,8 +283,8 @@ h3, p {
 
     .divdiv {
         margin: 0px auto;
-        height: 35px;
-        width: 35px;
+        height: 50px;
+        width: 50px;
     }
 
     /* .oldReddit, .white-black, .ing-esp {

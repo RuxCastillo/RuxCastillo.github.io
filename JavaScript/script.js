@@ -7,9 +7,12 @@ let english = true
 let acabaAbrirPagina = true
 let seAbrioMasInformación = false
 let panelConfiguracion = false
-let modoCel = false
+let modoCel 
+let barraLateral = false
+let perfilAbiertoModoCel = false
 
 console.log(window.innerHeight)
+
 
 function mensajeBienvenida() {
     encenderMensajedeBienvenida()
@@ -194,39 +197,91 @@ function elCuadrito() {
 
 
 function actualizarTodo() {
+    actualizandoTexto()
     cambioDeLenguaje()
     agarrandoTodosIconos()
     actualizandoElBackground()
     seVeFoto? ponerFotoPerfil() : null
     seVeFoto? elCuadrito() : null
-    actualizandoTexto()
+    loRelacionadoConCel()
+}
+
+function estamosenModoCel() {
     if(window.innerWidth < 781) {
         modoCel = true
-        console.log("hola")
-        esconderPerfil()
-    } 
+    } else {
+        modoCel = false
+    }
+}
+
+function loRelacionadoConCel() {
+    estamosenModoCel()
+
+    if(modoCel) {
+        ponerLoDeLaDerecha() 
+    }else {
+        quitarLoDeLaDerecha();
+    }
+
+}
+
+function ponerLoDeLaDerecha() {
+        if(!barraLateral) {
+            esconderPerfil()
+        }
+}
+
+function quitarLoDeLaDerecha() {
+    console.log("quitarlodeladerecha")
+    document.querySelector("#profile").style.display = "grid"
+    if(barraLateral) {
+        document.querySelector("#main").innerHTMl -= (
+            `<div id="abrirPerfil" onclick="seeProfile()">
+                <div><img src="../Img/flecha.png" /></div>
+                <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
+                <div><img src="./Img/flecha.png" /></div>
+            </div>`
+        )
+    }
+
+
 }
 
 let guardadoPerfil = document.querySelector("#profile").innerHTML
 function esconderPerfil() {
-    seVeFoto = false
-    document.querySelector("#profile").style.display = "none"
-    document.querySelector("#main").innerHTML += (
-        `<div id="abrirPerfil" onclick="seeProfile()">
-            <div><img src="../Img/flecha.png" /></div>
-            <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
-            <div><img src="./Img/flecha.png" /></div>
-        </div>`
+    if(!barraLateral) {
+        barraLateral = true
+        seVeFoto = false
+        document.querySelector("#profile").style.display = "none"
+        document.querySelector("#board").innerHTML += (
+            `<div id="abrirPerfil" onclick="seeProfile()">
+                <div><img src="../Img/flecha.png" /></div>
+                <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
+                <div><img src="./Img/flecha.png" /></div>
+            </div>`
     )
+} else {
+}
+
 }
 
 function seeProfile() {
-    seVeFoto = true
-    modoCel = true
-    console.log("abrir perfil")
-    document.querySelector("#board").innerHTML = ""
-    document.querySelector("#board").innerHTML = guardadoPerfil
-    actualizarTodo()
+    if(!perfilAbiertoModoCel) {
+        perfilAbiertoModoCel = true
+        seVeFoto = true
+        modoCel = true
+        loDeLaDerecha = true
+        console.log("abrir perfil")
+        document.querySelector("#board").innerHTML = ""
+        document.querySelector("#board").innerHTML = guardadoPerfil
+        barraLateral = false
+        actualizarTodo()
+    }else {
+        document.querySelector("#board").innerHTML = ""
+        barraLateral = false
+        perfilAbiertoModoCel = false
+        esconderPerfil()
+    }
 }
 
 
