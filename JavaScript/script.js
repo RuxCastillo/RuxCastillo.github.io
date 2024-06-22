@@ -1,124 +1,98 @@
 //aqui van las variables globales para la toma de decisiones, estas se actualizan con el estado actual de la pagina
-let esBlanco = true
-let seVeFoto = true 
-//cuadrosActivo falso es lineas
-let cuadrosActivo = true
-let english = true
-let acabaAbrirPagina = true
-let seAbrioMasInformación = false
-let panelConfiguracion = false
-let modoCel 
-let barraLateral = false
-let perfilAbiertoModoCel = false
 
-
-function mensajeBienvenida() {
-    encenderMensajedeBienvenida()
-    acabaAbrirPagina = false
+const estadoPagina = {
+    esBlanco: "",
+    english: "",
+    modoCel: "",
+    barraLateralExiste: "",
+    perfilAbiertoModoCel: "",
 }
 
-function encenderMensajedeBienvenida() {
-    let board = document.querySelector("#board")
-    htmlDeBienvenida()
+obteniendoDatos()
+console.log(estadoPagina)
+
+function obteniendoDatos() {
+    consiguiendoLaHoraActual()
+    estadoPagina.english = true
+    estamosenModoCel()
+    estadoPagina.barraLateralExiste = (estadoPagina.modoCel)? true : false
+    estadoPagina.perfilAbiertoModoCel = (estadoPagina.modoCel)? true : false
 }
 
-function mostrarElMensajeDeBienvenidaDeNuevo() {
-    acabaAbrirPagina = true
-    mensajeBienvenida(acabaAbrirPagina)      
-}
+
 
 function regresaStringDependiendoTheme() {
-    return esBlanco? "blanco" : "negro"
+    return estadoPagina.esBlanco? "blanco" : "negro"
 }
 
 //estas tienen que ver con el mostrar los iconos en el color que deben
 function agarrandoTodosIconos() {
     let allIconsHTML = document.querySelectorAll(".cambio")
     for(const variable of allIconsHTML) {
-        const path = actualizarElPathDeLosIcons(variable.name)
+        const path = Path.deLosIconos(variable.name)
         variable.setAttribute("src", path)
     }
 }
 
-function actualizarElPathDeLosIcons(nameImage) {
-    return `./Img/${regresaStringDependiendoTheme()}/icons/${nameImage}.png`
-}
-//estas tienen que ver con la foto de perfil que sea la correcta y sobre el about me
-function actualizarElPathFotoPerfil() {
-    return `./Img/${regresaStringDependiendoTheme()}/Perfil.png`
-}
-
 function ponerFotoPerfil() {
-    document.querySelector("#perfileImg").setAttribute("src", actualizarElPathFotoPerfil())
+    document.querySelector("#perfileImg").setAttribute("src", Path.fotoDePerfil())
 }
 
 function verAboutMe() {
-    if(modoCel) {
-        seVeFoto = false
+    if(estadoPagina.modoCel) {
         document.querySelector("#board").innerHTML = htmlAboutMe()
         document.querySelector(".regresarBoton").addEventListener("click", goBack)
-        
     } else {
-        seVeFoto = false
         document.querySelector("#profile").innerHTML = htmlAboutMe()
         document.querySelector(".regresarBoton").addEventListener("click", goBack)
     }
 }
 
 function goBack() {
-    if(modoCel) {
-        seVeFoto = true
+    if(estadoPagina.modoCel) {
         document.querySelector("#board").innerHTML = originalHTMLProfileCard
-        actualizarTodo()
     } else {
-        seVeFoto = true
         document.querySelector("#profile").innerHTML = originalHTMLProfileCard
-        actualizarTodo()
     }
+    actualizarTodo()
 }
 
 function generarTarjeta(arr) {
     document.querySelector("#board").innerHTML = pushTarjeta(arr);
-    barraLateral = false
     actualizarTodo()
 }
+
 //actualizando el background
 function actualizandoElBackground() {
-    document.querySelector("#body").style.backgroundImage = actualizarElPathBackground()
+    document.querySelector("#body").style.backgroundImage = Path.background()
 }
-
-function actualizarElPathBackground() {
-    return `url(../Img/${regresaStringDependiendoTheme()}/Fondo.jpg)`
-}
-//aqui voy a empezar a poner las funciones que tienen que ver con el cambio de tema
 
 function actualizandoTexto() {
-    document.querySelector("#body").style.color = (esBlanco? "black" : "white")
+    document.querySelector("#body").style.color = (estadoPagina.esBlanco? "black" : "white")
 }
 
 function solicitudCambioTheme() {
-    if(esBlanco) {
-        esBlanco = false
-        actualizarTodo()
+    if(estadoPagina.esBlanco) {
+        estadoPagina.esBlanco = false
     } else {
-        esBlanco = true
-        actualizarTodo()
+        estadoPagina.esBlanco = true
     }
+    actualizarTodo()
 }
 
 //ahora vamos a cambiar el lenguaje
 function solicitudCambioLenguaje() {
-    if(english) {
-        english = false
+    if(estadoPagina.english) {
+        estadoPagina.english = false
     }else {
-        english = true
+        estadoPagina.english = true
     }
     cambioDeLenguaje()
     elCuadrito()
 }
 
 function queJsonUsarParaLenguaje() {
-    return english? jsonDataLanguage[0] : jsonDataLanguage[1]
+    return estadoPagina.english? enEs[0] : enEs[1]
 }
 
 function cambioDeLenguaje() {
@@ -134,50 +108,21 @@ function cambioDeLenguaje() {
 }
 
 function cambioIconoLenguaje() {
-    if(english) {
+    if(estadoPagina.english) {
         document.querySelector("#language").name = "en"
-        let change = actualizarElPathDeLosIcons(document.querySelector("#language").name)
+        let change = Path.deLosIconos(document.querySelector("#language").name)
         document.querySelector("#language").setAttribute("src", change)
     } else {
         document.querySelector("#language").name = "es"
-        let change = actualizarElPathDeLosIcons(document.querySelector("#language").name)
+        let change = Path.deLosIconos(document.querySelector("#language").name)
         document.querySelector("#language").setAttribute("src", change)
     }
 }
 
-function abrePanel() {
-    let configuracionImg = document.querySelector("#configuracion");
-    let panel = document.querySelector("#panelAbierto");
-    cambioIconoLenguaje()
-
-    if(!panelConfiguracion) {
-        let elColorF = (esBlanco?"rgba(32,32,33,255)" : "rgba(181,179,185,255)")
-        let elBack = (esBlanco?  "rgba(208,210,213,255)" : "rgba(32,32,33,255)")
-        console.log("clickeaste el div de configuracion")
-        panel.style.border = `2px solid ${elColorF}`
-        panel.style.borderTop = "none"
-        panel.style.display = "grid"
-        configuracionImg.style.border = `2px solid ${elColorF}`
-        configuracionImg.style.borderBottom = "none"
-        panelConfiguracion = true
-        panel.style.backgroundColor = `${elBack}`
-        configuracionImg.style.backgroundColor = `${elBack}`
-    } else {
-        cambioIconoLenguaje()
-        panelConfiguracion = false
-        panel.style.display = "none"
-        configuracionImg.style.border = "none"
-        panel.style.backgroundColor = ""
-        configuracionImg.style.backgroundColor = ""
-        
-
-    }
-
-}
 
 let noRepeat = 0;
 function numeroRandomParaCuadrito() {
-    nume = english? 12 : 8;
+    nume = estadoPagina.english? 12 : 8;
     let numRandom = Math.floor(Math.random() * nume) + 1;
     while(noRepeat === numRandom) {
         numRandom = Math.floor(Math.random() * nume) + 1
@@ -186,42 +131,38 @@ function numeroRandomParaCuadrito() {
     return numRandom
 }
 
-function saberElPathDeCuadrito() {
-    return  `./Img/${regresaStringDependiendoTheme()}/${(english)? "ingles" : "español"}/${numeroRandomParaCuadrito()}.png`
-}
-
 function elCuadrito() {
-    document.querySelector("#phrase").setAttribute("src", saberElPathDeCuadrito())
+    document.querySelector("#phrase").setAttribute("src", Path.delCuadrito())
 }
-
-
 
 function actualizarTodo() {
     actualizandoTexto()
     cambioDeLenguaje()
     agarrandoTodosIconos()
     actualizandoElBackground()
-    seVeFoto? ponerFotoPerfil() : null
-    seVeFoto? elCuadrito() : null
+    ponerFotoPerfil()
+    elCuadrito()
     loRelacionadoConCel()
-    console.log(barraLateral, modoCel, perfilAbiertoModoCel)
-    console.log("actualizartodo")
+     if(estadoPagina.modoCel) {
+        estadoPagina.barraLateralExiste = false
+        esconderPerfil()
+        
+    } 
+ 
 }
 
 function estamosenModoCel() {
     if(window.innerWidth < 781) {
-        modoCel = true
-        
+        estadoPagina.modoCel = true
     } else {
-        modoCel = false
+        estadoPagina.modoCel = false
     }
-    console.log("estamosModoCel")
 }
 
 function loRelacionadoConCel() {
     estamosenModoCel()
 
-    if(modoCel) {
+    if(estadoPagina.modoCel) {
         ponerLoDeLaDerecha() 
     }else {
         quitarLoDeLaDerecha();
@@ -230,87 +171,86 @@ function loRelacionadoConCel() {
 }
 
 function ponerLoDeLaDerecha() {
-        if(!barraLateral) {
+        if(!estadoPagina.barraLateral) {
             esconderPerfil()
         }
         console.log("ponerlodeladerecha")
 }
 
-function quitarLoDeLaDerecha() {
+/* function quitarLoDeLaDerecha() {
     console.log("quitarlodeladerecha")
+    if(estadoPagina.barraLateralExiste) {
     document.querySelector("#profile").style.display = "grid"
-    if(barraLateral) {
-        barraLateral = false
+        estadoPagina.barraLateralExiste = false
         document.querySelector("#main").innerHTMl -= (
             `<div id="abrirPerfil" onclick="seeProfile()">
                 <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
             </div>`
         )
     }
-}
+} */
 
 let guardadoPerfil = document.querySelector("#profile").innerHTML
 function esconderPerfil() {
-    if(!barraLateral) {
-        barraLateral = true
-        seVeFoto = false
+    if(!estadoPagina.barraLateralExiste) {
+        estadoPagina.barraLateralExiste = true
         document.querySelector("#profile").style.display = "none"
         document.querySelector("#board").innerHTML += (
             `<div id="abrirPerfil" onclick="seeProfile()">
                 <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
             </div>`
     )
-}
+} else {
+    
+    document.querySelector("#profile").style.display = "grid"
 console.log("esconderperfil")
+}
 
 }
 
 function seeProfile() {
-    if(!perfilAbiertoModoCel) {
-        perfilAbiertoModoCel = true
-        seVeFoto = true
-        modoCel = true
-        loDeLaDerecha = true
+    if(!estadoPagina.perfilAbiertoModoCel) {
+        estadoPagina.perfilAbiertoModoCel = true 
+        estadoPagina.modoCel = true
         console.log("abrir perfil")
         document.querySelector("#board").innerHTML = ""
         document.querySelector("#board").innerHTML = guardadoPerfil
-        barraLateral = false
+        estadoPagina.barraLateral = false
         actualizarTodo()
     }else {
         document.querySelector("#board").innerHTML = ""
-        barraLateral = false
-        perfilAbiertoModoCel = false
+        estadoPagina.barraLateral = false
+        estadoPagina.perfilAbiertoModoCel = true 
         esconderPerfil()
-        console.log("esconderperfil")
+        console.log("esconderperfil2")
     }
-}
+} 
 
 
-function temaDependeDeHora(hour) {
-    if (hour < 9 || hour >= 20) {
-        solicitudCambioTheme()
-    }   
-        return
 
-}
-
+//esto tiene que ver con el theme cuando se abre la pagina
 function consiguiendoLaHoraActual() {
     let date = new Date()
     let hours = date.getHours()
-    console.log(hours)
     temaDependeDeHora(hours)
 }
-
-consiguiendoLaHoraActual()
+function temaDependeDeHora(hour) {
+    estadoPagina.esBlanco = true
+    console.log(estadoPagina.esBlanco)
+    if (hour < 9 || hour >= 20) {
+        solicitudCambioTheme()
+    }   
+}
+//aqui cierra lo que tiene que ver con el theme cuando se cierra la pagina
 
 function abreMas(lugar, elId) {
     let cualBase
     if (lugar === 'practica') {
-        cualBase = jsonDataPractice[elId]
+        cualBase = practice[elId]
     }else if (lugar === 'certificados') {
-        cualBase = jsonDataCertifications[elId]
+        cualBase = certifications[elId]
     } else {
-        cualBase = jsonDataWork[elId]
+        cualBase = workProjects[elId]
     }
     cambiandoElBoard(cualBase)
 }
@@ -319,7 +259,6 @@ let board = document.querySelector("#board")
 let loQueHabiaBoard
 function cambiandoElBoard(placeholder) {
     loQueHabiaBoard = board.innerHTML
-
     board.innerHTML = verMasHTML()
 }
 
@@ -327,14 +266,13 @@ let elwidthactual = window.innerWidth
 setInterval(mifuncion, 1000)
 function mifuncion() {
     if(window.innerWidth === elwidthactual) {
-
     }else {
         window.addEventListener("resize", actualizarTodo())
         elwidthactual = window.innerWidth
         if(elwidthactual > 782) {
         document.querySelector("#board").innerHTML = ""
         }else {
-            perfilAbiertoModoCel = false
+            estadoPagina.perfilAbiertoModoCel = false
             seeProfile()
         }
 }
@@ -344,8 +282,46 @@ window.addEventListener("load", iniciarProfile)
 
 function iniciarProfile() {
     if(window.innerWidth < 782) {
-        perfilAbierto = false
+        estadoPagina.perfilAbiertoModoCel = false
         seeProfile()
     }
 
 }
+
+const Path = {
+    deLosIconos: function(nameImage) {
+        return `./Img/${regresaStringDependiendoTheme()}/icons/${nameImage}.png`
+    },
+    fotoDePerfil: function() {
+        return `./Img/${regresaStringDependiendoTheme()}/Perfil.png`
+    },
+    background: function() {
+        return `url(../Img/${regresaStringDependiendoTheme()}/Fondo.jpg)`
+    },
+    delCuadrito: function() {
+        return  `./Img/${regresaStringDependiendoTheme()}/${(estadoPagina.english)? "ingles" : "español"}/${numeroRandomParaCuadrito()}.png`
+    }
+
+}
+
+if(estadoPagina.modoCel) {
+    document.querySelector("#board").innerHTML = ""
+    seeProfile()    
+}else {
+    generarTarjeta(certifications)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,26 +7,21 @@
             <link rel="stylesheet" href="./Stylesheets/cuadrito.css" />
             <link rel="stylesheet" href="./Stylesheets/style.css" />
             <link rel="stylesheet" href="./Stylesheets/css de los html.css" />
-            <script src="./JavaScript/callJSONs.js"></script>
             <title>Portafolio</title>
         </head>
         <body id="body" onload="actualizarTodo()">
             <main id="main">
                 <div id="projects">
-                    <div class="works-projects separator" onclick="generarTarjeta(jsonDataWork)">Projects.</div>
-                    <div class="certifications separator" onclick="generarTarjeta(jsonDataCertifications)">Achivements.</div>
-                    <div class="practice separator" onclick="generarTarjeta(jsonDataPractice)">Practice.</div>
+                    <div class="works-projects separator" onclick="generarTarjeta(workProjects)">Projects.</div>
+                    <div class="certifications separator" onclick="generarTarjeta(certifications)">Achivements.</div>
+                    <div class="practice separator" onclick="generarTarjeta(practice)">Practice.</div>
                     <div class="vacio separator"></div>
-                    <div class="configuration" onclick="abrePanel()"><img id="configuracion" class="cambio" name="configuracion"/>
-                        <div id="panelAbierto">
-                            <div class="white-black" onclick="solicitudCambioTheme()"><div class="divdiv"><img id="moon" name="luna" class="cambio" /></div></div>
-                            <div class="ing-esp" onclick="solicitudCambioLenguaje()"><div class="divdiv"><img id="language" name="en" class="cambio" /></div></div>
-                        </div>
-                    </div>
+                    <div class="white-black" onclick="solicitudCambioTheme()"><div class="divdiv"><img id="moon" name="luna" class="cambio" /></div></div>
+                    <div class="ing-esp" onclick="solicitudCambioLenguaje()"><div class="divdiv"><img id="language" name="en" class="cambio" /></div></div>
                     <div id="board"></div>
                 </div>
                 <div id="profile">
-                    <img alt="perfil picture" id="perfileImg" name="Perfil" onclick="mostrarElMensajeDeBienvenidaDeNuevo()"/>
+                    <img alt="perfil picture" id="perfileImg" name="Perfil" />
                     <div id="info">
                         <h1>Rubén López C.</h1>
                         <h3 class="ingenieria">Engineering Student in Software Development.</h3>
@@ -47,6 +42,7 @@
                 </div>
                 <img id="phrase" class="phrase" name="cuadrito" />
             </main>
+            <script src="./JavaScript/objeto.js"></script>
             <script src="./JavaScript/separation of concerns.js"></script>
             <script src="./JavaScript/script.js"></script>
         </body>
