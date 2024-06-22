@@ -243,9 +243,7 @@ function quitarLoDeLaDerecha() {
         barraLateral = false
         document.querySelector("#main").innerHTMl -= (
             `<div id="abrirPerfil" onclick="seeProfile()">
-                <div><img src="../Img/flecha.png" /></div>
                 <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
-                <div><img src="./Img/flecha.png" /></div>
             </div>`
         )
     }
@@ -259,13 +257,10 @@ function esconderPerfil() {
         document.querySelector("#profile").style.display = "none"
         document.querySelector("#board").innerHTML += (
             `<div id="abrirPerfil" onclick="seeProfile()">
-                <div><img src="../Img/flecha.png" /></div>
                 <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
-                <div><img src="./Img/flecha.png" /></div>
             </div>`
     )
 }
-
 console.log("esconderperfil")
 
 }
@@ -339,7 +334,18 @@ function mifuncion() {
         if(elwidthactual > 782) {
         document.querySelector("#board").innerHTML = ""
         }else {
+            perfilAbiertoModoCel = false
             seeProfile()
         }
 }
+}
+
+window.addEventListener("load", iniciarProfile)
+
+function iniciarProfile() {
+    if(window.innerWidth < 782) {
+        perfilAbierto = false
+        seeProfile()
+    }
+
 }
