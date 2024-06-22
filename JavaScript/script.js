@@ -9,7 +9,6 @@ const estadoPagina = {
 }
 
 obteniendoDatos()
-console.log(estadoPagina)
 
 function obteniendoDatos() {
     consiguiendoLaHoraActual()
@@ -171,14 +170,12 @@ function loRelacionadoConCel() {
     }else {
         //quitarLoDeLaDerecha();
     }
-    console.log("lorelacionadoconcel")
 }
 
 function ponerLoDeLaDerecha() {
         if(!estadoPagina.barraLateral) {
             esconderPerfil()
         }
-        console.log("ponerlodeladerecha")
 }
 
 /* function quitarLoDeLaDerecha() {
@@ -207,7 +204,6 @@ function esconderPerfil() {
 } else {
     
     document.querySelector("#profile").style.display = "grid"
-console.log("esconderperfil")
 }
 
 }
@@ -226,7 +222,6 @@ function seeProfile() {
         estadoPagina.barraLateral = false
         estadoPagina.perfilAbiertoModoCel = true 
         esconderPerfil()
-        console.log("esconderperfil2")
     }
 } 
 
