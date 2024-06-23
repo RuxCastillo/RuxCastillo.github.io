@@ -233,14 +233,14 @@ function consiguiendoLaHoraActual() {
     temaDependeDeHora(hours)
 }
 function temaDependeDeHora(hour) {
-    estadoPagina.esBlanco = true
-    if (hour < 9 || hour >= 20) {
+    if (hour < 9 && hour >= 20) {
         solicitudCambioTheme()
-    }   
+    } else {
+    }
 }
 //aqui cierra lo que tiene que ver con el theme cuando se cierra la pagina
 
-function abreMas(lugar, elId) {
+/* function abreMas(lugar, elId) {
     let cualBase
     if (lugar === 'practica') {
         cualBase = practice[elId]
@@ -250,7 +250,7 @@ function abreMas(lugar, elId) {
         cualBase = workProjects[elId]
     }
     cambiandoElBoard(cualBase)
-}
+} */
 
 let board = document.querySelector("#board")
 let loQueHabiaBoard

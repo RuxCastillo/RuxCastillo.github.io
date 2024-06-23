@@ -20,8 +20,10 @@ function pushTarjeta(arr) {
         for (let i = arr.length -1; i >= 0; i--) {
             tarjetasWorkPractice = (
                 `<div class="card">
-                    <div class="certs" onClick="abreMas('certificados', ${arr[i].id})">
-                        <img class="certimg1" src="${arr[i].img}"/>
+                    <div class="certs" >
+                        <a href="${arr[i].link}" target="_blank">
+                            <img class="certimg1" src="${arr[i].img}"/>
+                        </a>
                         <h2 class="certh2">${arr[i].title}</h2>
                         <p class="certp">${arr[i].palabrasClave}</p>
                     </div>
@@ -40,8 +42,6 @@ function pushTarjeta(arr) {
                             </a>
                             <h2>${arr[i].title}</h2>
                             <p>${arr[i].palabras}</p>
-                            <button class="code-button"><a href="${arr[i].codeButton}" target="_blank">Ver Codigo</a></button>
-                            <button onClick="abreMas('practica', ${arr[i].id})" class="ver-mas">Ver mas</button>
                         </div>
                     </div>`)
                     resultado += tarjetasWorkPractice
