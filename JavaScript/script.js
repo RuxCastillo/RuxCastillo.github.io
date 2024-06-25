@@ -138,11 +138,7 @@ function elCuadrito() {
 }
 
 function actualizarTodo() {
-    actualizandoTexto()
-    agarrandoTodosIconos()
-    actualizandoElBackground()
-    ponerFotoPerfil()
-    elCuadrito()
+
     loRelacionadoConCel()
      if(estadoPagina.modoCel) {
         estadoPagina.barraLateralExiste = false
@@ -151,6 +147,11 @@ function actualizarTodo() {
     } else {
         document.querySelector("#profile").style.display = "grid"
     }
+    actualizandoTexto()
+    agarrandoTodosIconos()
+    actualizandoElBackground()
+    ponerFotoPerfil()
+    elCuadrito()    
 } 
 
 function estamosenModoCel() {
