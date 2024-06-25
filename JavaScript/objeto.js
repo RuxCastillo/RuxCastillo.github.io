@@ -256,7 +256,7 @@ const practiceEn = [
         "type": "practice",
         "id": "10",
         "title": "In this activity I learned how to use EJS",
-        "img": "./Img/cards/Practice/10practice.png",
+        "img": "./Img/cards/Practice/11practice.png",
         "palabras": "Using EJS I learned how to make html where we can use js to change them before rendering them and sending them to the client",
         "codeButton": "https://github.com/RuxCastillo/Practice-Courses/tree/main/2%20Backend/3%20Practice%20EJS"
     },
