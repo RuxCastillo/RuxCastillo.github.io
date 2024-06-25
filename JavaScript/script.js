@@ -233,8 +233,10 @@ function consiguiendoLaHoraActual() {
     temaDependeDeHora(hours)
 }
 function temaDependeDeHora(hour) {
-    if (hour < 9 && hour >= 20) {
+    if (hour < 9) {
+        if(hour > 20) {
         solicitudCambioTheme()
+        }
     } else {
     }
 }
