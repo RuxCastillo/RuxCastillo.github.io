@@ -81,13 +81,14 @@ function solicitudCambioTheme() {
 
 //ahora vamos a cambiar el lenguaje
 function solicitudCambioLenguaje() {
-    if(estadoPagina.english) {
+    if(estadoPagina.english === true) {
         estadoPagina.english = false
-    }else {
+    }else if (estadoPagina.english === false) {
         estadoPagina.english = true
     }
     cambioDeLenguaje()
     elCuadrito()
+    generarTarjeta(guradandoUltimoPush)
 }
 
 function queJsonUsarParaLenguaje() {
@@ -104,6 +105,8 @@ function cambioDeLenguaje() {
         }
     }
     cambioIconoLenguaje()
+    actualizarTodo()
+    
 }
 
 function cambioIconoLenguaje() {
@@ -136,7 +139,6 @@ function elCuadrito() {
 
 function actualizarTodo() {
     actualizandoTexto()
-    cambioDeLenguaje()
     agarrandoTodosIconos()
     actualizandoElBackground()
     ponerFotoPerfil()
@@ -147,12 +149,9 @@ function actualizarTodo() {
         esconderPerfil()
         document.querySelector("#profile").style.display = "none"
     } else {
-        obteniendoDatos()
         document.querySelector("#profile").style.display = "grid"
     }
-
-    } 
- 
+} 
 
 function estamosenModoCel() {
     if(window.innerWidth < 781) {

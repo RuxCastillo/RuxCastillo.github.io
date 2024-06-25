@@ -12,11 +12,15 @@ function htmlAboutMe() {
 
 const originalHTMLProfileCard = document.querySelector("#profile").innerHTML
 
+let guradandoUltimoPush
 function pushTarjeta(arr) {
     let resultado = "";
     let tarjetasWorkPractice = "";
+    guradandoUltimoPush = arr
+
 
     if (arr === certifications) {
+        (estadoPagina.english)? arr = certificationsEn : ""
         for (let i = arr.length -1; i >= 0; i--) {
             tarjetasWorkPractice = (
                 `<div class="card">
@@ -33,6 +37,7 @@ function pushTarjeta(arr) {
         }
 
         }else if (arr === workProjects) {
+        (estadoPagina.english)? arr = workProjectsEn : null
             for (let i = arr.length -1; i >= 0; i--) {
                 tarjetasWorkPractice = (
                     `<div class="card">
@@ -47,6 +52,7 @@ function pushTarjeta(arr) {
                     resultado += tarjetasWorkPractice
             }
         } else {
+        (estadoPagina.english)? arr = practiceEn : null
 
             for (let i = arr.length - 1; i >= 0; i--) {
 
