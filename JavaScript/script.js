@@ -11,7 +11,7 @@ const estadoPagina = {
 obteniendoDatos()
 
 function obteniendoDatos() {
-    consiguiendoLaHoraActual()
+    estadoPagina.esBlanco = true
     estadoPagina.english = true
     estamosenModoCel()
     estadoPagina.barraLateralExiste = (estadoPagina.modoCel)? true : false
