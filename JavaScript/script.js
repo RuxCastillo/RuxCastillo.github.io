@@ -1,30 +1,85 @@
-//aqui van las variables globales para la toma de decisiones, estas se actualizan con el estado actual de la pagina
+    class EstadoActualPagina {
+        constructor(isWhite, isEng, isPc, isPictureDisplay, callback) {
+            this.isWhite = isWhite;
+            this.isEng = isEng;
+            this.isPc = isPc;
+            this.isPictureDisplay = isPictureDisplay;
+            this.notificationTheme = callback.notificationTheme;
+            this.notificationDevice = callback.notificationDevice;
+            this.notificationLang = callback.notificationLang;
+        }
+        themeChange() {
+            this.isWhite = !this.isWhite;
+            this.notificationTheme();
+        }
+        langChange() {
+            this.isEng = !this.isEng;
+            this.notificationLang();
+        }
+        deviceChange() {
+            this.isPc = !this.isPc;
+            this.notificationDevice();
+        }
+    }    
 
-const estadoPagina = {
-    esBlanco: "",
-    english: "",
-    modoCel: "",
-    barraLateralExiste: "",
-    perfilAbiertoModoCel: "",
-}
+    let theme = true;
+    function firstTheme() {
+        let date = new Date()
+        let hour = date.getHours()
+        if(hour > 20 || hour < 11) {
+            theme = false; 
+        } 
+    }
 
-obteniendoDatos()
+    let device = true;
+    function firstWidth() {
+        if(window.innerWidth < 782) {
+            device = false;
+        }
+    } 
 
-function obteniendoDatos() {
-    estadoPagina.esBlanco = true
-    estadoPagina.english = true
+
+    firstTheme();
+    firstWidth();
+    const pagina = new EstadoActualPagina(theme, true, device, true, {
+    notificationTheme() {
+        console.log("ha cambiado el theme")
+    },
+    notificationDevice() {
+        console.log("ha cambiado el dispositivo")
+    },
+    notificationLang() {
+        console.log("ha cambiado el lenguaje")
+    }
+    })
+    console.log(pagina);
+
+
+
+
+
+
+
+
+
+
+
+    const estadoPagina = {
+        esBlanco: true,
+        english: true,
+        modoCel: "",
+        barraLateralExiste: "",
+        perfilAbiertoModoCel: "",
+    }
+
     estamosenModoCel()
     estadoPagina.barraLateralExiste = (estadoPagina.modoCel)? true : false
     estadoPagina.perfilAbiertoModoCel = (estadoPagina.modoCel)? true : false
-}
 
+    function regresaStringDependiendoTheme() {
+        return estadoPagina.esBlanco? "blanco" : "negro"
+    }
 
-
-function regresaStringDependiendoTheme() {
-    return estadoPagina.esBlanco? "blanco" : "negro"
-}
-
-//estas tienen que ver con el mostrar los iconos en el color que deben
 function agarrandoTodosIconos() {
     let allIconsHTML = document.querySelectorAll(".cambio")
     for(const variable of allIconsHTML) {
@@ -40,11 +95,10 @@ function ponerFotoPerfil() {
 function verAboutMe() {
     if(estadoPagina.modoCel) {
         document.querySelector("#board").innerHTML = htmlAboutMe()
-        document.querySelector(".regresarBoton").addEventListener("click", goBack)
     } else {
         document.querySelector("#profile").innerHTML = htmlAboutMe()
-        document.querySelector(".regresarBoton").addEventListener("click", goBack)
     }
+    document.querySelector(".regresarBoton").addEventListener("click", goBack)
 }
 
 function goBack() {
@@ -121,7 +175,6 @@ function cambioIconoLenguaje() {
     }
 }
 
-
 let noRepeat = 0;
 function numeroRandomParaCuadrito() {
     nume = estadoPagina.english? 12 : 8;
@@ -178,19 +231,6 @@ function ponerLoDeLaDerecha() {
         }
 }
 
-/* function quitarLoDeLaDerecha() {
-    console.log("quitarlodeladerecha")
-    if(estadoPagina.barraLateralExiste) {
-    document.querySelector("#profile").style.display = "grid"
-        estadoPagina.barraLateralExiste = false
-        document.querySelector("#main").innerHTMl -= (
-            `<div id="abrirPerfil" onclick="seeProfile()">
-                <div id="seeProfile"><h3 id="miNombre">Rubén López C.</h3></div>
-            </div>`
-        )
-    }
-} */
-
 let guardadoPerfil = document.querySelector("#profile").innerHTML
 function esconderPerfil() {
     if(!estadoPagina.barraLateralExiste) {
@@ -202,10 +242,8 @@ function esconderPerfil() {
             </div>`
     )
 } else {
-    
     document.querySelector("#profile").style.display = "grid"
-}
-
+    }
 }
 
 function seeProfile() {
@@ -242,18 +280,6 @@ function temaDependeDeHora(hour) {
 }
 //aqui cierra lo que tiene que ver con el theme cuando se cierra la pagina
 
-/* function abreMas(lugar, elId) {
-    let cualBase
-    if (lugar === 'practica') {
-        cualBase = practice[elId]
-    }else if (lugar === 'certificados') {
-        cualBase = certifications[elId]
-    } else {
-        cualBase = workProjects[elId]
-    }
-    cambiandoElBoard(cualBase)
-} */
-
 let board = document.querySelector("#board")
 let loQueHabiaBoard
 function cambiandoElBoard(placeholder) {
@@ -286,7 +312,6 @@ function iniciarProfile() {
     }
 
 }
-
 
 const Path = {
     deLosIconos: function(nameImage) {
