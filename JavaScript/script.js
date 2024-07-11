@@ -33,7 +33,7 @@
 
     let device = true;
     function firstWidth() {
-        if(window.innerWidth < 782) {
+        if(window.innerWidth < 781) {
             device = false;
         }
     } 
@@ -53,6 +53,21 @@
     }
     })
     console.log(pagina);
+
+    function changeTheme() {
+        let colorNow = (pagina.isWhite)? "blanco" : "negro";
+        let langNow = (pagina.isEng)? "ingles" : "español";
+
+    }
+
+    document.querySelector(".ing-esp").addEventListener("click", solicitudLang);
+    document.querySelector("white-black").addEventListener("click", solicitudTheme);
+
+
+
+
+
+
 
 
 
@@ -206,15 +221,6 @@ function actualizarTodo() {
     ponerFotoPerfil()
     elCuadrito()    
 } 
-
-function estamosenModoCel() {
-    if(window.innerWidth < 781) {
-        estadoPagina.modoCel = true
-    } else {
-        estadoPagina.modoCel = false
-    }
-}
-
 function loRelacionadoConCel() {
     estamosenModoCel()
 
@@ -249,35 +255,16 @@ function esconderPerfil() {
 function seeProfile() {
     if(!estadoPagina.perfilAbiertoModoCel) {
         estadoPagina.perfilAbiertoModoCel = true 
-        estadoPagina.modoCel = true
         document.querySelector("#board").innerHTML = ""
         document.querySelector("#board").innerHTML = guardadoPerfil
         estadoPagina.barraLateral = false
         actualizarTodo()
     }else {
         document.querySelector("#board").innerHTML = ""
-        estadoPagina.barraLateral = false
-        estadoPagina.perfilAbiertoModoCel = true 
         esconderPerfil()
     }
 } 
 
-
-
-//esto tiene que ver con el theme cuando se abre la pagina
-function consiguiendoLaHoraActual() {
-    let date = new Date()
-    let hours = date.getHours()
-    temaDependeDeHora(hours)
-}
-function temaDependeDeHora(hour) {
-    if (hour < 9) {
-        if(hour > 20) {
-        solicitudCambioTheme()
-        }
-    } else {
-    }
-}
 //aqui cierra lo que tiene que ver con el theme cuando se cierra la pagina
 
 let board = document.querySelector("#board")
@@ -304,14 +291,6 @@ function mifuncion() {
 }
 
 window.addEventListener("load", iniciarProfile)
-
-function iniciarProfile() {
-    if(window.innerWidth < 782) {
-        estadoPagina.perfilAbiertoModoCel = false
-        seeProfile()
-    }
-
-}
 
 const Path = {
     deLosIconos: function(nameImage) {

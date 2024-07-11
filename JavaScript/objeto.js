@@ -13,11 +13,9 @@ const enEs = [
     {
     "certifications": "Logros.",
     "practice": "Practica.",
-    "aboutMe": "Acerca de mí.",
     "ingenieria": "Estudiante de Ingeniería en Desarrollo de Software.",
     "abajoIngenieria": "Desarrollador Full-Stack enfocado en Front-End",
-    "aboutMeText1": "Disfruto mucho de aprender y constantes desafíos por eso me sumergí en el mundo de la programación, dentro de este me estoy enfocando en el desarrollo front end pero también estoy adquiriendo conocimientos del backend.HTML, CSS, Flexbox y Grid, JavaScript, React, SQL, PostgreSQL, Git, GitHub, DSA (estructura de datos y algoritmos) son mis herramientas de trabajo para el desarrollo web, me encanta el cómo todo es tan exacto a la hora que escribimos código. Actualmente estoy estudiante la ingeniería y además estudio mucho por mi cuenta desarrollándome en este campo para estar en constante mejora todos los días." ,
-    "aboutMeText2": "Además, me gusta colaborar con otras personas y considera que aprender de otros es de las mejores formas en que uno puede aprender cosas nuevas y además retener la información, de los compañeros se pueden aprender cosas útiles en el día a día que no se mencionan en los libros. Un equipo de trabajo siempre podrá llegar más lejos que una sola persona trabajando por su cuenta, mi objetivo ahora es trabajar en proyectos grandes que resuelvan problemas de nuestra sociedad y generar impacto en el bienestar de las personas.",
+    "aboutMeText1": "Tengo gusto por aprender cosas nuevas todo el tiempo, así como los desafios constantes por eso me decidi por ser programador. Considero que de los compañeros se pueden aprender cosas útiles en el día a día que nose mencionan en los libros. Un equipo siempre podrá llegar más lejos que una sola persona por su cuenta. Mi objetivo ahora es trabajar en proyectos grandes que me permitan aportar para generar impacto en el bienestar de la sociedad en general",
     "works-projects": "Proyectos."
     }
 ]
