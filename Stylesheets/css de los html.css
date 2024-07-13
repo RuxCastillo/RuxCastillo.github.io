@@ -120,7 +120,7 @@
     margin: 2.5% auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1.5fr 1.5fr;
+    grid-template-rows: 3fr .5fr .5fr;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -135,6 +135,7 @@
     margin: 0 auto;
     grid-row: 1 / 2;
     border-radius: 15px;
+    align-self: end;
 }
 
 .tarjetaPractice a {
