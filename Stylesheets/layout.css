@@ -1,0 +1,70 @@
+:root {
+    --back-c: (burlywood);
+    --text-c: (black);
+    --articles-columns: (1fr 1fr);
+    --articles-rows: (.25fr .75fr);
+    --section-columns: (1fr 1fr);
+    --section-rows: (1fr);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: burlywood;
+    height: 100vh;
+    width: 100vw;
+    max-width: 1980px;
+    max-height: 1080px;
+    min-width: 700px;
+}
+
+main {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: var(--articles-columns);
+    grid-template-rows: var(--articles-rows);
+    border: 2px solid black;
+}
+
+header, ul {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    flex-basis: 25%;
+    height: 100%;
+}
+
+section {
+    grid-column: 1/1;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: var(--section-columns);
+    grid-template-rows: var(--section-rows);
+}
+
+#settings {
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
