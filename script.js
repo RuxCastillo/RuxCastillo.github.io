@@ -1,4 +1,4 @@
-const pagina = new Observer(true, false, false, "About Me", {
+const pagina = new Observer(true, false, false, "ABOUT ME", {
     isDark(bool) {
         console.log("cambio a " + bool + " el theme")
     },
@@ -24,30 +24,31 @@ variableCSS = (vab, val) => {return document.documentElement.style.setProperty(v
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
+aboutMeSection()
 
 function aboutMeSection() {
     variableCSS("--section-columns", "1fr .6fr");
     variableCSS("--section-rows", "1fr");
-    section.innerHTML = allSections("aboutMe");
+    section.innerHTML = htmlAboutMe();
 }
 
 function knowledgeSection() {
     variableCSS("--section-columns", "1fr")
     variableCSS("--section-rows", "35%")
     variableCSS("--section-auto-rows", "35%")
-    section.innerHTML = allSections("knowledge");
+    section.innerHTML = htmlKnow();
 }
 
 function proyectSection() {
     variableCSS("--section-columns", "1fr 1fr");
     variableCSS("--section-rows", "1fr");
-    section.innerHTML = allSections("proyects");
+    section.innerHTML = htmlpow();
 }
 
 function practiceSection() {
     variableCSS("--section-columns","repeat(5, 1fr)");
     variableCSS("--section-rows", "45%");
-    section.innerHTML = allSections("practice");
+    section.innerHTML = htmlPractice();
 }
 
 
