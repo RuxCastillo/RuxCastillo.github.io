@@ -13,6 +13,8 @@ const pagina = new Observer(true, false, false, "About Me", {
         clean();
         if(str === "ABOUT ME") aboutMeSection();
         if(str === "KNOWLEDGE") knowledgeSection();
+        if(str === "PROYECTS") proyectSection();
+        if(str === "PRACTICE") practiceSection();
     }
 });
 
@@ -23,8 +25,6 @@ clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
 
-knowledgeSection()
-
 function aboutMeSection() {
     variableCSS("--section-columns", "1fr .6fr");
     variableCSS("--section-rows", "1fr");
@@ -32,13 +32,22 @@ function aboutMeSection() {
 }
 
 function knowledgeSection() {
-    let section = query("section")
     variableCSS("--section-columns", "1fr")
-    variableCSS("--section-rows", "30%")
-    variableCSS("--section-auto-rows", "30%")
+    variableCSS("--section-rows", "35%")
+    variableCSS("--section-auto-rows", "35%")
     section.innerHTML = allSections("knowledge");
 }
 
+function proyectSection() {
+    variableCSS("--section-columns", "1fr 1fr");
+    variableCSS("--section-rows", "1fr");
+    section.innerHTML = allSections("proyects");
+}
 
+function practiceSection() {
+    variableCSS("--section-columns","repeat(5, 1fr)");
+    variableCSS("--section-rows", "45%");
+    section.innerHTML = allSections("practice");
+}
 
 

@@ -1,7 +1,5 @@
 function allSections(send) {
-
     const langNow = pagina.lang? 0 : 1;
-    console.log(langNow)
 
     if(send === "aboutMe") {
         return(
@@ -12,7 +10,8 @@ function allSections(send) {
                 <p>${aboutMeText[langNow].p}</p>
                 <div>
                     <a class="github" href="https://github.com/RuxCastillo"><img src="../Img/blanco/icons/github.png" /></a>
-                    <a class="gmail" href"mailto:rubenldc1412@gmail.com"><img src="../Img/blanco/icons/gmail.png" /></a>
+                    <a class="gmail" href="mailto:rubenldc1412@gmail.com"><img src="../Img/blanco/icons/gmail.png" /></a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><img src="../Img/blanco/icons/linked.png" /></a>
                 </div>
             </article>
             <img  class="picture" src="../Img/Pic.png" />
@@ -20,18 +19,45 @@ function allSections(send) {
     )}
 
     if(send === "knowledge") {
-        return(
-            `
-            <article class="know">
-                <img src="${knowledge[langNow][0].src}" />
-                <h3>${knowledge[langNow][0].h3}</h3>
-                <p>${knowledge[langNow][0].p}</p>
+        let resultado = ""
+        knowledge[langNow].forEach((cert) => {
+            resultado += `
+            <div class="know">
+                <img src="${cert.src}" />
+                <h4>${cert.h4}</h4>
+                <p>${cert.p}</p>
                 <div class="icons">
                     <img><img><img><img><img>
                 </div>
-            </article>
-            `
-        )
+            </div> `
+        })
+        return resultado
     }
-    
+
+    if(send === "proyects") {
+        let resultado = "";
+        proyects[langNow].forEach((pow) => {
+            resultado += `
+            <div class="proyects">
+                <img src="${pow.src}" />
+                <h3>${pow.h3}</h3>
+                <p>${pow.p}</p>
+            </div>`
+        })
+        return resultado
+        
+    }
+
+    if(send === "practice") {
+        let resultado = "";
+        practice[langNow].forEach((practice) => {
+            resultado += `
+            <div class="practice">
+                <img src="${practice.src}
+                <h5>${practice.h5}</h5>
+                <p>${practice.p}</p>
+            </div>`
+        })
+        return resultado
+    }
 }
