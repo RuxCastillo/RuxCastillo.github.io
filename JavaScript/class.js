@@ -12,6 +12,9 @@ class Observer {
             this.changeNotify = callbacks.changeNotify;
         }
 
+        document.querySelector(".theme").addEventListener("click", function() {pagina.changeTheme()});
+        document.querySelector(".lang").addEventListener("click", function() {pagina.changeLang()})
+
         const lis = document.querySelectorAll("header li");
         
         for(let li of lis) {

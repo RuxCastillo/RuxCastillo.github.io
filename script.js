@@ -1,23 +1,45 @@
 const pagina = new Observer(true, false, false, "ABOUT ME", {
     isDark(bool) {
-        console.log("cambio a " + bool + " el theme")
+        if(pagina.theme) {
+            path = "negro"
+            variableCSS("--back-c", "gray")
+            variableCSS("--text-c", "white")
+            query(".theme").setAttribute("src", "./assets/negro/icons/sol.png")
+        } else {
+            path = "blanco"
+            variableCSS("--back-c", "burlywood")
+            variableCSS("--text-c", "black")
+            query(".theme").setAttribute("src", "./assets/blanco/icons/luna.png")
+        }
+            query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
+
+        pagina.changeNotify(pagina.article)
     },
     isEng(bool) {
-        console.log("cambio a " + bool + " el lenguaje")
+        msg = (pagina.lang)? "es" : "en";
+        query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
+        pagina.changeNotify(pagina.article)
     },
     isMobile(bool) {
         console.log("cambio a " + bool + " el dispositivo")
     },
     changeNotify(str) {
-        console.log("cambio la seccion a " + str)
         clean();
+        pagina.article = str;
         if(str === "ABOUT ME") aboutMeSection();
         if(str === "KNOWLEDGE") knowledgeSection();
-        if(str === "PROYECTS") proyectSection();
         if(str === "PRACTICE") practiceSection();
+        if(str === "PROYECTS") proyectSection();
+
+     if(animation) {
+        document.querySelector(".about-me").style.animationName = "none"
+        document.querySelector(".picture").style.animationName = "none"
+      }         
     }
 });
 
+let msg = (pagina.lang)? "es" : "en"
+let path = (pagina.theme)? "negro" : "blanco";
 query = (css) => {return document.querySelector(css)};
 click = (elm, func) => {return elm.addEventListener("click", func)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
@@ -25,6 +47,7 @@ clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
 aboutMeSection()
+const animation = true; 
 
 function aboutMeSection() {
     variableCSS("--section-columns", "1fr .6fr");

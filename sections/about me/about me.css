@@ -4,6 +4,8 @@
     padding: 10% 5%;
     height: 100%;
     width: 100%;
+    animation-name: letras-hacia-derecha;
+    animation-duration: 4s;
 }
 
 .about-me h1 {
@@ -32,6 +34,8 @@
     height: 80%;
     padding: 4.1%;
     margin: auto;
+    animation-name: foto-hacia-izquierda;
+    animation-duration: 4s;
 
 }
 

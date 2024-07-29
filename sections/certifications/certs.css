@@ -1,9 +1,4 @@
-.know * {
-    border: 2px solid red;
-}
-
 .know {
-    background-color: blue;
     padding: 1% 1%;
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -18,14 +13,17 @@
     height: 100%;
 }
 
-.know h3 {
+.know h4 {
     grid-column: 2/3;
     grid-row: 1/2;
+    padding: 0 1vw;
+    font-size: 2rem;
 }
 
 .know p {
     grid-column: 2/3;
     grid-row: 2/3;
+    padding: 0 1vw;
 }
 
 .know .icons {
@@ -34,6 +32,11 @@
     display: flex;
     height: 100%;
     align-items: center;
+    padding: 0 1vw;
+}
+
+.know .icons img {
+    margin-left: 0px;
 }
 
 .know .icons .img {

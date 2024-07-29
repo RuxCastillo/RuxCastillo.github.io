@@ -23,7 +23,7 @@ const proyects = [
         },
         {
             src: "./img/1project.png",
-            h3: "AnkiQuestionsEs",
+            h3: "FixUp Electronics",
             p: "EspañolAqui va la descripcion de Ankiquestions en ingles"
         }
     ]

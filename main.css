@@ -38,14 +38,16 @@ main section {
 }
 
 body {
-    background-color: burlywood;
+    background-color: var(--back-c);
     height: 100vh;
     width: 100vw;
     min-width: 700px;
-    padding: 3% 5%;
+    padding: 8% 7%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    color: var(--text-c)
 }
 
 main {
@@ -53,8 +55,8 @@ main {
     min-height: 800px;
     max-width: 1980px;
     max-height: 1080px;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 90%;
     display: grid;
     grid-template-columns: var(--main-columns);
     grid-template-rows: var(--main-rows);
@@ -85,6 +87,20 @@ section {
     display: grid;
     grid-template-columns: var(--section-columns);
     grid-template-rows: var(--section-rows);
-    border: 2px solid black;
     grid-auto-rows: var(--section-auto-rows);
+    overflow: auto;
+    scrollbar-width: none;
+    animation-name: border-start;
+    animation-duration: 5s;
+    border: 3px solid black;
 }
+
+.icons * {
+    height: 5vh;
+    width: 2vw;
+    padding-top: 1vh;
+    margin: 1vh;
+    animation-name: iconos;
+    animation-duration: 5s 10s;
+}
+

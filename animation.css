@@ -1,0 +1,53 @@
+@keyframes border-start {
+    from {
+        overflow: visible;
+        border-image: linear-gradient(to right, burlywood 45%,#000 50%, burlywood 55%) 100% 1;
+    }
+    20% {
+        border-image: linear-gradient(to right, burlywood 30%,#000 50%, burlywood 100%) 100% 1;
+    }
+    30% {
+        border-image: linear-gradient(to right, black 0%, black 50%, black 100%) 100% 1;
+        border-image: linear-gradient(180deg, burlywood 45%,#000 50%, burlywood 55%) 100% 1;
+    }
+    50% {
+        border-image: linear-gradient(180deg, burlywood 0%,#000 50%, burlywood 100%) 100% 1;
+        border-left: 3px solid rgba(0, 0, 0, .1);
+    }
+    60% {
+        border-image: linear-gradient(180deg, black 0%,#000 50%, black 100%) 100% 1;
+    }
+    to {
+        border-left: 3px solid rgba(0, 0, 0, .9);
+        overflow: visible;
+    }
+} 
+
+@keyframes letras-hacia-derecha {
+    from {
+        margin-right: 70%;
+        width: 160%;
+    }
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes foto-hacia-izquierda {
+    from {
+        margin-left: 150%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+/* @keyframes iconos {
+    from {
+        margin-top: 10vh;
+    }
+    to {
+        margin-top: 1vh;
+    }
+} */
