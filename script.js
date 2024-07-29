@@ -30,11 +30,6 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
         if(str === "KNOWLEDGE") knowledgeSection();
         if(str === "PRACTICE") practiceSection();
         if(str === "PROYECTS") proyectSection();
-
-     if(animation) {
-        document.querySelector(".about-me").style.animationName = "none"
-        document.querySelector(".picture").style.animationName = "none"
-      }         
     }
 });
 
@@ -47,7 +42,10 @@ clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
 aboutMeSection()
-const animation = true; 
+setTimeout(() => {
+    document.querySelector(":root").style.setProperty("--animation-letters", "none")
+    document.querySelector(":root").style.setProperty("--animation-picture", "none")
+}, 7000)
 
 function aboutMeSection() {
     variableCSS("--section-columns", "1fr .6fr");

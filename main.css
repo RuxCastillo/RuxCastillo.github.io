@@ -5,7 +5,9 @@
     --main-rows: 1fr 9fr;
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
-    --section-auto-rows: 30vh
+    --section-auto-rows: 30vh;
+    --animation-letters: letras-hacia-derecha;
+    --animation-picture: foto-hacia-izquierda;
 }
 
 @font-face {
