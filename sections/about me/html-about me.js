@@ -24,11 +24,10 @@ function htmlAboutMe() {
 const aboutMeText = [
     {
         h2: "Software development engineering student with focus in Front-End.",
-        p: "¡Welcome to my portfolio! Here you can see my projects/works. You can also see mini-projects that I've done from courses, I usually expand this projects give my own touch so they help me with more practice. I also invite you to check out my knowledge so you can see how I can contribute to your project/team."
+        p: "¡Welcome to my portfolio! Here you can see my projects/works. You can also see mini-projects that I've done from courses, I usually expand these projects give my own touch so they help me with more practice. I also invite you to check out my knowledge so you can see how I can contribute to your project/team."
     },
     {
         h2: "Estudiante de ingeniería en desarrollo de software con enfoque en Front-End.",
-        p: "¡Welcome to my portfolio! Here you can see my projects/works. You can also see mini-projects that I've done from courses, I usually expand this projects give my own touch so they help me with more practice. I also invite you to check out my knowledge so you can see how I can contribute to your project/team."
-
+        p: "¡Bienvenidos a mi portafolio! Aquí podrán ver mis proyectos/trabajos. También podrán ver mini-proyectos que he realizado en cursos, suelo ampliar estos proyectos dándoles mi toque personal para que me ayuden con más práctica. También los invito a que revisen mis conocimientos para que puedan ver cómo puedo aportar a su proyecto/equipo."
     }
 ]

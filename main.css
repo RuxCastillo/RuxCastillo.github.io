@@ -8,6 +8,7 @@
     --section-auto-rows: 30vh;
     --animation-letters: letras-hacia-derecha;
     --animation-picture: foto-hacia-izquierda;
+    --display-icons: hidden;
 }
 
 @font-face {
@@ -44,12 +45,13 @@ body {
     height: 100vh;
     width: 100vw;
     min-width: 700px;
-    padding: 8% 7%;
+    padding: 4% 7%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--text-c)
+    color: var(--text-c);
+    overflow: hidden;
 }
 
 main {
@@ -93,16 +95,15 @@ section {
     overflow: auto;
     scrollbar-width: none;
     animation-name: border-start;
-    animation-duration: 5s;
+    animation-duration: 4s;
     border: 3px solid black;
 }
 
 .icons * {
-    height: 5vh;
-    width: 2vw;
-    padding-top: 1vh;
-    margin: 1vh;
-    animation-name: iconos;
-    animation-duration: 5s 10s;
+    height: 3.5vh;
+    width: 1.3vw;
+    padding-top: .5vh;
+    margin: .5vh;
+    visibility: var(--display-icons);
 }
 

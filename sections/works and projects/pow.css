@@ -1,12 +1,24 @@
-.proyects * {
-    border: 2px solid aqua;
-}
-
 .proyects {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5%;
-    justify-content: space-between;
-    background-color: green;
+    justify-content: start;
+    border: 3px solid black;
 }
+
+.proyects h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+}
+
+.proyects img {
+    object-fit: cover; 
+    width: 80%;
+    height: 45%;
+}
+
+.proyects p {
+    margin: auto;
+}
+

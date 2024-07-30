@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     animation-name: var(--animation-letters);
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 .about-me h1 {
@@ -35,7 +35,7 @@
     padding: 4.1%;
     margin: auto;
     animation-name: var(--animation-picture);
-    animation-duration: 4s;
+    animation-duration: 3s;
 
 }
 

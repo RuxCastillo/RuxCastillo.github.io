@@ -13,7 +13,6 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
         }
             query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
 
-        pagina.changeNotify(pagina.article)
     },
     isEng(bool) {
         msg = (pagina.lang)? "es" : "en";
@@ -43,9 +42,10 @@ const section = query("section");
 
 aboutMeSection()
 setTimeout(() => {
-    document.querySelector(":root").style.setProperty("--animation-letters", "none")
-    document.querySelector(":root").style.setProperty("--animation-picture", "none")
-}, 7000)
+    variableCSS("--animation-letters", "none")
+    variableCSS("--animation-picture", "none")
+    variableCSS("--display-icons", "visible")
+}, 4000)
 
 function aboutMeSection() {
     variableCSS("--section-columns", "1fr .6fr");
