@@ -40,7 +40,7 @@ variableCSS = (vab, val) => {return document.documentElement.style.setProperty(v
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
-aboutMeSection()
+//aboutMeSection()
 setTimeout(() => {
     variableCSS("--animation-letters", "none")
     variableCSS("--animation-picture", "none")
