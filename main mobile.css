@@ -1,0 +1,17 @@
+@media(max-width: 1150px) {
+    html {
+        font-size: 9px;
+    }
+    body {
+        padding: 0px;
+        margin: auto;
+        max-width: 62%;
+        min-width: 100px;
+    }
+    main {
+    }
+    section {
+
+    }
+
+}

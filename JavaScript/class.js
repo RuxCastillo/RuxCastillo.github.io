@@ -14,6 +14,7 @@ class Observer {
 
         document.querySelector(".theme").addEventListener("click", function() {pagina.changeTheme()});
         document.querySelector(".lang").addEventListener("click", function() {pagina.changeLang()})
+        window.addEventListener("resize", function() {pagina.changeDevice()})
 
         const lis = document.querySelectorAll("header li");
         
@@ -31,8 +32,14 @@ class Observer {
     }
     changeDevice() {
         console.log(this.device)
-        this.device = !this.device;
+        if (window.innerWidth < 1150) {
+        console.log("cambio el width de la pantalla")
+        this.device = true;
         this.isMobile(this.device);
+        } else {
+            console.log("no cambio a mobile" + window.innerWidth)
+            this.device = false
+        }
     }
     selectedSection(str) {
         this.article = str;

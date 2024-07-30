@@ -41,7 +41,7 @@ variableCSS = (vab, val) => {return document.documentElement.style.setProperty(v
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
-aboutMeSection()
+//aboutMeSection()
 setTimeout(() => {
     document.querySelector(":root").style.setProperty("--animation-letters", "none")
     document.querySelector(":root").style.setProperty("--animation-picture", "none")
