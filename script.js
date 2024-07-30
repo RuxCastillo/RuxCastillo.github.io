@@ -20,7 +20,23 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
         pagina.changeNotify(pagina.article)
     },
     isMobile(bool) {
-        console.log("cambio a " + bool + " el dispositivo")
+        if(bool) {
+            console.log("cambio a " + bool + " el dispositivo")
+            variableCSS("--section-rows", "1fr 1fr")
+            variableCSS("--section-columns", "1fr")
+            let val = document.querySelectorAll("head link")
+            console.log(val)
+            val.forEach((x) => {x = outerHTML = ""})
+            console.log(val)
+            document.querySelector("head").innerHTML += "modo cel"
+
+        } else {
+            variableCSS("--section-rows", "1fr")
+            variableCSS("--section-columns", "1fr 1fr")
+            document.querySelectorAll("head link").outerHTML = ""
+            document.querySelector("head").innerHTML += "modo pc"
+        }
+
     },
     changeNotify(str) {
         clean();
@@ -40,7 +56,7 @@ variableCSS = (vab, val) => {return document.documentElement.style.setProperty(v
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 
-//aboutMeSection()
+aboutMeSection()
 setTimeout(() => {
     variableCSS("--animation-letters", "none")
     variableCSS("--animation-picture", "none")

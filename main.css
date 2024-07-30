@@ -5,7 +5,7 @@
     --main-rows: 1fr 9fr;
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
-    --section-columns-mobile: 1fr;
+    --section-columns-mobile: 80%;
     --section-rows-mobile: .7fr 1fr;
     --section-auto-rows: 30vh;
     --animation-letters: letras-hacia-derecha;
@@ -46,7 +46,6 @@ body {
     background-color: var(--back-c);
     height: 100vh;
     width: 100vw;
-    min-width: 700px;
     padding: 4% 7%;
     display: flex;
     justify-content: center;
@@ -107,4 +106,23 @@ section {
     padding-top: .5vh;
     margin: .5vh;
     visibility: var(--display-icons);
+}
+
+@media(max-width: 1150px) {
+    body {
+        margin: auto;
+    }
+    .about-me a img {
+        width: 10%;
+    }
+    section > picture {
+        height: 30%;
+
+    }
+    .icons * {
+        height: 3%;
+        padding: 3px;
+        margin: 3px;
+    }
+
 }
