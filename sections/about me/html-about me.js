@@ -1,14 +1,33 @@
 function htmlAboutMe(bool) {
+    let letterPlace;
+    let picturePlace;
+    let relative;
 
-    const ismobile = (bool)? " mobile-abm" : "";
-    const picture = (bool)? " mobile-pic" : "";
+    if(bool) {
+        letterPlace = " mobile-abm";
+        picturePlace = " mobile-pic";
+        relative = "container"
+        variableCSS("--section-rows", "4fr 6fr")
+        variableCSS("--section-columns", "1fr")
+        variableCSS("--animation-letters", "none")
+        variableCSS("--animation-picture", "none")
+        variableCSS("--display-icons", "visible")
+        
+
+    } else {
+        letterPlace = "";
+        picturePlace = "";
+        variableCSS("--section-rows", "1fr")
+        variableCSS("--section-columns", "1fr .6fr")
+
+    }
+
     const langNow = pagina.lang? 0 : 1;
-    console.log(ismobile, picture)
 
 
         return(
             `
-            <article class="about-me${ismobile}">
+            <article class="about-me${letterPlace}">
                 <h1>Rubén López del Castillo</h1>
                 <h2>${aboutMeText[langNow].h2}</h2>
                 <p>${aboutMeText[langNow].p}</p>
@@ -18,7 +37,9 @@ function htmlAboutMe(bool) {
                     <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><img src="./assets/${path}/icons/linked.png" /></a>
                 </div>
             </article>
-            <img  class="picture${picture}" src="./sections/about me/img/Pic.png" />
+            <div class="${relative}">
+                <img class="picture ${picturePlace}" src="./sections/about me/img/Pic.png" />
+            </div>
             `
         )
 }

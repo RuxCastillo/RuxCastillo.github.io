@@ -11,6 +11,11 @@
     --display-icons: hidden;
 }
 
+html {
+    width: 98vw;
+    height: 98vh;
+}
+
 @font-face {
     font-family: "Oswald-Bold";
     src: url("./assets/fonts/Oswald-Bold.ttf") format("truetype");
@@ -84,7 +89,7 @@ li {
 
 section {
     grid-column: 1/-1;
-    grid-row: 2/3;
+    grid-row: 2/-1;
     display: grid;
     grid-template-columns: var(--section-columns);
     grid-template-rows: var(--section-rows);
@@ -125,12 +130,18 @@ section {
 
 } */
 
-.mobile-main {
-    padding: 1%;
+.mobile-body {
+    padding: 0px;
+    height: 97vh;
+    width: 97vw;
 }
 
-.mobile-main > main {
-    background-color: blue;
-    height: 100%;
-    width: 100%;
+.mobile-body > main {
+    height: 90%;
+    width: 95%;
+}
+
+.mobile-body > section {
+    height: 90%;
+    width: 95%;
 }

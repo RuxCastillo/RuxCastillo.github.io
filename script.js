@@ -1,7 +1,7 @@
 let isMobileStart = startSize()
 
 const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
-    isDark(bool) {
+    isDark() {
         if(pagina.theme) {
             path = "negro"
             variableCSS("--back-c", "gray")
@@ -16,23 +16,16 @@ const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
             query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
 
     },
-    isEng(bool) {
+    isEng() {
         msg = (pagina.lang)? "es" : "en";
         query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
         pagina.changeNotify(pagina.article)
     },
     isMobile(bool) {
         if(bool) {
-            console.log("cambio a " + bool + " el dispositivo")
-            variableCSS("--section-rows", "1fr 1fr")
-            variableCSS("--section-columns", "1fr")
-            variableCSS("--picture-column", "1/2")
-            variableCSS("--picture-row", "2/3")
-            body.classList.add("mobile-main")
+            body.classList.add("mobile-body")
         } else {
-            variableCSS("--section-rows", "1fr")
-            variableCSS("--section-columns", "1fr 1fr")
-            body.classList.remove("mobile-main")
+            body.classList.remove("mobile-body")
         }
         pagina.changeNotify(pagina.article)
 
@@ -55,7 +48,6 @@ click = (elm, func) => {return elm.addEventListener("click", func)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
-const main = query("main");
 const body = query("body");
 
 pagina.isMobile(pagina.device);
@@ -67,15 +59,6 @@ setTimeout(() => {
 }, 4000)
 
 function aboutMeSection() {
-    if(pagina.device) {
-        variableCSS("--section-columns", "1fr");
-        variableCSS("--section-rows", ".35fr .65fr");
-        console.log("puestas section c y r para mobile")
-    } else {
-        variableCSS("--section-columns", "1fr .6fr");
-        variableCSS("--section-rows", "1fr");
-        console.log("puestas section c y r para pc")
-    }
     section.innerHTML = htmlAboutMe(pagina.device);
 }
 
