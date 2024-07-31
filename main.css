@@ -5,8 +5,6 @@
     --main-rows: 1fr 9fr;
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
-    --section-columns-mobile: 80%;
-    --section-rows-mobile: .7fr 1fr;
     --section-auto-rows: 30vh;
     --animation-letters: letras-hacia-derecha;
     --animation-picture: foto-hacia-izquierda;
@@ -27,7 +25,7 @@
 
 header ul li {
     font-family: "Oswald-Bold";
-    font-size: 1.5rem;
+    font-size: calc(1.5rem - .5vw - .5vh);
 }
 
 main section {
@@ -108,7 +106,7 @@ section {
     visibility: var(--display-icons);
 }
 
-@media(max-width: 1150px) {
+/* @media(max-width: 1150px) {
     body {
         margin: auto;
     }
@@ -125,4 +123,14 @@ section {
         margin: 3px;
     }
 
+} */
+
+.mobile-main {
+    padding: 1%;
+}
+
+.mobile-main > main {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
 }

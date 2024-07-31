@@ -1,4 +1,6 @@
-const pagina = new Observer(true, false, false, "ABOUT ME", {
+let isMobileStart = startSize()
+
+const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
     isDark(bool) {
         if(pagina.theme) {
             path = "negro"
@@ -24,18 +26,15 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
             console.log("cambio a " + bool + " el dispositivo")
             variableCSS("--section-rows", "1fr 1fr")
             variableCSS("--section-columns", "1fr")
-            let val = document.querySelectorAll("head link")
-            console.log(val)
-            val.forEach((x) => {x = outerHTML = ""})
-            console.log(val)
-            document.querySelector("head").innerHTML += "modo cel"
-
+            variableCSS("--picture-column", "1/2")
+            variableCSS("--picture-row", "2/3")
+            body.classList.add("mobile-main")
         } else {
             variableCSS("--section-rows", "1fr")
             variableCSS("--section-columns", "1fr 1fr")
-            document.querySelectorAll("head link").outerHTML = ""
-            document.querySelector("head").innerHTML += "modo pc"
+            body.classList.remove("mobile-main")
         }
+        pagina.changeNotify(pagina.article)
 
     },
     changeNotify(str) {
@@ -45,6 +44,7 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
         if(str === "KNOWLEDGE") knowledgeSection();
         if(str === "PRACTICE") practiceSection();
         if(str === "PROYECTS") proyectSection();
+
     }
 });
 
@@ -55,7 +55,10 @@ click = (elm, func) => {return elm.addEventListener("click", func)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
 clean = () => {query("section").innerHTML = ""}
 const section = query("section");
+const main = query("main");
+const body = query("body");
 
+pagina.isMobile(pagina.device);
 aboutMeSection()
 setTimeout(() => {
     variableCSS("--animation-letters", "none")
@@ -64,28 +67,44 @@ setTimeout(() => {
 }, 4000)
 
 function aboutMeSection() {
-    variableCSS("--section-columns", "1fr .6fr");
-    variableCSS("--section-rows", "1fr");
-    section.innerHTML = htmlAboutMe();
+    if(pagina.device) {
+        variableCSS("--section-columns", "1fr");
+        variableCSS("--section-rows", ".35fr .65fr");
+        console.log("puestas section c y r para mobile")
+    } else {
+        variableCSS("--section-columns", "1fr .6fr");
+        variableCSS("--section-rows", "1fr");
+        console.log("puestas section c y r para pc")
+    }
+    section.innerHTML = htmlAboutMe(pagina.device);
 }
 
 function knowledgeSection() {
     variableCSS("--section-columns", "1fr")
     variableCSS("--section-rows", "35%")
     variableCSS("--section-auto-rows", "35%")
-    section.innerHTML = htmlKnow();
+    section.innerHTML = htmlKnow(pagina.device);
 }
 
 function proyectSection() {
     variableCSS("--section-columns", "1fr 1fr");
     variableCSS("--section-rows", "1fr");
-    section.innerHTML = htmlpow();
+    section.innerHTML = htmlpow(pagina.device);
 }
 
 function practiceSection() {
     variableCSS("--section-columns","repeat(5, 1fr)");
     variableCSS("--section-rows", "45%");
-    section.innerHTML = htmlPractice();
+    section.innerHTML = htmlPractice(pagina.device);
 }
 
+function startSize() {
+    if(window.innerHeight > 1150) {
+        console.log("al inicio es false")
+        return false 
+    } else {
+        console.log("al inicio es true")
+        return true
+    }
+}
 

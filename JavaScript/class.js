@@ -17,7 +17,6 @@ class Observer {
         window.addEventListener("resize", function() {pagina.changeDevice()})
 
         const lis = document.querySelectorAll("header li");
-        
         for(let li of lis) {
         li.addEventListener("click", function() {pagina.selectedSection(li.innerText)});
 }

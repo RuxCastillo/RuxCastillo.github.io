@@ -1,12 +1,14 @@
-function htmlAboutMe() {
+function htmlAboutMe(bool) {
 
-
+    const ismobile = (bool)? " mobile-abm" : "";
+    const picture = (bool)? " mobile-pic" : "";
     const langNow = pagina.lang? 0 : 1;
-    console.log(path)
+    console.log(ismobile, picture)
+
 
         return(
             `
-            <article class="about-me">
+            <article class="about-me${ismobile}">
                 <h1>Rubén López del Castillo</h1>
                 <h2>${aboutMeText[langNow].h2}</h2>
                 <p>${aboutMeText[langNow].p}</p>
@@ -16,7 +18,7 @@ function htmlAboutMe() {
                     <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><img src="./assets/${path}/icons/linked.png" /></a>
                 </div>
             </article>
-            <img  class="picture" src="./sections/about me/img/Pic.png" />
+            <img  class="picture${picture}" src="./sections/about me/img/Pic.png" />
             `
         )
 }
