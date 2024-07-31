@@ -33,6 +33,7 @@ const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
     changeNotify(str) {
         clean();
         pagina.article = str;
+        if(str === "ME") aboutMeSection();
         if(str === "ABOUT ME") aboutMeSection();
         if(str === "KNOWLEDGE") knowledgeSection();
         if(str === "PRACTICE") practiceSection();

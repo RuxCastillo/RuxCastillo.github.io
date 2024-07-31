@@ -2,6 +2,7 @@ function htmlAboutMe(bool) {
     let letterPlace;
     let picturePlace;
     let relative;
+    let me = document.querySelector(".me");
 
     if(bool) {
         letterPlace = " mobile-abm";
@@ -11,8 +12,10 @@ function htmlAboutMe(bool) {
         variableCSS("--section-columns", "1fr")
         variableCSS("--animation-letters", "none")
         variableCSS("--animation-picture", "none")
+        variableCSS("--animation-section", "none")
         variableCSS("--display-icons", "visible")
-        
+        me.innerText = "ME"
+        variableCSS("--main-rows", "7% 93%")  
 
     } else {
         letterPlace = "";

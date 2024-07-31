@@ -8,12 +8,8 @@
     --section-auto-rows: 30vh;
     --animation-letters: letras-hacia-derecha;
     --animation-picture: foto-hacia-izquierda;
+    --animation-section: border-start;
     --display-icons: hidden;
-}
-
-html {
-    width: 98vw;
-    height: 98vh;
 }
 
 @font-face {
@@ -45,20 +41,29 @@ main section {
     padding: 0;
 }
 
-body {
-    background-color: var(--back-c);
-    height: 100vh;
-    width: 100vw;
-    padding: 4% 7%;
+html {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+body {
+    background-color: var(--back-c);
+    height: 100%;
+    width: 100%;
+    padding: 4% 7%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95% 5%;
     color: var(--text-c);
     overflow: hidden;
 }
 
 main {
+    margin: auto;
     max-width: 1980px;
     max-height: 1080px;
     width: 95%;
@@ -96,49 +101,62 @@ section {
     grid-auto-rows: var(--section-auto-rows);
     overflow: auto;
     scrollbar-width: none;
-    animation-name: border-start;
+    animation-name: var(--animation-section);
     animation-duration: 4s;
     border: 3px solid black;
     width: 100%;
     height: 100%;
 }
 
-.icons * {
-    height: 3.5vh;
-    width: 1.3vw;
-    padding-top: .5vh;
-    margin: .5vh;
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
     visibility: var(--display-icons);
+    position: relative;
 }
 
-/* @media(max-width: 1150px) {
-    body {
-        margin: auto;
-    }
-    .about-me a img {
-        width: 10%;
-    }
-    section > picture {
-        height: 30%;
+.icons * {
+    position: absolute;
+    margin: auto;
+    padding: 1%;
+    height: 100%;
+}
 
-    }
-    .icons * {
-        height: 3%;
-        padding: 3px;
-        margin: 3px;
-    }
+.icons .theme {
+    left: 25%;
+    width: 10%;
+}
 
-} */
+.icons .lang {
+    right: 25%;
+    width: 10%;
+}
+
+/* A partir de aqui empieza en mobile */
 
 .mobile-body {
     padding: 0px;
-    height: 97vh;
-    width: 97vw;
+    height: 100%;
+    width: 99%;
 }
 
 .mobile-body > main {
-    height: 90%;
-    width: 95%;
+    max-width: 781px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.mobile-body main ul {
+    justify-content: space-between;
+}
+
+.mobile-body .me {
+    text-decoration: underline;
 }
 
 .mobile-body > section {
