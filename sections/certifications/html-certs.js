@@ -1,4 +1,13 @@
-function htmlKnow() {
+function htmlKnow(bool) {
+
+    if(bool) {
+
+    } else {
+        variableCSS("--section-columns", "1fr")
+        variableCSS("--section-rows", "35%")
+        variableCSS("--section-auto-rows", "35%")
+    }
+
     const langNow = pagina.lang? 0 : 1;
 
         let resultado = ""

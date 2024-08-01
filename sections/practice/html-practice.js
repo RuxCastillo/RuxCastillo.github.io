@@ -1,4 +1,12 @@
-function htmlPractice(send) {
+function htmlPractice(bool) {
+
+    if(bool) {
+
+    } else {
+        variableCSS("--section-columns","repeat(5, 1fr)");
+        variableCSS("--section-rows", "45%");
+    }
+
     const langNow = pagina.lang? 0 : 1;
 
         let resultado = "";

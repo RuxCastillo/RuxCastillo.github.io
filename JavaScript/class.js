@@ -30,15 +30,12 @@ class Observer {
         this.isDark(this.theme);
     }
     changeDevice() {
-        console.log(this.device)
         if (window.innerWidth < 1150) {
-        console.log("cambio el width de la pantalla")
         this.device = true;
-        this.isMobile(this.device);
         } else {
-            console.log("no cambio a mobile" + window.innerWidth)
             this.device = false
         }
+        this.isMobile(this.device)
     }
     selectedSection(str) {
         this.article = str;

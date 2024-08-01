@@ -1,6 +1,4 @@
-let isMobileStart = startSize()
-
-const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
+const pagina = new Observer(true, false, false, "ABOUT ME", {
     isDark() {
         if(pagina.theme) {
             path = "negro"
@@ -33,12 +31,16 @@ const pagina = new Observer(true, false, isMobileStart, "ABOUT ME", {
     changeNotify(str) {
         clean();
         pagina.article = str;
-        if(str === "ME") aboutMeSection();
-        if(str === "ABOUT ME") aboutMeSection();
-        if(str === "KNOWLEDGE") knowledgeSection();
-        if(str === "PRACTICE") practiceSection();
-        if(str === "PROYECTS") proyectSection();
 
+        if(str === "KNOWLEDGE") {
+            section.innerHTML = htmlKnow(pagina.device);
+        } else if (str === "PRACTICE") {
+            section.innerHTML = htmlPractice(pagina.device);
+        } else if (str === "PROYECTS") {
+            section.innerHTML = htmlpow(pagina.device);
+        } else {
+            section.innerHTML = htmlAboutMe(pagina.device);
+        }
     }
 });
 
@@ -51,44 +53,17 @@ clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 const body = query("body");
 
-pagina.isMobile(pagina.device);
-aboutMeSection()
+pagina.device = startSize()
+pagina.changeNotify()
+
 setTimeout(() => {
     variableCSS("--animation-letters", "none")
     variableCSS("--animation-picture", "none")
     variableCSS("--display-icons", "visible")
 }, 4000)
 
-function aboutMeSection() {
-    section.innerHTML = htmlAboutMe(pagina.device);
-}
-
-function knowledgeSection() {
-    variableCSS("--section-columns", "1fr")
-    variableCSS("--section-rows", "35%")
-    variableCSS("--section-auto-rows", "35%")
-    section.innerHTML = htmlKnow(pagina.device);
-}
-
-function proyectSection() {
-    variableCSS("--section-columns", "1fr 1fr");
-    variableCSS("--section-rows", "1fr");
-    section.innerHTML = htmlpow(pagina.device);
-}
-
-function practiceSection() {
-    variableCSS("--section-columns","repeat(5, 1fr)");
-    variableCSS("--section-rows", "45%");
-    section.innerHTML = htmlPractice(pagina.device);
-}
-
 function startSize() {
-    if(window.innerHeight > 1150) {
-        console.log("al inicio es false")
-        return false 
-    } else {
-        console.log("al inicio es true")
-        return true
-    }
+    if(window.innerHeight > 1150) return true;
+    return false
 }
 

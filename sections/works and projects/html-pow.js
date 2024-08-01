@@ -1,4 +1,12 @@
-function htmlpow() {
+function htmlpow(bool) {
+
+    if(bool) {
+        
+    } else {
+        variableCSS("--section-columns", "1fr 1fr");
+        variableCSS("--section-rows", "1fr");
+    }
+
     const langNow = pagina.lang? 0 : 1;
 
         let resultado = "";
