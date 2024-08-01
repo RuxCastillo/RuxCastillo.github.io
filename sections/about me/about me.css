@@ -47,6 +47,7 @@ section .container-pc {
     width: 90%;
     height: 80%;
     margin: auto;
+    margin-left: 0%;
     animation-name: var(--animation-picture);
     animation-duration: 3s;
     grid-column: 2/3;

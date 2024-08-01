@@ -9,7 +9,9 @@
     --animation-letters: letras-hacia-derecha;
     --animation-picture: foto-hacia-izquierda;
     --animation-section: border-start;
-    --display-icons: hidden;
+    --display-icons: visible;
+    --background-i: url("./assets/blanco/Fondo.jpg");
+    --border-main: 3px solid black;
 }
 
 @font-face {
@@ -26,7 +28,6 @@
 
 header ul li {
     font-family: "Oswald-Bold";
-    font-size: calc(1.5rem - .5vw - .5vh);
 }
 
 main section {
@@ -51,6 +52,8 @@ html {
 }
 
 body {
+    background-image: var(--background-i);
+    background-size: cover;
     background-color: var(--back-c);
     height: 100%;
     width: 100%;
@@ -67,7 +70,7 @@ main {
     max-width: 1980px;
     max-height: 1080px;
     width: 95%;
-    height: 90%;
+    height: 95%;
     display: grid;
     grid-template-columns: var(--main-columns);
     grid-template-rows: var(--main-rows);
@@ -103,7 +106,7 @@ section {
     scrollbar-width: none;
     animation-name: var(--animation-section);
     animation-duration: 4s;
-    border: 3px solid black;
+    border: var(--border-main);
     width: 100%;
     height: 100%;
 }
@@ -116,24 +119,11 @@ section {
     width: 100%;
     margin: auto;
     visibility: var(--display-icons);
-    position: relative;
 }
 
 .icons * {
-    position: absolute;
-    margin: auto;
-    padding: 1%;
     height: 100%;
-}
-
-.icons .theme {
-    left: 25%;
-    width: 10%;
-}
-
-.icons .lang {
-    right: 25%;
-    width: 10%;
+    margin: 5px;
 }
 
 /* A partir de aqui empieza en mobile */
@@ -162,4 +152,24 @@ section {
 .mobile-body > section {
     height: 90%;
     width: 95%;
+}
+
+.mobile-body .icons {
+    position: relative;
+}
+
+.mobile-body .icons * {
+    position: absolute;
+    margin: auto;
+    height: 100%;
+    padding: 1%;
+    width: 10%;
+}
+
+.mobile-body .icons .theme {
+    left: 25%;
+}
+
+.mobile-body .icons .lang {
+    right: 25%;
 }

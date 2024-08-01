@@ -23,10 +23,12 @@ function htmlAboutMe(bool) {
         relative = "container-pc"
         variableCSS("--section-rows", "1fr")
         variableCSS("--section-columns", "1fr .6fr")
-        variableCSS("--animation-letters", "letras-hacia-derecha")
-        variableCSS("--animation-picture", "foto-hacia-izquierda")
-        variableCSS("--animation-section", "border-start")
-        variableCSS("--display-icons", "hidden")
+        if(!firstAnimation) {
+            variableCSS("--animation-letters", "letras-hacia-derecha")
+            variableCSS("--animation-picture", "foto-hacia-izquierda")
+            variableCSS("--animation-section", "border-start")
+            firstAnimation = true;
+        }
         me.innerText = "ABOUT ME"
         variableCSS("--main-rows", "1fr 9fr")  
 

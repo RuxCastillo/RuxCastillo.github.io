@@ -5,14 +5,18 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
             variableCSS("--back-c", "gray")
             variableCSS("--text-c", "white")
             query(".theme").setAttribute("src", "./assets/negro/icons/sol.png")
+            variableCSS("--background-i", `url("./assets/negro/Fondo.jpg")`);
+            variableCSS("--border-main", "3px solid white");
         } else {
             path = "blanco"
             variableCSS("--back-c", "burlywood")
             variableCSS("--text-c", "black")
             query(".theme").setAttribute("src", "./assets/blanco/icons/luna.png")
+            variableCSS("--background-i", `url("./assets/blanco/Fondo.jpg")`);
+            variableCSS("--border-main", "3px solid black");
         }
             query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
-
+            pagina.changeNotify(pagina.article)
     },
     isEng() {
         msg = (pagina.lang)? "es" : "en";
@@ -29,7 +33,7 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
 
     },
     changeNotify(str) {
-        clean();
+        section.innerHTML = "";
         pagina.article = str;
 
         if(str === "KNOWLEDGE") {
@@ -47,11 +51,11 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
 let msg = (pagina.lang)? "es" : "en"
 let path = (pagina.theme)? "negro" : "blanco";
 query = (css) => {return document.querySelector(css)};
-click = (elm, func) => {return elm.addEventListener("click", func)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
-clean = () => {query("section").innerHTML = ""}
 const section = query("section");
 const body = query("body");
+let firstAnimation = false;
+
 
 pagina.device = startSize()
 pagina.changeNotify()
