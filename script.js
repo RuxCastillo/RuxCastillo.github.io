@@ -55,9 +55,7 @@ const section = query("section");
 const body = query("body");
 let firstAnimation = false;
 
-//ya no inicia la pagina cuando carga al inicio en modo cel
-pagina.device = startSize()
-pagina.isMobile(pagina.device)
+pagina.changeDevice()
 pagina.changeNotify()
 
 setTimeout(() => {

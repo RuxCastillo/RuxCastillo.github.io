@@ -48,3 +48,21 @@
     padding-left: 0px;
 }
 
+.mobile-certs h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.mobile-certs p {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.mobile-certs img {
+    max-height: 20px;
+    width: 20%;
+}
+
+.mobile-certs .icons-certs {
+    justify-content: center;
+}
