@@ -8,5 +8,6 @@ Tengo que linkear los proyectos y empezarlos ha hacer para que queden bien.
 la seccion de proyectos tengo que hacer que se vea bien en celular.
 Tengo que terminar de pulir la parte de about me.
 Las letras tengo que hacer que se vean bien en cualquier pantalla.
+Que cuando estes en celular solo haya 3 opciones disponibles, que son las 3 en las que no estes, y cuando cambies de sección estas cambian, asi habria espacio para los iconos de lang y theme
 
 Lo ya hecho:

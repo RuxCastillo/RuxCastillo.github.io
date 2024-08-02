@@ -30,7 +30,6 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
             body.classList.remove("mobile-body")
         }
         pagina.changeNotify(pagina.article)
-
     },
     changeNotify(str) {
         section.innerHTML = "";
@@ -56,8 +55,9 @@ const section = query("section");
 const body = query("body");
 let firstAnimation = false;
 
-
+//ya no inicia la pagina cuando carga al inicio en modo cel
 pagina.device = startSize()
+pagina.isMobile(pagina.device)
 pagina.changeNotify()
 
 setTimeout(() => {

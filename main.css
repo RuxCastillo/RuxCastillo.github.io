@@ -12,6 +12,8 @@
     --display-icons: visible;
     --background-i: url("./assets/blanco/Fondo.jpg");
     --border-main: 3px solid black;
+    --certs-img: block;
+    --know-columns: 1fr 3fr;
 }
 
 @font-face {

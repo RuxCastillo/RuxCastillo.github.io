@@ -1,12 +1,17 @@
 function htmlKnow(bool) {
+    let pEscondido
 
     if(bool) {
-
+        variableCSS("--certs-img", "none")
+        variableCSS("--know-columns", "0fr .9fr")
     } else {
-        variableCSS("--section-columns", "1fr")
-        variableCSS("--section-rows", "35%")
-        variableCSS("--section-auto-rows", "35%")
+        variableCSS("--certs-img", "block")
+        variableCSS("--know-columns", "1fr 3fr")
+        
     }
+    variableCSS("--section-columns", "1fr")
+    variableCSS("--section-rows", "35%")
+    variableCSS("--section-auto-rows", "35%")
 
     const langNow = pagina.lang? 0 : 1;
 
@@ -17,9 +22,9 @@ function htmlKnow(bool) {
                 <img src="${cert.src}" />
                 <h4>${cert.h4}</h4>
                 <p>${cert.p}</p>
-                <div class="icons">
+                 <div class="icons-certs">
                     ${icons(cert)}
-                </div>
+                </div> 
             </div> `
         })
         return resultado
@@ -32,7 +37,7 @@ function icons(obj) {
 
     let resultado = ""
     iterar.forEach((icon) => {
-        resultado += `<img src=../../assets/color/${icon}.png>`
+        resultado += `<img src=../../assets/color/${icon}.png />`
     })
 
     return resultado

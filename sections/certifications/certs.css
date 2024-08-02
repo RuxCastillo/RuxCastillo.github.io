@@ -1,11 +1,12 @@
 .know {
     padding: 1% 1%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: var(--know-columns);
     grid-template-rows: 1fr 1fr .7fr;
 }
 
 .know > img {
+    display: var(--certs-img);
     grid-column: 1/2;
     grid-row: 1/-1;
     object-fit: cover;
@@ -26,20 +27,24 @@
     padding: 0 1vw;
 }
 
-.know .icons {
+.know .icons-certs {
     grid-column: 2/3;
     grid-row: 3/4;
     display: flex;
     height: 100%;
     align-items: center;
     padding: 0 1vw;
+    padding-left: 0px;
 }
 
-.know .icons img {
-    margin-left: 0px;
-}
-
-.know .icons .img {
+.know .icons-certs img {
+    width: 7%;
+    padding: 0 1vw;
+    height: 80%;
     flex-basis: 0;
-    justify-content: space-between;
 }
+
+.icons-certs > img {
+    padding-left: 0px;
+}
+
