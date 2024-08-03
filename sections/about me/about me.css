@@ -82,7 +82,7 @@ section > .mobile-abm {
 }
 
 .mobile-abm a img {
-    width: 15%;
+    width: 10%;
     grid-column: 1/2;
     grid-row: 4/5;
 }
@@ -106,5 +106,18 @@ section .container .mobile-pic {
     position: absolute;
     object-fit: fill;
 }
+
+.sleep {
+    display: none;
+}
+
+@media (min-height: 800px) {
+    section .container .mobile-pic {
+        width: 65%;
+        right: 17.5%;
+        background-color: white;
+    }
+}
+
 
 

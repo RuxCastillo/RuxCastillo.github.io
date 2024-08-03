@@ -1,9 +1,9 @@
 function htmlKnow(bool) {
-    let pEscondido
+    let mobileCerts = (bool)? "mobile-certs" : "";
 
     if(bool) {
         variableCSS("--certs-img", "none")
-        variableCSS("--know-columns", "0fr .9fr")
+        variableCSS("--know-columns", "0fr 1fr")
     } else {
         variableCSS("--certs-img", "block")
         variableCSS("--know-columns", "1fr 3fr")
@@ -18,7 +18,7 @@ function htmlKnow(bool) {
         let resultado = ""
         knowledge[langNow].forEach((cert) => {
             resultado += `
-            <div class="know">
+            <div class="know ${mobileCerts}">
                 <img src="${cert.src}" />
                 <h4>${cert.h4}</h4>
                 <p>${cert.p}</p>

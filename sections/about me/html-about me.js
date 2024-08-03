@@ -3,6 +3,7 @@ function htmlAboutMe(bool) {
     let picturePlace;
     let relative;
     let me = document.querySelector(".me");
+    let sleep = (window.innerHeight < 500 || window.innerWidth < 400)? " sleep" : ""
 
     if(bool) {
         letterPlace = " mobile-abm";
@@ -22,8 +23,9 @@ function htmlAboutMe(bool) {
         variableCSS("--main-rows", "1fr 9fr")  
     }
 
-    const langNow = pagina.lang? 0 : 1;
+    if(sleep === " sleep") variableCSS("--section-rows", "0fr 1fr")
 
+    const langNow = pagina.lang? 0 : 1;
 
         return(
             `
@@ -37,7 +39,7 @@ function htmlAboutMe(bool) {
                     <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><img src="./assets/${path}/icons/linked.png" /></a>
                 </div>
             </article>
-            <div class="${relative}">
+            <div class="${relative} ${sleep}">
                 <img class="picture ${picturePlace}" src="./sections/about me/img/Pic.png" />
             </div>
             `
