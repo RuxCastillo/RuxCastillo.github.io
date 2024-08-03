@@ -1,15 +1,10 @@
 :root {
-    --back-c: burlywood;
     --text-c: black;
     --main-columns: 1fr;
     --main-rows: 1fr 9fr;
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
     --section-auto-rows: 30vh;
-    --animation-letters: letras-hacia-derecha;
-    --animation-picture: foto-hacia-izquierda;
-    --animation-section: border-start;
-    --display-icons: visible;
     --background-i: url("./assets/blanco/Fondo.jpg");
     --border-main: 3px solid black;
     --certs-img: block;
@@ -25,22 +20,24 @@
 @font-face {
     font-family: "Nunito-Medium";
     src: url("./assets/fonts/Nunito-Medium.ttf") format("truetype");
-    font-weight: 500;
+    font-weight: 400;
 }
 
 header ul li {
     font-family: "Oswald-Bold";
+    font-weight: 700;
 }
 
 main section {
     font-family: "Nunito-Medium";
+    font-weight: 400;
 }
 
 *,
 *::before,
 *::after {
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     padding: 0;
 }
 
@@ -50,13 +47,12 @@ html {
     align-items: center;
     height: 100vh;
     width: 100vw;
-
+    font-size: 62.5%;
 }
 
 body {
     background-image: var(--background-i);
     background-size: cover;
-    background-color: var(--back-c);
     height: 100%;
     width: 100%;
     padding: 4% 7%;
@@ -65,12 +61,13 @@ body {
     grid-template-rows: 95% 5%;
     color: var(--text-c);
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 main {
     margin: auto;
-    max-width: 1980px;
-    max-height: 1080px;
+    max-width: 198rem;
+    max-height: 108rem;
     width: 95%;
     height: 95%;
     display: grid;
@@ -95,6 +92,7 @@ ul {
 li {
     width: 10%;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 section {
@@ -120,12 +118,11 @@ section {
     height: 100%;
     width: 100%;
     margin: auto;
-    visibility: var(--display-icons);
 }
 
 .icons * {
-    height: 100%;
-    margin: 5px;
+    height: 4rem;
+    margin: .5rem;
 }
 
 /* A partir de aqui empieza en mobile */
@@ -137,7 +134,7 @@ section {
 }
 
 .mobile-body > main {
-    max-width: 781px;
+    max-width: 78.5rem;
     height: 100%;
     width: 100%;
 
@@ -154,24 +151,4 @@ section {
 .mobile-body > section {
     height: 90%;
     width: 95%;
-}
-
-.mobile-body .icons {
-    position: relative;
-}
-
-.mobile-body .icons * {
-    position: absolute;
-    margin: auto;
-    height: 100%;
-    padding: 1%;
-    width: 10%;
-}
-
-.mobile-body .icons .theme {
-    left: 25%;
-}
-
-.mobile-body .icons .lang {
-    right: 25%;
 }

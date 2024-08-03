@@ -1,7 +1,7 @@
 .about-me {
     display: flex;
     flex-direction: column;
-    padding: 10% 5%;
+    padding: 10rem 5rem;
     height: 100%;
     width: 100%;
     animation-name: var(--animation-letters);
@@ -11,47 +11,47 @@
 }
 
 .about-me h1 {
-    font-size: 3rem;
+    font-family: "Oswald-Bold";
+    font-size: 5rem;
     grid-column: 1/2;
     grid-row: 1/2;
-    font-family: "Oswaldo-Bold";
+    height: 6rem;
 }
 
 .about-me h2 {
-    font-size: 1.5rem;
-    grid-column: 1/2;
-    grid-row: 2/3;
+    font-size: 3rem;
+    height: 7rem;
 }
 
 .about-me p {
-    font-size: 1rem;
+    font-size: 2rem;
     padding-top: 2%;
-    grid-column: 1/2;
-    grid-row: 3/4;
-    height: 60%;
+}
+
+section .about-me div {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .about-me a img {
-    width: 5%;
-    grid-column: 1/2;
-    grid-row: 4/5;
+    width: 5rem;
+    bottom: 0px;
+    display: absolute;
 }
 
 section .container-pc {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10rem 2rem
 }
 
  section .picture {
-    width: 90%;
-    height: 80%;
-    margin: auto;
-    margin-left: 0%;
+    height: 100%;
+    width: 100%;
     animation-name: var(--animation-picture);
     animation-duration: 3s;
-    grid-column: 2/3;
-    grid-row: 1/-1; 
 }
 
 /* Desde aqui empieza lo del cel */

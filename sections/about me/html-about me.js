@@ -10,28 +10,16 @@ function htmlAboutMe(bool) {
         relative = "container"
         variableCSS("--section-rows", "4fr 6fr")
         variableCSS("--section-columns", "1fr")
-        variableCSS("--animation-letters", "none")
-        variableCSS("--animation-picture", "none")
-        variableCSS("--animation-section", "none")
-        variableCSS("--display-icons", "visible")
         me.innerText = "ME"
         variableCSS("--main-rows", "7% 93%")  
-
     } else {
         letterPlace = "";
         picturePlace = "";
         relative = "container-pc"
         variableCSS("--section-rows", "1fr")
         variableCSS("--section-columns", "1fr .6fr")
-        if(!firstAnimation) {
-            variableCSS("--animation-letters", "letras-hacia-derecha")
-            variableCSS("--animation-picture", "foto-hacia-izquierda")
-            variableCSS("--animation-section", "border-start")
-            firstAnimation = true;
-        }
         me.innerText = "ABOUT ME"
         variableCSS("--main-rows", "1fr 9fr")  
-
     }
 
     const langNow = pagina.lang? 0 : 1;

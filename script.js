@@ -2,14 +2,12 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
     isDark() {
         if(pagina.theme) {
             path = "negro"
-            variableCSS("--back-c", "gray")
             variableCSS("--text-c", "white")
             query(".theme").setAttribute("src", "./assets/negro/icons/sol.png")
             variableCSS("--background-i", `url("./assets/negro/Fondo.jpg")`);
             variableCSS("--border-main", "3px solid white");
         } else {
             path = "blanco"
-            variableCSS("--back-c", "burlywood")
             variableCSS("--text-c", "black")
             query(".theme").setAttribute("src", "./assets/blanco/icons/luna.png")
             variableCSS("--background-i", `url("./assets/blanco/Fondo.jpg")`);
@@ -55,16 +53,9 @@ const section = query("section");
 const body = query("body");
 let firstAnimation = false;
 
-//ya no inicia la pagina cuando carga al inicio en modo cel
 pagina.device = startSize()
 pagina.isMobile(pagina.device)
 pagina.changeNotify()
-
-setTimeout(() => {
-    variableCSS("--animation-letters", "none")
-    variableCSS("--animation-picture", "none")
-    variableCSS("--display-icons", "visible")
-}, 4000)
 
 function startSize() {
     if(window.innerHeight > 1150) return true;
