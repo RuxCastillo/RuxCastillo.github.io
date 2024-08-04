@@ -20,11 +20,13 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
         query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
         pagina.changeNotify(pagina.article)
     },
-    isMobile(bool) {
-        if(bool) {
+    isMobile() {
+        if(startSize()) {
             body.classList.add("mobile-body")
+            pagina.device = true
         } else {
             body.classList.remove("mobile-body")
+            pagina.device = false
         }
         pagina.changeNotify(pagina.article)
     },
@@ -57,7 +59,7 @@ pagina.isMobile(pagina.device)
 pagina.changeNotify()
 
 function startSize() {
-    if(window.innerHeight > 1150) return true;
+    if(window.innerHeight - window.innerWidth > 0) return true;
     return false
 }
 

@@ -1,7 +1,9 @@
 function htmlpow(bool) {
+    let mobilePow = (bool)? " mobile-pow" : "";
 
     if(bool) {
-        
+        variableCSS("--section-columns", "1fr")
+        variableCSS("--section-rows", "1fr 1fr");
     } else {
         variableCSS("--section-columns", "1fr 1fr");
         variableCSS("--section-rows", "1fr");
@@ -12,7 +14,7 @@ function htmlpow(bool) {
         let resultado = "";
         proyects[langNow].forEach((pow) => {
             resultado += `
-            <div class="proyects">
+            <div class="proyects ${mobilePow}">
                 <h3>${pow.h3}</h3>
                 <img src="${pow.src}" />
                 <p>${pow.p}</p>

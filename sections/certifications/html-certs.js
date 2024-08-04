@@ -3,15 +3,15 @@ function htmlKnow(bool) {
 
     if(bool) {
         variableCSS("--certs-img", "none")
-        variableCSS("--know-columns", "0fr 1fr")
+        variableCSS("--know-columns", "1fr")
     } else {
         variableCSS("--certs-img", "block")
         variableCSS("--know-columns", "1fr 3fr")
         
     }
     variableCSS("--section-columns", "1fr")
-    variableCSS("--section-rows", "35%")
-    variableCSS("--section-auto-rows", "35%")
+    variableCSS("--section-rows", "20rem")
+    variableCSS("--section-auto-rows", "20rem")
 
     const langNow = pagina.lang? 0 : 1;
 

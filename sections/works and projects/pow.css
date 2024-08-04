@@ -4,7 +4,7 @@
     align-items: center;
     padding: 3rem;
     justify-content: start;
-    border: 3px solid black;
+    border: var(--border-main);
 }
 
 .proyects h3 {
@@ -23,3 +23,14 @@
     font-size: 1.75rem;
 }
 
+/* mobile pow */
+
+.mobile-pow {
+    width: 43rem; 
+}
+
+.mobile-pow img {
+    width: 38rem;
+    height: 20rem;
+    padding-bottom: 1rem;
+}

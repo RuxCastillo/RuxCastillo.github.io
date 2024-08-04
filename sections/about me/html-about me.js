@@ -29,7 +29,7 @@ function htmlAboutMe(bool) {
 
         return(
             `
-            <article class="about-me${letterPlace}">
+            <article class="about-me ${letterPlace}">
                 <h1>Rubén López del Castillo</h1>
                 <h2>${aboutMeText[langNow].h2}</h2>
                 <p>${aboutMeText[langNow].p}</p>

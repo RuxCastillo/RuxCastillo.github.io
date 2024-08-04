@@ -30,11 +30,6 @@ class Observer {
         this.isDark(this.theme);
     }
     changeDevice() {
-        if (window.innerWidth < 1150) {
-        this.device = true;
-        } else {
-            this.device = false
-        }
         this.isMobile(this.device)
     }
     selectedSection(str) {
