@@ -1,8 +1,10 @@
 .know {
-    padding: 1% 1%;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: var(--know-columns);
     grid-template-rows: 1fr 1fr .7fr;
+    height: 29rem;
+    width: 156rem;
 }
 
 .know > img {
@@ -10,28 +12,31 @@
     grid-column: 1/2;
     grid-row: 1/-1;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 40rem;
+    height: 25rem;
 }
 
 .know h4 {
     grid-column: 2/3;
     grid-row: 1/2;
     padding: 0 1vw;
-    font-size: 2rem;
+    font-size: 4rem;
+    height: 5rem;
 }
 
 .know p {
     grid-column: 2/3;
     grid-row: 2/3;
     padding: 0 1vw;
+    font-size: 2rem;
+    height: 10.5rem;
 }
 
 .know .icons-certs {
     grid-column: 2/3;
     grid-row: 3/4;
     display: flex;
-    height: 100%;
+    height: 5rem;
     align-items: center;
     padding: 0 1vw;
     padding-left: 0px;
@@ -59,8 +64,8 @@
 }
 
 .mobile-certs img {
-    max-height: 20px;
-    width: 20%;
+    max-height: 2rem;
+    width: 2rem;
 }
 
 .mobile-certs .icons-certs {

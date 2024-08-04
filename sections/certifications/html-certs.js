@@ -67,7 +67,7 @@ const knowledge = [
         {
             src: "./sections/certifications/img/Js Bootcamp.png",
             h4: "The Modern Javascript Bootcamp Course",
-            p: "I learned a lot about front end, I explored my knowledge in html, CSS and Js in more depth, I learned to use jQuery, Bootstrap, react. I was also introduced to topics such as web design, Git/GitHub and I had my first approach to the back end looking at topics such as node, express, npm, EJS, API, databases in general and I learned to use PostgreSQL, Authentication and security and at the end a bit of Web3.",
+            p: "This course was about exploring many parts of JavaScript both inside the browser and outside with node, as well as some projects in which they gave me knowledge about APIs, I learned a lot which has allowed me to improve a lot when writing code, in addition to understanding various parts of how to use Js to program web pages,",
             img: ["Js", "Node", "API"]
         },
     ],
@@ -93,8 +93,7 @@ const knowledge = [
         {
             src: "./sections/certifications/img/Js Bootcamp.png",
             h4: "The Modern Javascript Bootcamp Course",
-            p: "I learned a lot about front end, I explored my knowledge in html, CSS and Js in more depth, I learned to use jQuery, Bootstrap, react. I was also introduced to topics such as web design, Git/GitHub and I had my first approach to the back end looking at topics such as node, express, npm, EJS, API, databases in general and I learned to use PostgreSQL, Authentication and security and at the end a bit of Web3.",
+            p: "Este curso fue explorar muchísimas partes de JavaScript tanto dentro del browser como afuera con node, además de algunos proyectos en los que me dieron conocimientos sobre APIs, aprendí muchísimo lo cual me ha permitido mejorar mucho al escribir código, además de entender varias partes de cómo usar Js para programar páginas web",
             img: ["Js", "Node", "API"]
         },
-    ]
-]
+    ]]

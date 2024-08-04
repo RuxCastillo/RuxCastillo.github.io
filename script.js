@@ -17,7 +17,6 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
             pagina.changeNotify(pagina.article)
     },
     isEng() {
-        msg = (pagina.lang)? "es" : "en";
         query(".lang").setAttribute("src", `./assets/${path}/icons/${msg}.png`)
         pagina.changeNotify(pagina.article)
     },

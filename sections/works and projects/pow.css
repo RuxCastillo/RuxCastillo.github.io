@@ -2,23 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5%;
+    padding: 3rem;
     justify-content: start;
     border: 3px solid black;
 }
 
 .proyects h3 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 2%;
 }
 
 .proyects img {
     object-fit: cover; 
-    width: 80%;
-    height: 45%;
+    width: 55rem;
+    height: 30rem;
 }
 
 .proyects p {
     margin: auto;
+    font-size: 1.75rem;
 }
 

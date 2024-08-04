@@ -2,16 +2,14 @@
     display: flex;
     flex-direction: column;
     padding: 10rem 5rem;
-    height: 100%;
-    width: 100%;
-    animation-name: var(--animation-letters);
-    animation-duration: 3s;
+    height: 80rem;
+    width: 100rem;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 
 .about-me h1 {
-    font-family: "Oswald-Bold";
+    font-family: "Oswald-Bold" !important;
     font-size: 5rem;
     grid-column: 1/2;
     grid-row: 1/2;
@@ -44,12 +42,15 @@ section .container-pc {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem 2rem
+    padding: 10rem 0rem;
+    padding-right: 5rem;
+    height: 80rem;
+    width: 60rem;
 }
 
  section .picture {
-    height: 100%;
     width: 100%;
+    height: 100%;
     animation-name: var(--animation-picture);
     animation-duration: 3s;
 }
@@ -82,7 +83,7 @@ section > .mobile-abm {
 }
 
 .mobile-abm a img {
-    width: 10%;
+    width: 20%;
     grid-column: 1/2;
     grid-row: 4/5;
 }
