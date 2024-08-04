@@ -126,33 +126,53 @@ section {
 
 .mobile-body {
     padding: 0px;
-    height: 100%;
-    width: 99%;
+    height: 80rem;
+    width: 45rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 70rem 3rem;
 }
 
-.mobile-body > main {
-    max-width: 78.5rem;
-    height: 100%;
-    width: 100%;
-
+.mobile-body main {
+    height: 75rem;
+    width: 43rem;
 }
 
 .mobile-body main ul {
     justify-content: space-between;
+    width: 43rem;
+    height: 5rem;
+    grid-row: 3/4;
+}
+
+.mobile-body main ul li:last-child {
+    width: 7rem;
+}
+
+.mobile-body main ul li {
+    font-size: 2rem;
 }
 
 .mobile-body .me {
     text-decoration: underline;
 }
 
-.mobile-body > section {
-    height: 90%;
-    width: 95%;
+.mobile-body section {
+    height: 70rem;
+    width: 43rem;
 }
 
-@media(max-height: 1000px) {
+.mobile-body .icons {
+    width: 43rem;
+    grid-row: 3/4;
+}
+
+.mobile-body .icons * {
+    height: 3rem;
+}
+
+/* @media(max-height: 1000px) {
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
 }
 
@@ -160,4 +180,4 @@ section {
     html {
         font-size: 37.5%;
     }
-}
+} */
