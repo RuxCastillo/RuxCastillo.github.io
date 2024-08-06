@@ -13,9 +13,8 @@ function htmlPractice(bool) {
         practice[langNow].forEach((practice) => {
             resultado += `
             <div class="practice">
-                <img src="${practice.src}
+                <a href="${practice.link}" target="_blank"><img src="${practice.src}" /></a>
                 <h5>${practice.h5}</h5>
-                <p>${practice.p}</p>
             </div>`
         })
         return resultado
@@ -24,16 +23,87 @@ function htmlPractice(bool) {
 const practice = [
     [
         {
-            src: "./img/",
-            h5: "Node",
-            p: "basic ejs englis"
-        }
+            src: "./sections/practice/img/painting.png",
+            h5: "Practice of grid",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Practice%20Grid%20Mondrian%20Painting/index.html",
+        },
+        {
+            src: "./sections/practice/img/dados.png",
+            h5: "Making a game with dices",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Dice%20game/dicee.html"
+        },
+        {
+            src: "./sections/practice/img/drum kit.png",
+            h5: "Practicing DOM and addEventListener",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Drum%20kit%20game/index.html"
+        },
+        {
+            src: "./sections/practice/img/tinder perros.png",
+            h5: "Practicing Bootstrap",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Tinder%20para%20perros/index.html"
+        },
+        {
+            src: "./sections/practice/img/simon dice.png",
+            h5: "Practicing Js making a game of simon tell",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Simon%20game/index.html"
+        },
+        {
+            src: "./sections/practice/img/hover.png",
+            h5: "100 days of CSS day:",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Hover/index.html"
+        },
+        {
+            src: "./sections/practice/img/slides.png",
+            h5: "50 days of vanilla",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Slides%20mio/index.html"
+        },
+        {
+            src: "./sections/practice/img/timer.png",
+            h5: "Making a timer with input from user",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Timer/index.html"
+        },
     ],
     [
         {
-            src: "./img/",
-            h5: "Nodees",
-            p: "españolbasic ejs englis"
-        }
+            src: "./sections/practice/img/painting.png",
+            h5: "Practice grid with this project",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Practice%20Grid%20Mondrian%20Painting/index.html",
+
+        },
+        {
+            src: "./sections/practice/img/dados.png",
+            h5: "Practice haciendo juego de azar con dados",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Dice%20game/dicee.html"
+        },
+        {
+            src: "./sections/practice/img/drum kit.png",
+            h5: "Practicando DOM y addEventListener",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Drum%20kit%20game/index.html"
+        },
+        {
+            src: "./sections/practice/img/tinder perros.png",
+            h5: "Mejorando mis habilidades con bootstrap",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Tinder%20para%20perros/index.html"
+        },
+        {
+            src: "./sections/practice/img/simon dice.png",
+            h5: "Mejorando mis habilidades de Js haciendo un juego de simon dice",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Simon%20game/index.html"
+        },
+        {
+            src: "./sections/practice/img/hover.png",
+            h5: "100 dias de CSS dia:",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Hover/index.html"
+        },
+        {
+            src: "./sections/practice/img/slides.png",
+            h5: "50 dias de webdev vanilla",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Slides%20mio/index.html"
+        },
+        {
+            src: "./sections/practice/img/timer.png",
+            h5: "Haciendo un timer con input del usuario",
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Timer/index.html"
+        },
     ]
 ]
