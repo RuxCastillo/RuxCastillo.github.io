@@ -22,9 +22,11 @@ const pagina = new Observer(true, false, false, "ABOUT ME", {
     },
     isMobile() {
         if(startSize()) {
+            html.classList.add("html-mobile")
             body.classList.add("mobile-body")
             pagina.device = true
         } else {
+            html.classList.remove("html-mobile")
             body.classList.remove("mobile-body")
             pagina.device = false
         }
@@ -50,9 +52,9 @@ let msg = (pagina.lang)? "es" : "en"
 let path = (pagina.theme)? "negro" : "blanco";
 query = (css) => {return document.querySelector(css)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
+const html = query("html");
 const section = query("section");
 const body = query("body");
-let firstAnimation = false;
 
 pagina.device = startSize()
 pagina.isMobile(pagina.device)

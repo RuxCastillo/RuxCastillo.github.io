@@ -106,8 +106,8 @@ section .container .mobile-pic {
     object-fit: fill;
 }
 
-.sleep {
-    display: none;
+
+section .container-pc .sleep {
 }
 
 /* @media (min-height: 800px) {

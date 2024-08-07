@@ -9,6 +9,7 @@
     --border-main: 3px solid black;
     --certs-img: block;
     --know-columns: 1fr 3fr;
+    --html-mobile-size: 62.5%;
 }
 
 @font-face {
@@ -46,6 +47,10 @@ html {
     height: 100vh;
     width: 100vw;
     font-size: 62.5%;
+}
+
+.html-mobile {
+    font-size: var(--html-mobile-size);
 }
 
 body {
@@ -170,15 +175,73 @@ section {
     height: 3rem;
 }
 
-@media(max-width: 2000px) {
+@media(max-width: 1650px) {
     html {
         font-size: 56.25%;
     }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1520px) {
     html {
         font-size: 50%
+    }
+}
+
+@media(max-width: 1320px) {
+    html {
+        font-size: 43.75%;
+    }
+}
+
+@media(max-width: 1120px) {
+    html {
+        font-size: 37.5%
+    }
+}
+
+
+@media(max-width: 950px) {
+    html {
+        font-size: 31.25%;
+    }
+}
+
+@media(max-width: 800px) {
+    html {
+        font-size: 25%
+    }
+
+}
+
+@media(max-width: 700px) {
+    html {
+        font-size: 18.75%;
+    }
+}
+
+
+
+@media(max-height: 750px) {
+    .html-mobile {
+        font-size: 56.25%;
+    }
+}
+
+@media(max-height: 700px) {
+    .html-mobile {
+        font-size: 50%;
+    }
+}
+
+@media(max-height: 600px) {
+    .html-mobile {
+        font-size: 43.75%;
+    }
+}
+
+@media(max-height: 550px) {
+    .html-mobile {
+        font-size: 37.5%;
     }
 }
 

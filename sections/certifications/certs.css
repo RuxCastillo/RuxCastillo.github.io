@@ -2,7 +2,7 @@
     padding: 1.5rem;
     display: grid;
     grid-template-columns: var(--know-columns);
-    grid-template-rows: 1fr 1fr .7fr;
+    grid-template-rows: 1fr 2fr .7fr;
     height: 29rem;
     width: 156rem;
 }
@@ -58,7 +58,6 @@
 .mobile-certs {
     width: 43rem;
     height: 29rem;
-    grid-template-rows: 4rem 12rem 4rem;
     grid-column: 1/2;
     padding: 0px;
 
@@ -68,7 +67,8 @@
     width: 43rem;
     font-size: 2rem;
     text-align: center;
-    height: 4rem;
+    height: 8rem;
+    padding-top: 4rem;
 }
 
 .mobile-certs p {
