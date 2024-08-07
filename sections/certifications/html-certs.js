@@ -10,8 +10,8 @@ function htmlKnow(bool) {
         
     }
     variableCSS("--section-columns", "1fr")
-    variableCSS("--section-rows", "20rem")
-    variableCSS("--section-auto-rows", "20rem")
+    variableCSS("--section-rows", "29rem")
+    variableCSS("--section-auto-rows", "29rem")
 
     const langNow = pagina.lang? 0 : 1;
 
