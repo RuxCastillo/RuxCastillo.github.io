@@ -1,4 +1,7 @@
-const pagina = new Observer(true, false, false, "ABOUT ME", {
+const language = query(".lang")
+const theme = query(".theme")
+
+const pagina = new Observer(language, theme, false, "ABOUT ME", {
     isDark() {
         if(pagina.theme) {
             path = "negro"
@@ -55,6 +58,7 @@ variableCSS = (vab, val) => {return document.documentElement.style.setProperty(v
 const html = query("html");
 const section = query("section");
 const body = query("body");
+
 
 pagina.device = startSize()
 pagina.isMobile(pagina.device)

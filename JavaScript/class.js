@@ -12,27 +12,27 @@ class Observer {
             this.changeNotify = callbacks.changeNotify;
         }
 
-        document.querySelector(".theme").addEventListener("click", function() {pagina.changeTheme()});
+        this.lang.addEventListener("click", this.changeTheme);
         document.querySelector(".lang").addEventListener("click", function() {pagina.changeLang()})
         window.addEventListener("resize", function() {pagina.changeDevice()})
 
-        const lis = document.querySelectorAll("header li");
+        const lis = document.querySelectorAll(".art");
         for(let li of lis) {
         li.addEventListener("click", function() {pagina.selectedSection(li.innerText)});
 }
     }
-    changeLang() {
+    changeLang = () => {
         this.lang = !this.lang;
         this.isEng(this.lang);
     }
-    changeTheme() {
+    changeTheme = () => {
         this.theme = !this.theme;
         this.isDark(this.theme);
     }
-    changeDevice() {
+    changeDevice = () => {
         this.isMobile(this.device)
     }
-    selectedSection(str) {
+    selectedSection = (str) => {
         this.article = str;
         this.changeNotify(this.article)
     }
