@@ -1,7 +1,8 @@
-const language = query(".lang")
-const theme = query(".theme")
+const language = document.querySelector(".lang")
+const theme = document.querySelector(".theme")
+const sectionsBtn = document.querySelectorAll(".art")
 
-const pagina = new Observer(language, theme, false, "ABOUT ME", {
+const pagina = new Observer(language, theme, sectionsBtn, {
     isDark() {
         if(pagina.theme) {
             path = "negro"
@@ -24,7 +25,7 @@ const pagina = new Observer(language, theme, false, "ABOUT ME", {
         pagina.changeNotify(pagina.article)
     },
     isMobile() {
-        if(startSize()) {
+        if(pagina.startSize()) {
             html.classList.add("html-mobile")
             body.classList.add("mobile-body")
             pagina.device = true
@@ -39,11 +40,11 @@ const pagina = new Observer(language, theme, false, "ABOUT ME", {
         section.innerHTML = "";
         pagina.article = str;
 
-        if(str === "KNOWLEDGE") {
+        if(str === "knowledge") {
             section.innerHTML = htmlKnow(pagina.device);
-        } else if (str === "PRACTICE") {
+        } else if (str === "practice") {
             section.innerHTML = htmlPractice(pagina.device);
-        } else if (str === "PROYECTS") {
+        } else if (str === "proyects") {
             section.innerHTML = htmlpow(pagina.device);
         } else {
             section.innerHTML = htmlAboutMe(pagina.device);
@@ -60,12 +61,7 @@ const section = query("section");
 const body = query("body");
 
 
-pagina.device = startSize()
-pagina.isMobile(pagina.device)
+window.addEventListener("resize", function() {pagina.changeDevice()})
 pagina.changeNotify()
 
-function startSize() {
-    if(window.innerHeight - window.innerWidth > 0) return true;
-    return false
-}
 

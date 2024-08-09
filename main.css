@@ -127,6 +127,10 @@ section {
     margin: .3rem;
 }
 
+.art {
+    cursor: pointer;
+}
+
 /* A partir de aqui empieza en mobile */
 
 .mobile-body {

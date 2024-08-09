@@ -1,9 +1,11 @@
 class Observer {
-    constructor(lang, theme, device, article, callbacks){
-        this.lang = lang;
-        this.theme = theme;
-        this.device = device;
-        this.article = article;
+    constructor(langBtn, themeBtn, sectionBtn, callbacks){
+        this.lang = true
+        this.theme = false
+        this.device = this.startSize()
+
+        this.langBtn = langBtn;
+        this.themeBtn = themeBtn;
 
         if(callbacks) {
             this.isDark = callbacks.isDark;
@@ -12,13 +14,11 @@ class Observer {
             this.changeNotify = callbacks.changeNotify;
         }
 
-        this.lang.addEventListener("click", this.changeTheme);
-        document.querySelector(".lang").addEventListener("click", function() {pagina.changeLang()})
-        window.addEventListener("resize", function() {pagina.changeDevice()})
+        this.langBtn.addEventListener("click", this.changeLang);
+        this.themeBtn.addEventListener("click", this.changeTheme);
 
-        const lis = document.querySelectorAll(".art");
-        for(let li of lis) {
-        li.addEventListener("click", function() {pagina.selectedSection(li.innerText)});
+        for(let li of sectionBtn) {
+        li.addEventListener("click", this.selectedSection, li);
 }
     }
     changeLang = () => {
@@ -33,10 +33,12 @@ class Observer {
         this.isMobile(this.device)
     }
     selectedSection = (str) => {
-        this.article = str;
-        this.changeNotify(this.article)
+        this.changeNotify(str.srcElement.id)
+    }
+    startSize = () => {
+        if(window.innerHeight - window.innerWidth > 0) return true;
+        return false
     }
 }
-
 
 
