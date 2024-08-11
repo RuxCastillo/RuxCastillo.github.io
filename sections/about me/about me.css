@@ -9,7 +9,6 @@
 }
 
 .about-me h1 {
-    font-family: "Oswald-Bold";
     font-size: 5rem;
     grid-column: 1/2;
     grid-row: 1/2;
