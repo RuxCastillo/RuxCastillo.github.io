@@ -46,7 +46,7 @@ const pagina = new Observer(language, theme, sectionsBtn, {
             section.innerHTML = htmlPractice(pagina.device);
         } else if (str === "proyects") {
             section.innerHTML = htmlpow(pagina.device);
-        } else {
+        } else if (str === "hola") {
             section.innerHTML = htmlAboutMe(pagina.device);
         }
     }
@@ -62,6 +62,6 @@ const body = query("body");
 
 
 window.addEventListener("resize", function() {pagina.changeDevice()})
-pagina.changeNotify()
+//pagina.changeNotify()
 
 

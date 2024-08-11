@@ -1,7 +1,5 @@
 :root {
     --text-c: black;
-    --main-columns: 1fr;
-    --main-rows: 1fr 9fr;
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
     --section-auto-rows: 30vh;
@@ -24,7 +22,7 @@
     font-weight: 400;
 }
 
-header ul li {
+header {
     font-family: "Oswald-Bold";
 }
 
@@ -41,90 +39,68 @@ h1 main section {
 }
 
 html {
+    font-size: 62.5%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    font-size: 62.5%;
-}
-
-.html-mobile {
-    font-size: var(--html-mobile-size);
 }
 
 body {
-    background-image: var(--background-i);
-    background-size: cover;
-    height: 100rem;
-    width: 170rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 93rem 5rem;
+    background-image: radial-gradient(#f7f7f7, #9c9c9c 80%);
+    display: flex;
+    flex-direction: column;
     color: var(--text-c);
-    overflow: hidden;
     box-sizing: border-box;
-}
-
-main {
-    margin: auto;
-    max-width: 200rem;
-    max-height: 110rem;
-    width: 160rem;
-    height: 90rem;
-    display: grid;
-    grid-template-columns: var(--main-columns);
-    grid-template-rows: var(--main-rows);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    max-height: 90rem;
+    max-width: 170rem;
 }
 
 header {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-}
-
-ul {
-    width: 160rem;
-    height: 9rem;
-    list-style-type: none;
+    height: 5%; 
+    width: 95%;
     display: flex;
+    margin: 0 auto;
     justify-content: space-around;
     align-items: center;
 }
 
-li {
-    width: 14rem;
-    text-align: center;
+nav {
     font-size: 2.5rem;
 }
 
+main {
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+}
+
 section {
-    grid-column: 1/-1;
-    grid-row: 2/-1;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: var(--section-columns);
-    grid-template-rows: var(--section-rows);
-    grid-auto-rows: var(--section-auto-rows);
     overflow: auto;
     scrollbar-width: none;
-    animation-name: var(--animation-section);
-    animation-duration: 4s;
     border: var(--border-main);
-    width: 160rem;
-    height: 80rem;
+    height: 100%;
+    width: 100%;
 }
 
 .icons {
+    height: 5%; 
+    width: 95%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 6rem;
-    width: 160rem;
-    margin: auto;
 }
 
 .icons * {
-    height: 4.5rem;
-    margin: .3rem;
+    height: 90%;
+    margin: 0 10px;
 }
 
 .art {
@@ -133,32 +109,17 @@ section {
 
 /* A partir de aqui empieza en mobile */
 
-.mobile-body {
-    padding: 0px;
-    height: 80rem;
-    width: 45rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5rem 70rem 3rem;
+ .mobile-body {
+    max-height: none;
 }
 
+.mobile-body nav {
+    font-size: 1.5rem;
+}
+/*
 .mobile-body main {
     height: 75rem;
     width: 43rem;
-}
-
-.mobile-body main ul {
-    justify-content: space-between;
-    width: 43rem;
-    height: 5rem;
-    grid-row: 3/4;
-}
-
-.mobile-body main ul li:last-child {
-    width: 7rem;
-}
-
-.mobile-body main ul li {
-    font-size: 2rem;
 }
 
 .mobile-body .me {
@@ -170,87 +131,4 @@ section {
     width: 43rem;
 }
 
-.mobile-body .icons {
-    width: 43rem;
-    grid-row: 3/4;
-}
-
-.mobile-body .icons * {
-    height: 3rem;
-}
-
-@media(max-width: 1650px) {
-    html {
-        font-size: 56.25%;
-    }
-}
-
-@media(max-width: 1520px) {
-    html {
-        font-size: 50%
-    }
-}
-
-@media(max-width: 1320px) {
-    html {
-        font-size: 43.75%;
-    }
-}
-
-@media(max-width: 1120px) {
-    html {
-        font-size: 37.5%
-    }
-}
-
-
-@media(max-width: 950px) {
-    html {
-        font-size: 31.25%;
-    }
-}
-
-@media(max-width: 800px) {
-    html {
-        font-size: 25%
-    }
-
-}
-
-@media(max-width: 700px) {
-    html {
-        font-size: 18.75%;
-    }
-}
-
-
-
-@media(max-height: 750px) {
-    .html-mobile {
-        font-size: 56.25%;
-    }
-}
-
-@media(max-height: 700px) {
-    .html-mobile {
-        font-size: 50%;
-    }
-}
-
-@media(max-height: 600px) {
-    .html-mobile {
-        font-size: 43.75%;
-    }
-}
-
-@media(max-height: 550px) {
-    .html-mobile {
-        font-size: 37.5%;
-    }
-}
-
-/* @media(max-height: 801px) {
-    html {
-        font-size: 37.5%;
-    }
-} */
+ */
