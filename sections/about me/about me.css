@@ -1,9 +1,13 @@
+.section-about-me {
+    display: grid;
+    grid-template-columns: .8fr .6fr;
+    grid-template-rows: 1fr;
+    padding: 2.5% 2.5%;
+}
+
 .about-me {
     display: flex;
     flex-direction: column;
-    padding: 10rem 5rem;
-    height: 80rem;
-    width: 100rem;
     grid-column: 1/2;
     grid-row: 1/2;
 }
@@ -12,27 +16,28 @@
     font-size: 5rem;
     grid-column: 1/2;
     grid-row: 1/2;
-    height: 8rem;
 }
 
 .about-me h2 {
     font-size: 3rem;
-    height: 9rem;
+    font-family: "Nunito";
 }
 
 .about-me p {
     font-size: 2rem;
-    padding-top: 1rem;
+    font-family: "Nunito";
 }
 
 section .about-me div {
-    height: 32rem;
     display: flex;
     align-items: flex-end;
 }
 
 .about-me a img {
-    width: 8rem;
+}
+
+.github2 {
+    background: url("./assets/blanco/icons/gmail.png");
 }
 
 section .container-pc {
@@ -54,7 +59,7 @@ section .container-pc {
 
 /* Desde aqui empieza lo del cel */
 
-
+/* 
 section .mobile-abm {
     grid-column: 1/-1;
     grid-row: 2/-1;
@@ -107,7 +112,7 @@ section .container .mobile-pic {
 
 
 section .container-pc .sleep {
-}
+} */
 
 /* @media (min-height: 800px) {
     section .container .mobile-pic {

@@ -8,26 +8,28 @@
     --certs-img: block;
     --know-columns: 1fr 3fr;
     --html-mobile-size: 62.5%;
+    --body-maxh: 90rem; 
+    --body-maxw: 170rem;
 }
 
 @font-face {
-    font-family: "Oswald-Bold";
+    font-family: "Oswald";
     src: url("./assets/fonts/Oswald-Bold.ttf") format("truetype");
     font-weight: 700;
 }
 
 @font-face {
-    font-family: "Nunito-Medium";
+    font-family: "Nunito";
     src: url("./assets/fonts/Nunito-Medium.ttf") format("truetype");
     font-weight: 400;
 }
 
 header {
-    font-family: "Oswald-Bold";
+    font-family: "Oswald";
 }
 
-h1 main section {
-    font-family: "Nunito-Medium";
+h1 main section h2 p{
+    font-family: "Nunito";
 }
 
 *,
@@ -58,8 +60,9 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0 auto;
-    max-height: 90rem;
-    max-width: 170rem;
+    max-height: var(--body-maxh);
+    max-width: var(--body-maxw);
+    transition: 4s
 }
 
 header {
@@ -83,7 +86,6 @@ main {
 
 section {
     margin: 0 auto;
-    display: grid;
     overflow: auto;
     scrollbar-width: none;
     border: var(--border-main);

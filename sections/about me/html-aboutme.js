@@ -1,5 +1,5 @@
 function htmlAboutMe(bool) {
-    let letterPlace;
+/*     let letterPlace;
     let picturePlace;
     let relative;
     let me = document.querySelector(".me");
@@ -25,24 +25,27 @@ function htmlAboutMe(bool) {
 
     if(sleep === " sleep") {
         variableCSS("--section-rows", "0fr 1fr")
-    } 
+    }  */
+
+    variableCSS("--body-maxh", "50rem")
+    variableCSS("--body-maxw", "110rem")
+    removeClassFromSection("section-about-me")
 
     const langNow = pagina.lang? 0 : 1;
 
         return(
             `
-            <article class="about-me ${letterPlace}">
+            <article class="about-me">
                 <h1>Rubén López del Castillo</h1>
                 <h2>${aboutMeText[langNow].h2}</h2>
                 <p>${aboutMeText[langNow].p}</p>
                 <div>
-                    <a class="github" href="https://github.com/RuxCastillo"><img src="../../assets/${path}/icons/github.png" /></a>
-                    <a class="gmail" href="mailto:rubenldc1412@gmail.com"><img src="./assets/${path}/icons/gmail.png" /></a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><img src="./assets/${path}/icons/linked.png" /></a>
+                    <a class="github" href="https://github.com/RuxCastillo"><i class="fa-brands fa-github"></i></a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/ruben-l-1811402a4/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </article>
-            <div class="${relative}${sleep}">
-                <img class="picture ${picturePlace}${sleep}" src="./sections/about me/img/Pic.png" />
+            <div class="container-picture">
+                <img class="picture" src="./sections/about me/img/Pic2.jpg" />
             </div>
             `
         )

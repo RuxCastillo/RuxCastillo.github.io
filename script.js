@@ -38,6 +38,7 @@ const pagina = new Observer(language, theme, sectionsBtn, {
     },
     changeNotify(str) {
         section.innerHTML = "";
+        removeClassFromSection()
         pagina.article = str;
 
         if(str === "knowledge") {
@@ -46,7 +47,7 @@ const pagina = new Observer(language, theme, sectionsBtn, {
             section.innerHTML = htmlPractice(pagina.device);
         } else if (str === "proyects") {
             section.innerHTML = htmlpow(pagina.device);
-        } else if (str === "hola") {
+        } else {
             section.innerHTML = htmlAboutMe(pagina.device);
         }
     }
@@ -62,6 +63,11 @@ const body = query("body");
 
 
 window.addEventListener("resize", function() {pagina.changeDevice()})
-//pagina.changeNotify()
+pagina.changeNotify()
+
+function removeClassFromSection(agregar) {
+    section.classList = "";
+    section.classList.add(agregar)
+}
 
 
