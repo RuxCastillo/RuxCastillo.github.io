@@ -3,9 +3,11 @@ function htmlPractice(bool) {
     if(bool) {
 
     } else {
-        variableCSS("--section-columns","repeat(5, 1fr)");
-        variableCSS("--section-rows", "45%");
+/*         variableCSS("--section-columns","repeat(5, 1fr)");
+        variableCSS("--section-rows", "45%"); */
     }
+
+    removeClassFromSection("section-practice")
 
     const langNow = pagina.lang? 0 : 1;
 

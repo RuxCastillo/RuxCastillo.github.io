@@ -41,6 +41,9 @@ const pagina = new Observer(language, theme, sectionsBtn, {
         removeClassFromSection()
         pagina.article = str;
 
+        variableCSS("--body-maxh", "90rem")
+        variableCSS("--body-maxw", "170rem")
+
         if(str === "knowledge") {
             section.innerHTML = htmlKnow(pagina.device);
         } else if (str === "practice") {

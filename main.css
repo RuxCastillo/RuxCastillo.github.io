@@ -8,8 +8,8 @@
     --certs-img: block;
     --know-columns: 1fr 3fr;
     --html-mobile-size: 62.5%;
-    --body-maxh: 90rem; 
-    --body-maxw: 170rem;
+    --body-maxh: 50rem; 
+    --body-maxw: 110rem;
 }
 
 @font-face {
@@ -62,7 +62,7 @@ body {
     margin: 0 auto;
     max-height: var(--body-maxh);
     max-width: var(--body-maxw);
-    transition: 4s
+    transition: 2s
 }
 
 header {
@@ -95,14 +95,14 @@ section {
 
 .icons {
     height: 5%; 
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .icons * {
-    height: 90%;
-    margin: 0 10px;
+    height: 100%;
+    margin: 0 5px;
 }
 
 .art {

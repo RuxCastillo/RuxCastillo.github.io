@@ -1,13 +1,15 @@
 function htmlpow(bool) {
     let mobilePow = (bool)? " mobile-pow" : "";
 
-    if(bool) {
+/*     if(bool) {
         variableCSS("--section-columns", "1fr")
         variableCSS("--section-rows", "1fr 1fr");
     } else {
         variableCSS("--section-columns", "1fr 1fr");
         variableCSS("--section-rows", "1fr");
-    }
+    } */
+
+    removeClassFromSection("section-pow")
 
     const langNow = pagina.lang? 0 : 1;
 
