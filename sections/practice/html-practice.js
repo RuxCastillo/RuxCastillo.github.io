@@ -71,6 +71,11 @@ const practice = [
     ],
     [
         {
+            src: "./sections/practice/img/1001.png",
+            h5: "100 Días de CSS: Día 1 pagina tributo", 
+            link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/100%20days%20of%20CSS/Day%201%20A%20tribute%20page/"
+        },        
+        {
             src: "./sections/practice/img/timer.png",
             h5: "Haciendo un timer con input del usuario",
             link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Timer/index.html"
@@ -87,7 +92,7 @@ const practice = [
         },
         {
             src: "./sections/practice/img/simon dice.png",
-            h5: "Mejorando mis habilidades de Js haciendo un juego de simon dice",
+            h5: "Haciendo un juego de simon dice",
             link: "https://ruxcastillo.github.io/Practice-Courses/Frontend/Simon%20game/index.html"
         },
         {

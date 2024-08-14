@@ -20,24 +20,20 @@
 
 .about-me h2 {
     font-size: 3rem;
-    font-family: "Nunito";
 }
 
 .about-me p {
     font-size: 2rem;
-    font-family: "Nunito";
 }
 
-section .about-me div {
-    display: flex;
-    align-items: flex-end;
+.about-me div {
+    height: 2rem;
 }
 
-.about-me a img {
-}
-
-.github2 {
-    background: url("./assets/blanco/icons/gmail.png");
+.about-me div a i {
+    font-size: 4rem;
+    margin: 0 5px;
+    color: black;
 }
 
 section .container-pc {

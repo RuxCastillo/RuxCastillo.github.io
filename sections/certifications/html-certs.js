@@ -9,9 +9,9 @@ function htmlKnow(bool) {
         variableCSS("--know-columns", "1fr 3fr")
         
     }
-    variableCSS("--section-columns", "1fr")
+/*     variableCSS("--section-columns", "1fr")
     variableCSS("--section-rows", "29rem")
-    variableCSS("--section-auto-rows", "29rem")
+    variableCSS("--section-auto-rows", "29rem") */
     removeClassFromSection("section-know")
 
     const langNow = pagina.lang? 0 : 1;
@@ -48,8 +48,8 @@ const knowledge = [
     [
         {
             src: "./sections/certifications/img/universidad.jpg",
-            h4: "UVEG: Virtual University of the State of Guanajuato (in progress)",
-            p: "I am currently a software development engineering student, I am 15% of the way through the total curriculum.",
+            h4: "UVEG: Virtual University of the State of Guanajuato",
+            p: "(IN PROGRESS) I am currently a software development engineering student, I am 15% of the way through the total curriculum.",
             img: ["BD"]
         },
         {
