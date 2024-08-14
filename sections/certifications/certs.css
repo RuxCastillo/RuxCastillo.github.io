@@ -7,16 +7,16 @@
 
 
 .know {
-    padding: 1.5rem;
+    padding: 5px;
     display: grid;
     grid-template-columns: var(--know-columns);
     grid-template-rows: 1fr 2fr .7fr;
     height: 30%;
     width: 95%;
-    margin: 1.5rem;
-    background-color: white;
+    margin: 15px;
+    background-color: #f7f7f7;
     font-family: "Nunito";
-    box-shadow: .5rem .5rem 1rem black;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.6);
 }
 
 .know > img {
@@ -37,8 +37,8 @@
 .know p {
     grid-column: 2/3;
     grid-row: 2/3;
-    padding: 1rem 1vw;
-    font-size: 2rem;
+    padding: 0 1vw;
+    font-size: 1.5rem;
 }
 
 .know .icons-certs {
@@ -63,7 +63,7 @@
 
 /*mobile certs*/
 
-.mobile-certs {
+/* .mobile-certs {
     width: 43rem;
     height: 29rem;
     grid-column: 1/2;
@@ -95,4 +95,4 @@
     height: 4rem;
     width: 43rem;
     justify-content: center;
-}
+} */

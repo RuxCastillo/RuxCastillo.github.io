@@ -28,7 +28,7 @@ header {
     font-family: "Oswald";
 }
 
-h1 main section h2 p{
+h1, main, section, h2, p {
     font-family: "Nunito";
 }
 
@@ -134,3 +134,9 @@ section {
 }
 
  */
+
+ @media(max-width: 1300px) {
+    html {
+        font-size: 50%;
+    }
+ }

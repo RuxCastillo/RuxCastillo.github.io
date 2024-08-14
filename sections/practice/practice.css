@@ -11,15 +11,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 90%;
-    height: 90%;
-    background-color: white;
-    box-shadow: .25rem .25rem .75rem black;
+    width: 95%;
+    height: 95%;
+    background-color: #f7f7f7;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.6);
 }
 
 .practice a {
     width: 90%;
-    height: 90%;
+    height: 70%;
     margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
 
 .practice h5 {
     height: 10%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: "Nunito";
 }
