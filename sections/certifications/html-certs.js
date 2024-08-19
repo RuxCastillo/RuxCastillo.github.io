@@ -9,9 +9,7 @@ function htmlKnow(bool) {
         variableCSS("--know-columns", "1fr 3fr")
         
     }
-/*     variableCSS("--section-columns", "1fr")
-    variableCSS("--section-rows", "29rem")
-    variableCSS("--section-auto-rows", "29rem") */
+
     removeClassFromSection("section-know")
 
     const langNow = pagina.lang? 0 : 1;

@@ -1,31 +1,4 @@
-function htmlAboutMe(bool) {
-/*     let letterPlace;
-    let picturePlace;
-    let relative;
-    let me = document.querySelector(".me");
-    let sleep = (window.innerHeight < 500 || window.innerWidth < 800)? " sleep" : ""
-
-    if(bool) {
-        letterPlace = " mobile-abm";
-        picturePlace = " mobile-pic";
-        relative = "container"
-        variableCSS("--section-rows", "4fr 6fr")
-        variableCSS("--section-columns", "1fr")
-        me.innerText = "ME"
-        variableCSS("--main-rows", "7% 93%")  
-    } else {
-        letterPlace = "";
-        picturePlace = "";
-        relative = "container-pc"
-        variableCSS("--section-rows", "1fr")
-        variableCSS("--section-columns", "1fr .6fr")
-        me.innerText = "ABOUT ME"
-        variableCSS("--main-rows", "1fr 9fr")  
-    }
-
-    if(sleep === " sleep") {
-        variableCSS("--section-rows", "0fr 1fr")
-    }  */
+function htmlAboutMe() {
 
     variableCSS("--body-maxh", "50rem")
     variableCSS("--body-maxw", "110rem")
