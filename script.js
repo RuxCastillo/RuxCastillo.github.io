@@ -1,9 +1,6 @@
 const language = document.querySelector(".lang")
 const theme = document.querySelector(".theme")
 const sectionsBtn = document.querySelectorAll(".art")
-const html = query("html");
-const section = query("section");
-const body = query("body");
 
 const pagina = new Observer(language, theme, sectionsBtn, {
     isDark() {
@@ -62,6 +59,11 @@ const pagina = new Observer(language, theme, sectionsBtn, {
 
 query = (css) => {return document.querySelector(css)};
 variableCSS = (vab, val) => {return document.documentElement.style.setProperty(vab, val)}
+const html = query("html");
+const section = query("section");
+const body = query("body");
+
+
 
 window.addEventListener("resize", function() {pagina.changeDevice()})
 pagina.changeNotify()
