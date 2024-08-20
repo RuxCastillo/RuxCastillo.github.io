@@ -3,13 +3,14 @@
     --section-columns: 1fr 1fr;
     --section-rows: 1fr;
     --section-auto-rows: 30vh;
-    --background-i: url("./assets/blanco/Fondo.jpg");
     --border-main: 3px solid black;
     --certs-img: block;
     --know-columns: 1fr 3fr;
     --html-mobile-size: 62.5%;
     --body-maxh: 50rem; 
     --body-maxw: 110rem;
+    --background-image: radial-gradient(#f7f7f7, #9c9c9c 80%);
+    --background-c: #f7f7f7;
 }
 
 @font-face {
@@ -50,7 +51,7 @@ html {
 }
 
 body {
-    background-image: radial-gradient(#f7f7f7, #9c9c9c 80%);
+    background-image: var(--background-image);
     display: flex;
     flex-direction: column;
     color: var(--text-c);
@@ -62,7 +63,7 @@ body {
     margin: 0 auto;
     max-height: var(--body-maxh);
     max-width: var(--body-maxw);
-    transition: 1.4s
+    transition: 1.4s;
 }
 
 header {
@@ -94,6 +95,7 @@ section {
 }
 
 .icons {
+    margin-top: 3px;
     height: 5%; 
     width: 100%;
     display: flex;

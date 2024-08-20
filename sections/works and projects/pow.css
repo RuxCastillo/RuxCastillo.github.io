@@ -6,7 +6,7 @@
 
 
 .proyects {
-    background: #f7f7f7;
+    background: var(--background-c);
     margin: .75rem;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
     padding: 3rem;
     justify-content: start;
     border: var(--border-main);
-    box-shadow: 1rem 1rem 1.5rem black;
+    box-shadow: var(--contorno);
     overflow: hidden;
 }
 

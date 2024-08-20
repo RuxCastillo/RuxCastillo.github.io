@@ -9,7 +9,6 @@ function htmlKnow(bool) {
         variableCSS("--know-columns", "1fr 3fr")
         
     }
-
     removeClassFromSection("section-know")
 
     const langNow = pagina.lang? 0 : 1;
