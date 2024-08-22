@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.main {
+    background-image: linear-gradient(to bottom right, rgb(72, 72, 190), rgb(2, 2, 56));
+
+}
+
+.main article {
+    height: 90vh;
+}
+
+
