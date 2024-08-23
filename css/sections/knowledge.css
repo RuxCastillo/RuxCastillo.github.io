@@ -1,0 +1,6 @@
+.main__knowledge {
+    height: 70vh;
+    background-image: linear-gradient(to bottom right, rgb(2, 2, 56),rgb(72, 72, 190));
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}

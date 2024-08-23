@@ -1,0 +1,10 @@
+.main__proyects {
+    height: 80vh;
+    background-image: radial-gradient(rgb(192, 190, 190), #f7f7f7);
+    display: grid;
+}
+
+.main__proyects ul {
+    height: 100%;
+
+}

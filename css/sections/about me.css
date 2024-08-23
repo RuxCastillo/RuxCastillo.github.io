@@ -1,59 +1,43 @@
-.section-about-me {
-    display: grid;
-    grid-template-columns: .8fr .6fr;
-    grid-template-rows: 1fr;
-    padding: 2.5% 2.5%;
-}
-
-.about-me {
+.main__about {
+    background-image: linear-gradient(to bottom right, rgb(72, 72, 190), rgb(2, 2, 56));
+    height: 70vh;
     display: flex;
-    flex-direction: column;
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-.about-me h1 {
-    font-size: 5rem;
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-.about-me h2 {
-    font-size: 3rem;
-}
-
-.about-me p {
-    font-size: 2rem;
-}
-
-.about-me div {
-    height: 2rem;
-}
-
-.about-me div a i {
-    font-size: 4rem;
-    margin: 0 5px;
-    color: var(--text-c);
-}
-
-section .container-pc {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10rem 0rem;
-    padding-right: 5rem;
-    height: 80rem;
-    width: 60rem;
+    justify-content: center;
+
 }
 
- section .picture {
+.main__about-introduction {
+    flex: 0 0 40%;
+    margin-right: 2rem;
+    color: #f7f7f7;
+}
+
+.main__about-introduction span {
+    color: var(--tercer-color);
+}
+
+.main__about-introduction h1 { 
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.main__about-introduction h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.main__about-introduction p {
+    font-size: 1.8rem;
+
+}
+
+.main__about-picture {
+    flex: 0 0 30%;
+}
+
+.main__about-picture img {
     width: 100%;
-    height: 100%;
-    animation-name: var(--animation-picture);
-    animation-duration: 3s;
+    border-radius: 7px;
 }
-
-
-
-
-
