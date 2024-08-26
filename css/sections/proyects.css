@@ -1,10 +1,54 @@
 .main__proyects {
     height: 80vh;
     background-image: radial-gradient(rgb(192, 190, 190), #f7f7f7);
-    display: grid;
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+
+
 }
 
-.main__proyects ul {
-    height: 100%;
+.main__proyects-horizontal {
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.main__proyects-vertical {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyect {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85%;
+    padding: 2rem;
+    background-color: white;
+    opacity: .8;
+    box-shadow: .5rem .5rem 1rem rgb(0,0,0,.3);
+    border: 3px solid #f7f7f7;
+    border-radius: 15px;
+    margin: 1.5rem;
+}
+
+.proyect div {
+    flex: 0 0 40%;
+
+}
+
+.proyect h3 {
+    flex: 0 0 20%;
+    text-align: center;
+}
+
+.proyect p {
+    flex: 0 0 40%;
 }
