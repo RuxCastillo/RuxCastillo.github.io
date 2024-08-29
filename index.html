@@ -11,25 +11,29 @@
 
             <header class="navigation">
                 <div class="navigation__navs">
-                    <nav>about me</nav>
-                    <nav>proyects</nav>
-                    <nav>knowledge</nav>
+                    <nav><a href="#aboutme">about me</a></nav>
+                    <nav><a href="#proyects">proyects</a></nav>
+                    <nav><a href="#knowledge">knowledge</a></nav>
                 </div>
                 <div class="navigation__icons">
                     <div>
-                        <svg class="navigation__icons-github">
-                            <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
-                        </svg>
+                        <a href="https://github.com/RuxCastillo" target="_blank">
+                            <svg class="navigation__icons-github">
+                                <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+                            </svg>
+                        </a>
                     </div>
                     <div>
-                        <svg class="navigation__icons-linkedin">
-                            <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-                        </svg>
+                        <a href="https://www.linkedin.com/in/rubenldc" target="_blank">
+                            <svg class="navigation__icons-linkedin">
+                                <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
                     </div>
             </header>
 
             <main class="main">
-                <article class="main__about">
+                <article class="main__about" id="aboutme">
                     <section class="main__about-introduction">
                         <h2>Software development engineering student, with focus in <span>Front-End.</span></h2>     
                         <h1>Nombre Completo y Apellido aqui</h1>
@@ -42,31 +46,47 @@
                     </div>
                 </article>
                 
-                <article class="main__proyects">
+                <article class="main__proyects" id="proyects">
 
                         <div class="proyect p1">
-                            <div>imagen</div>
+                            <div>
+                                <svg>
+                                    <use xlink:href="./assets/symbol-defs.svg#icon-html-five"></use>
+                                </svg>
+                            </div>
                             <h3>Mas avanzado de html</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestiae suscipit adipisci quae repellat aspernatur illum natus rerum ipsum aliquam. Veritatis repudiandae possimus maiores dolores nihil eaque corporis sed ea.</p>
                         </div>
                         <div class="proyect p2">
-                            <div>imagen</div>
+                            <div>
+                                <svg> 
+                                    <use xlink:href="assets/symbol-defs.svg#icon-css3"></use>
+                                </svg>
+                            </div>
                             <h3>Legacy CSS</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestiae suscipit adipisci quae repellat aspernatur illum natus rerum ipsum aliquam. Veritatis repudiandae possimus maiores dolores nihil eaque corporis sed ea.</p>
                         </div>
                         <div class="proyect p3">
-                            <div>imagen</div>
+                            <div>
+                                <svg>
+                                    <use xlink:href="assets/symbol-defs.svg#icon-folder-open"></use>
+                                </svg>
+                            </div>
                             <h3>50 proyects in 5 days - HTML, CSS y JavaScript</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestiae suscipit adipisci quae repellat aspernatur illum natus rerum ipsum aliquam. Veritatis repudiandae possimus maiores dolores nihil eaque corporis sed ea.</p>
                         </div>
                         <div class="proyect p4">
-                            <div>imagen</div>
+                            <div>
+                                <svg>
+                                    <use xlink:href="assets/symbol-defs.svg#icon-folder-open"></use>
+                                </svg>
+                            </div>
                             <h3>100 Days of CSS</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestiae suscipit adipisci quae repellat aspernatur illum natus rerum ipsum aliquam. Veritatis repudiandae possimus maiores dolores nihil eaque corporis sed ea.</p>
                         </div>
                         
                 </article>
-                <article class="main__knowledge">
+                <article class="main__knowledge" id="knowledge">
                     <div>
                         <h4>Knowledge</h4>
                         <ul>

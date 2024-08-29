@@ -15,12 +15,19 @@
 }
 
 .navigation__navs {
-    flex: 1;
+    flex: 0;
     display: flex;
+    margin-right: auto;
+    margin-left: 2.5rem;
 }
 
 .navigation__navs nav {
     margin: auto;
+    flex: 0 0 12.5rem;
+}
+
+.navigation__navs nav a {
+    text-decoration: none;
 }
 
 .navigation__icons {
