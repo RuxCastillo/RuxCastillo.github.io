@@ -1,5 +1,6 @@
 .main__knowledge {
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     background-image: linear-gradient(to bottom right, rgb(2, 2, 56),rgb(72, 72, 190));
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -40,10 +41,16 @@
 @media (max-width: 1000px) {
     .main__knowledge {
         height: fit-content;
+        border-radius: 0px;
     }
 }
 
 @media (max-width: 500px) {
-    .main__knowledge {
+
+    .main__knowledge div {
+        width: 95%;
+        padding: 1rem;
+        padding-top: 2rem;
+        margin-left: 0;
     }
 }

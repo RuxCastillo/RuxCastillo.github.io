@@ -58,14 +58,31 @@
 }
 
 @media (max-width: 500px) {
-    .navigation__navs nav:first-child{
+/*     .navigation__navs nav:first-child{
         display: none;
-    }
+    } */
     .navigation__navs {
         margin-left: 1rem;
+        margin-right: .5rem;
     }
     .navigation__navs nav {
-        flex: 0 0 10rem;
+        flex: 0 0 auto;
+        margin-right: 1.25rem;
+    }
+    .navigation__icons {
+        padding-left: 0px;
+        flex: 0 0 25%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navigation__navs {
+        margin-left: .5rem;
+        margin-right: auto;
+    }
+    .navigation__navs nav {
+        margin-right: .5rem;
+        font-size: 1.4rem;
     }
 }
 

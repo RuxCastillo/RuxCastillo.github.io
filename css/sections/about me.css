@@ -1,6 +1,7 @@
 .main__about {
     background-image: linear-gradient(to bottom right, rgb(72, 72, 190), rgb(2, 2, 56));
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,13 +77,13 @@
 
 @media (max-width: 500px) {
     .main__about-introduction h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
     .main__about-introduction h2 {
         font-size: 1.5rem;
     }
     .main__about-introduction p {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 }
 
