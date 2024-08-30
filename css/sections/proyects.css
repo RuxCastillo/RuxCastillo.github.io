@@ -10,13 +10,20 @@
     align-items: center;
 }
 
+a {
+    width: 80%;
+    height: 80%;
+    text-decoration: none;
+    color: black
+}
+
 .proyect {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    width: 80%;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
     background-color: white;
     opacity: .8;
     box-shadow: .5rem .5rem 1rem rgb(0,0,0,.3);
@@ -80,16 +87,26 @@
         grid-auto-rows: 1fr;
     }
     .proyect h3 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     .proyect p {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
     .main__proyects {
         height: fit-content;
+    }
+    .proyect div {
+        padding: .3rem;
+        flex: 0 0 30%; 
+    }
+    .proyect h3 {
+        font-size: 2.5rem;
+    }
+    .proyect p {
+        font-size: 1.6rem;
     }
 }
