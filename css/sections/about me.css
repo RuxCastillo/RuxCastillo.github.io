@@ -1,20 +1,13 @@
 .main__about {
-    background-image: linear-gradient(to bottom right, rgb(72, 72, 190), rgb(2, 2, 56));
+    background-image: linear-gradient(to bottom right, var(--tertiary-color), var(--secondary-color));
     min-height: 60vh;
     height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .main__about-introduction {
     flex: 0 0 40%;
     margin-right: 2rem;
     color: #f7f7f7;
-}
-
-.main__about-introduction span {
-    color: var(--tercer-color);
 }
 
 .main__about-introduction h1 { 

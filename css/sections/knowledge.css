@@ -1,14 +1,11 @@
 .main__knowledge {
     min-height: 60vh;
     height: fit-content;
-    background-image: linear-gradient(to bottom right, rgb(2, 2, 56),rgb(72, 72, 190));
+    background-image: linear-gradient(to bottom right, var(--secondary-color), var(--tertiary-color));
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    color: white;
+    color: var(--primary-text);
     font-size: 1.9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .main__knowledge div {
@@ -32,10 +29,6 @@
 .main__knowledge li {
     margin: 1.5rem;
     list-style: none;
-}
-
-.main__knowledge span {
-    color: var(--tercer-color);
 }
 
 @media (max-width: 1000px) {

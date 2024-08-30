@@ -1,3 +1,11 @@
 :root {
-    --tercer-color: #ffa500;
+    --primary-color: #f7f7f7;
+    --secondary-color: rgb(2,2,56);
+    --tertiary-color: rgb(72,72,190);
+    --primary-text: white;
+    --secondary-text: black;
+    --tertiary-text: #ffa500;
+    --background-primary-color: white;
+    --background-secondary-color: #f7f7f7;
+
 }
