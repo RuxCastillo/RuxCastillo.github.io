@@ -82,6 +82,7 @@ a {
 
 @media (max-width: 1000px) {
     .main__proyects {
+        min-height: fit-content;
         height: 80vh;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
