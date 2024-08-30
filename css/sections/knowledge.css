@@ -1,5 +1,5 @@
 .main__knowledge {
-    min-height: 70vh;
+    min-height: 60vh;
     height: fit-content;
     background-image: linear-gradient(to bottom right, rgb(2, 2, 56),rgb(72, 72, 190));
     border-bottom-right-radius: 15px;
