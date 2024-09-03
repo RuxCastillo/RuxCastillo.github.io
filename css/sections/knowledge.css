@@ -31,6 +31,10 @@
     list-style: none;
 }
 
+.main__knowledge li a {
+    color: white;
+}
+
 @media (max-width: 1000px) {
     .main__knowledge {
         height: fit-content;
