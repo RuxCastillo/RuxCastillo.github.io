@@ -29,6 +29,7 @@
 .main__knowledge li {
     margin: 1.5rem;
     list-style: none;
+    color: white;
 }
 
 .main__knowledge li a {
