@@ -3,7 +3,7 @@
     min-height: 60vh;
     background-image: radial-gradient(rgb(192, 190, 190), var(--primary-color));
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(min-content, 1fr);
     width: 100%;
     align-content: center;
@@ -21,6 +21,7 @@ a {
 
 .proyect {
     flex-direction: column;
+    max-width: 700px;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -29,6 +30,7 @@ a {
     border: 3px solid #f7f7f7;
     border-radius: 15px;
     padding: 2rem;
+    margin: 0 auto;
 }
 
 .proyect div {
