@@ -35,7 +35,7 @@ function enviandoFormularioServer() {
 	};
 	generarToastNotification('Data has been sent to the server.', 'white');
 
-	fetch('http://localhost:3001/portafolio', {
+	fetch('https://anki-questions.vercel.app/portafolio', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
