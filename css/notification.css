@@ -11,11 +11,11 @@
 	height: 10rem;
 	background-color: var(--secondary-color);
 	border-radius: 15px;
-	color: white;
 	font-size: 2rem;
 	text-align: center;
 	padding-top: 1rem;
 	position: relative;
+	color: white;
 	box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 }
 
@@ -25,11 +25,22 @@
 	position: absolute;
 	bottom: 0px;
 	height: 1rem;
-	background-color: white;
 	left: 0;
 	border-radius: 0 0 15px 15px;
 }
 
 .notification::after.green {
 	background-color: green;
+}
+
+.notification.green::after {
+	background-color: green;
+}
+
+.notification.red::after {
+	background-color: red;
+}
+
+.notification.white::after {
+	background-color: white;
 }
