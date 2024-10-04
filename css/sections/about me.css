@@ -1,87 +1,90 @@
 .main__about {
-    background-image: linear-gradient(to bottom right, var(--tertiary-color), var(--secondary-color));
-    min-height: 60vh;
-    height: fit-content;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--tertiary-color),
+		var(--secondary-color)
+	);
+	min-height: 60vh;
+	height: 80vh;
 }
 
 .main__about-introduction {
-    flex: 0 0 40%;
-    margin-right: 2rem;
-    color: #f7f7f7;
+	flex: 0 0 40%;
+	margin-right: 2rem;
+	color: #f7f7f7;
 }
 
-.main__about-introduction h1 { 
-    font-size: 10rem;
-    font-weight: 500;
+.main__about-introduction h1 {
+	font-size: 10rem;
+	font-weight: 500;
 }
 
 .main__about-introduction h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-style: italic;
+	font-size: 2.5rem;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .main__about-introduction p {
-    font-size: 3rem;
-
+	font-size: 3rem;
 }
 
 .main__about-picture {
-    flex: 0 0 30%;
+	flex: 0 0 30%;
 }
 
 .main__about-picture img {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
+	width: 100%;
+	height: 100%;
+	border-radius: 7px;
 }
 @media (max-width: 1500px) {
-    .main__about-introduction {
-        flex: 0 0 50%;
-    }
-    .main__about-introduction h1 {
-        font-size: 7rem;
-    }
-    .main__about-introduction p {
-        font-size: 2.5rem;
-    }
+	.main__about-introduction {
+		flex: 0 0 50%;
+	}
+	.main__about-introduction h1 {
+		font-size: 7rem;
+	}
+	.main__about-introduction p {
+		font-size: 2.5rem;
+	}
 }
 @media (max-width: 1000px) {
-    .main__about {
-        min-height: 60vh;
-        height: fit-content;
-    }
-    .main__about-picture {
-        display: none;
-    }
-    .main__about-introduction {
-        flex: 0 0 80%;
-    }
-    .main__about-introduction h1 {
-        font-size: 8rem;
-    }
-    .main__about-introduction h2 {
-        font-size: 2.5rem;
-    }
-    .main__about-introduction p {
-        font-size: 3rem;
-    }
+	.main__about {
+		min-height: 60vh;
+		height: fit-content;
+	}
+	.main__about-picture {
+		display: none;
+	}
+	.main__about-introduction {
+		flex: 0 0 80%;
+	}
+	.main__about-introduction h1 {
+		font-size: 8rem;
+	}
+	.main__about-introduction h2 {
+		font-size: 2.5rem;
+	}
+	.main__about-introduction p {
+		font-size: 3rem;
+	}
 }
 
 @media (max-width: 500px) {
-    .main__about-introduction h1 {
-        font-size: 4.5rem;
-    }
-    .main__about-introduction h2 {
-        font-size: 1.5rem;
-    }
-    .main__about-introduction p {
-        font-size: 2rem;
-    }
+	.main__about-introduction h1 {
+		font-size: 4.5rem;
+	}
+	.main__about-introduction h2 {
+		font-size: 1.5rem;
+	}
+	.main__about-introduction p {
+		font-size: 2rem;
+	}
 }
 
 @media (max-width: 361px) {
-    .main__about-introduction p {
-        font-size: 1.75rem;
-    }
+	.main__about-introduction p {
+		font-size: 1.75rem;
+	}
 }

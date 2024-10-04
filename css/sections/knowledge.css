@@ -155,6 +155,10 @@ textarea:focus {
 	font-family: sans-serif;
 }
 
+.form__contact-button:hover {
+	color: var(--secondary-color);
+}
+
 /* aqui inicia lo de las certificaciones */
 
 .main__knowledge-certs {
