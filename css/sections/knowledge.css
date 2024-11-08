@@ -126,6 +126,7 @@
 	font-family: sans-serif;
 	font-size: 1.3rem;
 	transition: top 0.3s ease;
+	color: rgb(49, 49, 49);
 }
 
 input:focus,

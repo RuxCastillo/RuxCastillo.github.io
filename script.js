@@ -1,22 +1,29 @@
 const textarea = document.querySelector('.textarea-form');
 const inputs = document.querySelectorAll('.input-form');
 
-textarea.addEventListener('input', (e) => {
-	console.log('textarea');
-	if (e.target.value === '') {
-		textarea.nextElementSibling.classList.remove('typing');
-	} else {
-		textarea.nextElementSibling.classList.add('typing');
+textarea.addEventListener('mouseover', (e) => {
+	textarea.nextElementSibling.classList.add('typing');
+});
+textarea.addEventListener('mouseout', (e) => {
+	function bajarLetras() {
+		if (e.target.value === '') {
+			textarea.nextElementSibling.classList.remove('typing');
+		}
 	}
+	setTimeout(bajarLetras, 4000);
 });
 
 inputs.forEach((input) => {
-	input.addEventListener('input', (e) => {
-		if (e.target.value === '') {
-			input.nextElementSibling.classList.remove('typing');
-		} else {
-			input.nextElementSibling.classList.add('typing');
+	input.addEventListener('mouseover', (e) => {
+		input.nextElementSibling.classList.add('typing');
+	});
+	input.addEventListener('mouseout', (e) => {
+		function bajarLetras() {
+			if (e.target.value === '') {
+				input.nextElementSibling.classList.remove('typing');
+			}
 		}
+		setTimeout(bajarLetras, 4000);
 	});
 });
 
